@@ -10,6 +10,7 @@ CREATE TABLE `t_user` (
   `updated_at` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 CREATE TABLE `t_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
@@ -20,3 +21,6 @@ CREATE TABLE `t_log` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+INSERT INTO `t_user` (`id`, `email`, `username`, `nickname`, `password`, `last_ip`, `is_deleted`, `created_at`, `updated_at`) VALUES
+(1, 'admin@admin.com', 'admin', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '127.0.0.1', NULL, NULL, 1446993800);
