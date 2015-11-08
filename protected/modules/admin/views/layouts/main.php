@@ -285,11 +285,12 @@
 <script src="/assets/js/ace.min.js"></script>
 <script type="text/javascript"> ace.vars['base'] = '..'; </script>
 <script src="/assets/js/ace/ace.onpage-help.js"></script>
-
+<!---
 <?php if (file_exists(Yii::app()->basePath . '/../js/scripts.js')) {?>
 <script src="/js/scripts.js"></script>
     <?php Yii::app()->getClientScript()->registerScriptFile("/js/scripts.js", CClientScript::POS_END);?>
 <?php } ?>
+-->
 <?php if(isset($this->module)) { ?>
     <?php if (file_exists(Yii::app()->basePath . '/../js/'. $this->module->id .'/scripts.js')) {?>
         <?php Yii::app()->getClientScript()->registerScriptFile("/js/".$this->module->id."/scripts.js", CClientScript::POS_END);?>
