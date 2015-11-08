@@ -9,7 +9,7 @@ $this->breadcrumbs=array(
 </div>
 <div class="row">
     <div class="col-xs-12">
-<?php $this->widget('application.components.WxGridView', array(
+<?php $this->widget('admin.components.WxGridView', array(
 	'id'=>'user-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,

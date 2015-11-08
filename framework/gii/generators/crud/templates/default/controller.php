@@ -12,7 +12,7 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/main';
+	public $layout='/layouts/main';
 
 	/**
 	 * @return array action filters
@@ -20,9 +20,11 @@ class <?php echo $this->controllerClass; ?> extends <?php echo $this->baseContro
 	public function filters()
 	{
 		return array(
+			/*
 			array( // 操作日志过滤器
                 'application.components.ActionLog'
             ),
+			 */
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 		);

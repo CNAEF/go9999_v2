@@ -1,3 +1,4 @@
 protected/runtime/*
 upload/*
 .idea
+.DS_Store

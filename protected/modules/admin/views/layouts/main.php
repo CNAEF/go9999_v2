@@ -34,9 +34,11 @@
     <!--[if lte IE 9]>
     <link rel="stylesheet" href="/assets/css/ace-ie.min.css" />
     <![endif]-->
+    <!--
     <?php if (file_exists(Yii::app()->basePath . '/../css/styles.css')) {?>
     <link rel="stylesheet" href="/css/styles.css" />
     <?php } ?>
+    -->
     <?php if(isset($this->module)) { ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'. $this->module->id .'/styles.css')) {?>
         <link rel="stylesheet" href="/css/<?php echo $this->module->id;?>/styles.css" />

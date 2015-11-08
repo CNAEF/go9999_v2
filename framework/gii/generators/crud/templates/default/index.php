@@ -15,11 +15,11 @@ echo "\$this->breadcrumbs=array(
 ?>
 <div class="page-header">
     <h1>管理<?php echo $this->pluralize($this->class2name($this->modelClass)); ?></h1>
-    <a class="btn btn-success" href="/<?php echo $this->modelClass; ?>/create">创建<?php echo $this->pluralize($this->class2name($this->modelClass)); ?></a>
+    <a class="btn btn-success" href="/admin/<?php echo $this->modelClass; ?>/create">创建<?php echo $this->pluralize($this->class2name($this->modelClass)); ?></a>
 </div>
 <div class="row">
     <div class="col-xs-12">
-<?php echo "<?php"; ?> $this->widget('application.components.WxGridView', array(
+<?php echo "<?php"; ?> $this->widget('admin.components.WxGridView', array(
 	'id'=>'<?php echo $this->class2id($this->modelClass); ?>-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
