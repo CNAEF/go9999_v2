@@ -1,0 +1,152 @@
+.navbar-brand{
+    width:190px;
+}
+/* 模块选择按钮 */
+/*
+.ace-nav>li.mod-nav{
+    height:30px;
+    line-height:30px;
+    margin-top:15px;
+}
+*/
+.ace-nav>li.mod-nav>a{
+	background:#0a3c67;
+	padding:0 18px;
+    /*
+    height:30px;
+    line-height:30px;
+    */
+}
+
+.ace-nav>li.mod-nav.active>a{
+	background:#f5f5f5;
+	color:#666;
+}
+
+.ace-nav>li.mod-nav>a:hover {
+	background:#ccc;
+}
+
+/* *样式 */
+.form-group span.required {
+	color:red;
+}
+
+/* 排序图标 */
+.grid-view table.items th a.asc
+{
+	background:url(up.gif) right center no-repeat;
+	padding-right: 10px;
+}
+
+.grid-view table.items th a.desc
+{
+	background:url(down.gif) right center no-repeat;
+	padding-right: 10px;
+}
+
+/* 表格过滤器样式 */
+.grid-view .filters td{
+    margin:0;
+    padding:0;
+
+}
+.grid-view .filters td input[type=text],.grid-view .filters td select{
+    width:100%;
+    height:35px;
+    margin:0;
+    /*padding:0;*/
+}
+
+/* 页面标题 */
+.page-header{
+    position:relative;
+}
+.page-header h1{
+    margin-left:0;
+}
+.page-header .btn{
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+/* 样式重置*/
+html,body,input,div,a,span,li,ul{font-family:Helvetica,"微软雅黑",Arial,sans-serif;}
+body{
+	font-size: 12px;
+	color: #333333;
+}
+/*
+.fa-dashboard::before, .fa-tachometer::before,.glyphicon-file::before,.fa-exclamation-circle::before,.fa-exclamation-circle::before,.fa-exclamation-circle::before,.fa-group::before, .fa-users::before,.fa-gear::before, .fa-cog::before{
+	content: ""
+}
+*/
+.nav-list > li > a,.breadcrumb{
+	font-size: 12px;
+}
+.no-skin .nav-list > li.active > a,.no-skin .nav-list > li.open > a,.no-skin .nav-list > li .submenu > li.active > a,.breadcrumb > li > a,.page-header h1{
+	color: #3ca0d9;
+}
+.breadcrumb > li + li::before{
+	color: #333333;
+}
+.navbar{
+	background:none repeat scroll 0 0 #3ca0d9;
+}
+.page-header h1{
+	font-size: 24px;
+}
+/* 不要控制bootstrap的栅格系统
+.col-sm-9,.col-xs-9{
+	max-width: 640px;
+}
+.form-group .col-sm-9,.form-group .col-xs-9{
+	top:5px;
+}
+.form-group .col-sm-9 .col-xs-10,.form-group .col-sm-9 .col-xs-10 input,.form-group .col-xs-9 .col-xs-10,.form-group .col-xs-9 .col-xs-10 input{
+	padding-left: 1px;
+}
+.form-group .col-xs-9 > .row{
+	padding-left:12px;
+}
+*/
+#CinemaNotification_iShow label,#CinemaNotification_iStatus label{
+	margin-right:25px;
+	margin-left:5px;
+}
+.no-skin .nav-list .submenu li > a{
+	margin-left:17px;
+}
+#cinema-selector-selected{
+	line-height: 12px;
+	padding-left: 12px;
+}
+.dataTables_wrapper .row:last-child{
+	background-color: #fff;
+	border-bottom: none;
+}
+.ace-nav > li > a,.ace-nav > li.grey > a,.ace-nav > li.mod-nav > a,.ace-nav > li.mod-nav.active > a,.ace-nav > li.mod-nav >a:hover{
+	background-color: #3ca0d9;
+	color: #ffffff;
+}
+.ace-nav > li{
+	border:none;
+}
+.ace-nav > li.mod-nav.active > a{
+	background: #f5f5f5;
+	color: #269cdd;
+}
+#activity-search-result .col-sm-3 div p{
+	color: #666666;
+}
+#activity-search-result .col-sm-3 div p input{
+	margin-right: 20px;
+}
+#activity-search-result .col-sm-3 div p:last-child{
+	margin-left: 34px;
+	color: #333333;
+}
+.form-group #activity-box .row div div{
+	height: auto;
+}
