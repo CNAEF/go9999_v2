@@ -105,7 +105,7 @@ class Volunteer extends CActiveRecord
 			'_Q9' => 'Q9',
 			'_Q10' => 'Q10',
 			'_Q11' => 'Q11',
-			'user_status' => 'User Status',
+			'user_status' => '旧版用户状态',
 			'verify_admin_id' => '审核人',
 			'verify_time' => '审核时间',
 			'verify_status' => '审核状态',
