@@ -18,7 +18,7 @@ class Log extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 't_log';
+		return '{{log}}';
 	}
 
 	/**
