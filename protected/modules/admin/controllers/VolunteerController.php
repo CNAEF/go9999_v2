@@ -80,8 +80,12 @@ class VolunteerController extends Controller
 				$this->redirect(array('update','id'=>$model->id));
 			}
 		}
-
+		/*
 		$this->render('update',array(
+			'model'=>$model,
+		));
+		*/
+		$this->render('view',array(
 			'model'=>$model,
 		));
 	}

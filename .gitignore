@@ -2,6 +2,7 @@ protected/runtime/*
 upload/*
 .idea
 .DS_Store
+*/.DS_Store
 /.settings/
 /.buildpath
 /.project

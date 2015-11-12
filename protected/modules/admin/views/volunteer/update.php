@@ -1,13 +1,13 @@
 <?php
 $this->breadcrumbs=array(
-	'Volunteers'=>array('index'),
+	'志愿者'=>array('index'),
 	//$model->name=>array('update','id'=>$model->id),
 	'编辑',
 );
 ?>
 <div class="page-header">
     <h1>
-        编辑Volunteer        <small>
+        编辑志愿者        <small>
             <i class="ace-icon fa fa-angle-double-right"></i>
             #<?php echo $model->id; ?>        </small>
     </h1>

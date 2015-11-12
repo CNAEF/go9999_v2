@@ -62,7 +62,7 @@ class Volunteer extends CActiveRecord
 			'edu_photo' 		=> '毕业证',
 			'_edu_high_level' 	=> '旧版教育程度',
 			'edu_university' 	=> '大学',
-			'profession' 		=> '专业',
+			'profession' 		=> '职业',
 			'special' 			=> '特殊技能',
 			'work' 				=> '工作',
 			'work_experience' 	=> '工作经验',
@@ -212,6 +212,53 @@ class Volunteer extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+
+	public function getSex() {
+		return $this->sex ? '男' : '女';
+	}
+
+	public function getMarried() {
+		return $this->married == 1 ? '未婚' : '已婚';
+	}
+
+	public function getEduLevel() {
+		switch ($this->edu_level) {
+		case '1':
+			return '高中';
+			break;
+		case '2':
+			return '中专';
+			break;
+		case '3':
+			return '技校';
+			break;
+		case '4':
+			return '大专';
+			break;
+		case '5':
+			return '本科';
+			break;
+		case '6':
+			return '硕士';
+			break;
+		case '7':
+			return '博士';
+			break;
+		}
+	}
+
+	public function getProfession() {
+		switch ($this->profession) {
+			case '无业':
+			case '无':
+			case '':
+				return '暂无工作';
+				break;
+			default :
+				return $this->profession;
+				break;
+		}
 	}
 	
 }
