@@ -13,11 +13,9 @@ class VolunteerController extends Controller
 	public function filters()
 	{
 		return array(
-			/*
 			array( // 操作日志过滤器
-                'application.components.ActionLog'
+                'admin.components.ActionLog'
             ),
-			 */
 			'accessControl', // perform access control for CRUD operations
 			'postOnly + delete', // we only allow deletion via POST request
 		);
@@ -70,6 +68,8 @@ class VolunteerController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+
+
 		$model=$this->loadModel($id);
 
 		if(isset($_POST['Volunteer']))
@@ -78,14 +78,14 @@ class VolunteerController extends Controller
 			if($model->save()) {
 				Yii::app()->user->setFlash('success','更新成功');
 				$this->redirect(array('update','id'=>$model->id));
+			} else {
+				echo "<pre>";
+				print_r($model->getErrors());
+				exit;
 			}
+
 		}
-		/*
 		$this->render('update',array(
-			'model'=>$model,
-		));
-		*/
-		$this->render('view',array(
 			'model'=>$model,
 		));
 	}

@@ -12,7 +12,7 @@ $this->breadcrumbs=array(
         查看日志
         <small>
             <i class="ace-icon fa fa-angle-double-right"></i>
-            #<?php echo $model->iLogID; ?>
+            #<?php echo $model->id; ?>
         </small>
     </h1>
 </div>

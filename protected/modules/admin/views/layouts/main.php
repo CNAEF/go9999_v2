@@ -65,6 +65,16 @@
     <script src="/assets/js/html5shiv.js"></script>
     <script src="/assets/js/respond.min.js"></script>
     <![endif]-->
+    <!--[if !IE]> -->
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/assets/js/jquery.min.js'>"+"<"+"/script>");
+    </script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+    </script>
+    <![endif]-->
 </head>
 <body class="no-skin">
 <!-- #section:basics/navbar.layout -->
@@ -271,16 +281,7 @@
     </a>
 </div><!-- /.main-container -->
 <!-- basic scripts -->
-<!--[if !IE]> -->
-<script type="text/javascript">
-    window.jQuery || document.write("<script src='/assets/js/jquery.min.js'>"+"<"+"/script>");
-</script>
-<!-- <![endif]-->
-<!--[if IE]>
-<script type="text/javascript">
-    window.jQuery || document.write("<script src='/assets/js/jquery1x.min.js'>"+"<"+"/script>");
-</script>
-<![endif]-->
+
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>

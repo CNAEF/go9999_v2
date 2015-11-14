@@ -1,0 +1,10 @@
+$(function(){
+    $('button.btn-success').click(function(){
+        $('#Volunteer_verify_status').val('2');
+        $('#volunteer-form').submit();
+    });
+    $('button.btn-danger').click(function(){
+        $('#Volunteer_verify_status').val('3');
+        $('#volunteer-form').submit();
+    });
+});
