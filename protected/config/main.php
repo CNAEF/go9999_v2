@@ -9,7 +9,7 @@ return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'language' => 'zh_cn',
     'sourceLanguage' => 'zh_cn',
-    'name' => 'Config.name',
+    'name' => '中国·支教联盟',
     // preloading 'log' component
     'preload' => array('log'),
     // autoloading model and component classes
@@ -41,25 +41,6 @@ return array(
             'charset' => 'utf8',
             'tablePrefix'=>'t_'
         ),
-        /*
-        'cache' => array(
-            'class'=>'CMemCache',
-            'servers'=>array(
-                array(
-                    'host'=>'127.0.0.1',
-                    'port'=>11211,
-                    'weight'=>60,
-                ),
-                array(
-                    'host'=>'server2',
-                    'port'=>11211,
-                    'weight'=>40,
-                ),
-            ),
-            'keyPrefix' => 'yii_admin_',
-            'hashKey' => false,
-        ),
-        */
         'user' => array(
             // enable cookie-based authentication
             'allowAutoLogin' => true,
@@ -104,6 +85,7 @@ return array(
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(
+        'secret' => '',
         'company' => 'params.company',
     ),
 );

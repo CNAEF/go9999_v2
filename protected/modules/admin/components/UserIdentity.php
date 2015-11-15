@@ -14,7 +14,7 @@ class UserIdentity extends CUserIdentity
             $record=User::model()->findByAttributes(array('email'=>$this->username));
         if($record===null)
             $this->errorCode=self::ERROR_USERNAME_INVALID;
-        else if($record->password!==md5($this->password))
+        else if($record->password!==md5($this->password.Yii::app()->params['secret']))
             $this->errorCode=self::ERROR_PASSWORD_INVALID;
         else
         {

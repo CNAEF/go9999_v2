@@ -66,7 +66,7 @@ class UserController extends Controller
 		{
 			$model->attributes=$_POST['User'];
             if ($_POST['User']['password'])
-                $model->password = md5($_POST['User']['password']);
+                $model->password = md5($_POST['User']['password'].Yii::app()->params['secret']);
 
 			if($model->save()){
                 Yii::app()->user->setFlash('success','用户创建成功');
@@ -96,7 +96,7 @@ class UserController extends Controller
             if (empty($_POST['User']['password'])) {
                 unset($_POST['User']['password']);
             } else {
-                $_POST['User']['password'] = md5($_POST['User']['password']);
+                $_POST['User']['password'] = md5($_POST['User']['password'].Yii::app()->params['secret']);
             }
             $model->attributes=$_POST['User'];
 
@@ -130,7 +130,7 @@ class UserController extends Controller
             if (empty($_POST['User']['password'])) {
                 unset($_POST['User']['password']);
             } else {
-                $_POST['User']['password'] = md5($_POST['User']['password']);
+                $_POST['User']['password'] = md5($_POST['User']['password'].Yii::app()->params['secret']);
             }
             $model->attributes=$_POST['User'];
 
