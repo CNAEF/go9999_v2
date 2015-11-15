@@ -62,7 +62,7 @@ $this->breadcrumbs=array(
         <th>身份证</th>
         <td>
             <?php if ($model->id_photo) { ?>
-                <img src="uploads/id_photo/<?php echo $model->id_photo;?>" />
+                <img src="/uploads/id_photo/<?php echo $model->id_photo;?>" />
             <?php } ?>
         </td>
     </tr>
@@ -70,7 +70,7 @@ $this->breadcrumbs=array(
         <th>学历</th>
         <td>
             <?php if ($model->edu_photo) { ?>
-                <img src="uploads/edu_photo/<?php echo $model->edu_photo;?>" />
+                <img src="/uploads/edu_photo/<?php echo $model->edu_photo;?>" />
             <?php } ?>
         </td>
     </tr>
@@ -78,7 +78,7 @@ $this->breadcrumbs=array(
         <th>生活</th>
         <td>
             <?php if ($model->user_photo) { ?>
-                <img src="uploads/user_photo/<?php echo $model->user_photo;?>" />
+                <img src="/uploads/user_photo/<?php echo $model->user_photo;?>" />
             <?php } ?>
         </td>
     </tr>
