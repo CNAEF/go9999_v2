@@ -22,7 +22,7 @@ CREATE TABLE `t_log` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `t_admin` (`id`, `email`, `username`, `nickname`, `password`, `last_ip`, `is_deleted`, `created_at`, `updated_at`) VALUES
+INSERT INTO `t_user` (`id`, `email`, `username`, `nickname`, `password`, `last_ip`, `is_deleted`, `created_at`, `updated_at`) VALUES
 (1, 'admin@admin.com', 'admin', 'admin', 'cdbc311d6121f5545c5ed5a128a58f14', '127.0.0.1', NULL, NULL, 1446993800);
 
 CREATE TABLE IF NOT EXISTS `t_volunteer` (
