@@ -93,3 +93,42 @@ CREATE TABLE IF NOT EXISTS `t_volunteer` (
 
 ALTER TABLE `t_volunteer`
   ADD PRIMARY KEY (`id`);
+  
+#Lee Fixed db bug, add increment to volunteer.pk#
+ALTER TABLE `t_volunteer` 
+CHANGE COLUMN `id` `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ;
+
+#Lee Fixed db bug, remove no need not null#
+ALTER TABLE `t_volunteer` 
+CHANGE COLUMN `_age` `_age` TINYINT(3) NULL ,
+CHANGE COLUMN `_edu_high_level` `_edu_high_level` VARCHAR(100) NULL ,
+CHANGE COLUMN `_user_post_addr` `_user_post_addr` VARCHAR(200) NULL ,
+CHANGE COLUMN `is_disability` `is_disability` TEXT NULL ,
+CHANGE COLUMN `is_experience` `is_experience` TEXT NULL ,
+CHANGE COLUMN `_Q1` `_Q1` TEXT NULL ,
+CHANGE COLUMN `_Q2` `_Q2` TEXT NULL ,
+CHANGE COLUMN `_Q3` `_Q3` TEXT NULL ,
+CHANGE COLUMN `_Q4` `_Q4` TEXT NULL ,
+CHANGE COLUMN `_Q5` `_Q5` TEXT NULL ,
+CHANGE COLUMN `_Q6` `_Q6` TEXT NULL ,
+CHANGE COLUMN `_Q7` `_Q7` TEXT NULL ,
+CHANGE COLUMN `_Q8` `_Q8` TEXT NULL ,
+CHANGE COLUMN `_Q9` `_Q9` TEXT NULL ,
+CHANGE COLUMN `_Q10` `_Q10` TEXT NULL ,
+CHANGE COLUMN `_Q11` `_Q11` TEXT NULL ,
+CHANGE COLUMN `user_status` `user_status` TINYINT(3) NULL ,
+CHANGE COLUMN `verify_admin_id` `verify_admin_id` INT(11) NULL ,
+CHANGE COLUMN `verify_time` `verify_time` DATETIME NULL ,
+CHANGE COLUMN `verify_status` `verify_status` TINYINT(3) NULL ;
+
+#Lee Fixed db bug, add missing field#
+ALTER TABLE `t_volunteer` 
+ADD COLUMN `urgent_addr` VARCHAR(500) NOT NULL AFTER `urgent_workplace`;
+
+#Lee Fixed db bug, remove require from urgent fields, because we may donot need it.#
+ALTER TABLE `t_volunteer` 
+CHANGE COLUMN `urgent_title` `urgent_title` VARCHAR(20) NULL ,
+CHANGE COLUMN `urgent_name` `urgent_name` VARCHAR(20) NULL ,
+CHANGE COLUMN `urgent_contact` `urgent_contact` VARCHAR(100) NULL ,
+CHANGE COLUMN `urgent_workplace` `urgent_workplace` VARCHAR(200) NULL ,
+CHANGE COLUMN `urgent_addr` `urgent_addr` VARCHAR(500) NULL ;
