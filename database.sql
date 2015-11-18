@@ -132,3 +132,7 @@ CHANGE COLUMN `urgent_name` `urgent_name` VARCHAR(20) NULL ,
 CHANGE COLUMN `urgent_contact` `urgent_contact` VARCHAR(100) NULL ,
 CHANGE COLUMN `urgent_workplace` `urgent_workplace` VARCHAR(200) NULL ,
 CHANGE COLUMN `urgent_addr` `urgent_addr` VARCHAR(500) NULL ;
+
+#Lee Fixed db bug, add default value for verify_status#
+ALTER TABLE `t_volunteer` 
+CHANGE COLUMN `verify_status` `verify_status` TINYINT(3) UNSIGNED NULL DEFAULT 0 ;
