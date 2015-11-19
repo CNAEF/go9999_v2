@@ -28,6 +28,9 @@ return array(
         ),
         'admin' => array(
 
+        ),
+        'w' => array(
+
         )
     ),
     // application components
@@ -89,5 +92,8 @@ return array(
     'params' => array(
         'secret' => '',
         'company' => 'params.company',
+        'uploadMaxSize' => 2048000,
+        'uploadPath' => dirname(__FILE__).'/../../uploads/',
+        'uploadPathImage' => dirname(__FILE__).'/../../uploads/',
     ),
 );
