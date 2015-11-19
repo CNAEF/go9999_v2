@@ -136,3 +136,8 @@ CHANGE COLUMN `urgent_addr` `urgent_addr` VARCHAR(500) NULL ;
 #Lee Fixed db bug, add default value for verify_status#
 ALTER TABLE `t_volunteer` 
 CHANGE COLUMN `verify_status` `verify_status` TINYINT(3) UNSIGNED NULL DEFAULT 1 COMMENT 'API: 1 - just add, 2 - passed, 3 - fail' ;
+
+#Lee Fixed db bug, remove not null from special and work_experience#
+ALTER TABLE `t_volunteer` 
+CHANGE COLUMN `special` `special` TEXT NULL ,
+CHANGE COLUMN `work_experience` `work_experience` TEXT NULL ;
