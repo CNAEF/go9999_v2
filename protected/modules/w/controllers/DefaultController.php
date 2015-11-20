@@ -102,7 +102,11 @@ class DefaultController extends WBasedController
 	 */
 	public function actionProgress()
 	{
-	    $volunteers = VolunteerW::model()->findAll();
+		$volunteers = VolunteerW::model()->findAll(array(
+			'condition' => 'time>:time',
+			'params' => array(':time' => date('Y-m-d H:i:s', time()-(86400*180))),
+			'order' => 'id desc'
+		));
 	    
 	    //format volunteer before use.
 	    foreach ($volunteers as $oneV) {
