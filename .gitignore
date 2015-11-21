@@ -1,8 +1,9 @@
 protected/runtime/*
-upload/*
+public/upload/*
 .idea
 .DS_Store
-/.settings/
-/.buildpath
-/.project
-/index_l.php
+public/.DS_Store
+public/.settings/
+public/.buildpath
+public/.project
+public/index_l.php
