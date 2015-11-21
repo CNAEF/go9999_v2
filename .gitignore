@@ -7,3 +7,4 @@ public/.settings/
 public/.buildpath
 public/.project
 public/index_l.php
+public/protected/config/main.php
