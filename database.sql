@@ -1,143 +1,108 @@
-CREATE TABLE `t_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(80) DEFAULT NULL,
-  `username` varchar(80) DEFAULT NULL,
-  `nickname` varchar(80) DEFAULT NULL,
-  `password` varchar(80) DEFAULT NULL,
-  `last_ip` varchar(20) DEFAULT NULL,
-  `is_deleted` tinyint(1) DEFAULT NULL,
-  `created_at` int(11) DEFAULT NULL,
-  `updated_at` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
 
 CREATE TABLE `t_log` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) DEFAULT NULL,
-  `uri` varchar(1000) NOT NULL,
-  `data` text,
-  `ip` varchar(20) NOT NULL,
-  `created_at` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-INSERT INTO `t_user` (`id`, `email`, `username`, `nickname`, `password`, `last_ip`, `is_deleted`, `created_at`, `updated_at`) VALUES
-(1, 'admin@admin.com', 'admin', 'admin', 'cdbc311d6121f5545c5ed5a128a58f14', '127.0.0.1', NULL, NULL, 1446993800);
-
-CREATE TABLE IF NOT EXISTS `t_volunteer` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `sex` tinyint(3) NOT NULL,
-  `birthday` int(11) NOT NULL,
-  `_age` tinyint(3) NOT NULL,
-  `married` tinyint(3) NOT NULL,
-  `hometown_province` varchar(40) NOT NULL,
-  `hometown_city` varchar(40) NOT NULL,
-  `id_num` varchar(20) NOT NULL,
-  `id_photo` varchar(100) NOT NULL,
-  `user_photo` varchar(100) NOT NULL,
-  `edu_level` tinyint(3) NOT NULL,
-  `edu_photo` varchar(100) NOT NULL,
-  `_edu_high_level` varchar(100) NOT NULL,
-  `edu_university` varchar(100) NOT NULL,
-  `profession` varchar(100) NOT NULL,
-  `special` text NOT NULL,
-  `work` varchar(100) NOT NULL,
-  `work_experience` text NOT NULL,
-  `phone` varchar(20) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `qq` varchar(100) NOT NULL,
-  `cur_province` varchar(100) NOT NULL,
-  `cur_city` varchar(100) NOT NULL,
-  `cur_addr` varchar(100) NOT NULL,
-  `_user_post_addr` varchar(200) NOT NULL,
-  `post_code` int(6) NOT NULL,
-  `family_title` varchar(20) NOT NULL,
-  `family_name` varchar(20) NOT NULL,
-  `family_contact` varchar(100) NOT NULL,
-  `family_workplace` varchar(100) NOT NULL,
-  `family_addr` varchar(200) NOT NULL,
-  `urgent_title` varchar(20) NOT NULL,
-  `urgent_name` varchar(20) NOT NULL,
-  `urgent_contact` varchar(100) NOT NULL,
-  `urgent_workplace` varchar(200) NOT NULL,
-  `is_disability` text NOT NULL,
-  `is_experience` text NOT NULL,
-  `predict_deadline` varchar(50) NOT NULL,
-  `begin_date` tinyint(4) NOT NULL,
-  `cur_status` tinyint(3) NOT NULL,
-  `cur_income` text NOT NULL,
-  `info_from` varchar(100) NOT NULL,
+  `user_id` int(11) DEFAULT NULL COMMENT '管理员ID',
+  `uri` varchar(1000) NOT NULL COMMENT '请求URL',
+  `data` text COMMENT '提交数据',
+  `ip` varchar(20) NOT NULL COMMENT '请求IP',
+  `created_at` int(11) DEFAULT NULL COMMENT '创建时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员操作日志';
+
+CREATE TABLE `t_user` (
+  `id` int(11) NOT NULL,
+  `email` varchar(80) DEFAULT NULL COMMENT '邮箱',
+  `username` varchar(80) DEFAULT NULL COMMENT '用户名，用于登陆',
+  `nickname` varchar(80) DEFAULT NULL COMMENT '昵称，用于前台显示',
+  `password` varchar(80) DEFAULT NULL COMMENT '密码',
+  `last_ip` varchar(20) DEFAULT NULL COMMENT '最有一次登陆的ip',
+  `is_deleted` tinyint(1) DEFAULT NULL COMMENT '是否可用，目前未生效',
+  `created_at` int(11) DEFAULT NULL COMMENT '创建时间',
+  `updated_at` int(11) DEFAULT NULL COMMENT '修改时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='管理员';
+
+CREATE TABLE `t_volunteer` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL COMMENT '姓名',
+  `sex` tinyint(3) NOT NULL COMMENT '性别 1 男 2 女',
+  `birthday` int(11) NOT NULL COMMENT '生日',
+  `_age` tinyint(3) DEFAULT NULL COMMENT '旧版年龄字段，已废弃',
+  `married` tinyint(3) NOT NULL COMMENT '婚姻状况 1 未婚 2 已婚',
+  `hometown_province` varchar(40) NOT NULL COMMENT '籍贯 省份',
+  `hometown_city` varchar(40) NOT NULL COMMENT '籍贯 城市',
+  `id_num` varchar(20) NOT NULL COMMENT '身份证号',
+  `id_photo` varchar(100) NOT NULL COMMENT '身份证照片上传路径',
+  `user_photo` varchar(100) NOT NULL COMMENT '生活照上传路径',
+  `edu_level` tinyint(3) NOT NULL COMMENT '教育程度',
+  `edu_photo` varchar(100) NOT NULL COMMENT '学历照片存放路径',
+  `_edu_high_level` varchar(100) DEFAULT NULL COMMENT '高中',
+  `edu_university` varchar(100) NOT NULL COMMENT '大学',
+  `profession` varchar(100) NOT NULL COMMENT '旧版教育程度',
+  `special` text NOT NULL COMMENT '特殊技能',
+  `work` varchar(100) NOT NULL COMMENT '工作',
+  `work_experience` text NOT NULL COMMENT '工作经验',
+  `phone` varchar(20) NOT NULL COMMENT '手机号码',
+  `email` varchar(100) NOT NULL COMMENT '电子邮箱',
+  `qq` varchar(100) NOT NULL COMMENT 'QQ/微信',
+  `cur_province` varchar(100) NOT NULL COMMENT '现居地 身份',
+  `cur_city` varchar(100) NOT NULL COMMENT '现居地 城市',
+  `cur_addr` varchar(100) NOT NULL COMMENT '现居地 详细地址',
+  `_user_post_addr` varchar(200) DEFAULT NULL COMMENT '旧版邮寄地址 已废弃',
+  `post_code` int(6) NOT NULL COMMENT '邮政编码',
+  `family_title` varchar(20) NOT NULL COMMENT '家庭联系人称谓',
+  `family_name` varchar(20) NOT NULL COMMENT '家庭联系人姓名',
+  `family_contact` varchar(100) NOT NULL COMMENT '家庭联系人联系方式',
+  `family_workplace` varchar(100) NOT NULL COMMENT '家庭联系人工作单位',
+  `family_addr` varchar(200) NOT NULL COMMENT '家庭联系人地址',
+  `urgent_title` varchar(20) NOT NULL COMMENT '紧急联系人称谓',
+  `urgent_name` varchar(20) NOT NULL COMMENT '紧急联系人姓名',
+  `urgent_contact` varchar(100) NOT NULL COMMENT '紧急联系人联系方式',
+  `urgent_workplace` varchar(200) NOT NULL COMMENT '紧急联系人工作单位',
+  `urgent_addr` varchar(500) NOT NULL,
+  `is_disability` text COMMENT '伤残病历',
+  `is_experience` text COMMENT '支教经验',
+  `predict_deadline` varchar(50) NOT NULL COMMENT '支教期限',
+  `begin_date` tinyint(4) NOT NULL COMMENT '开始支教时间',
+  `cur_status` tinyint(3) NOT NULL COMMENT '现在的状态',
+  `cur_income` text NOT NULL COMMENT '收入来源',
+  `info_from` varchar(100) NOT NULL COMMENT '信息来源',
   `Q1` text NOT NULL,
   `Q2` text NOT NULL,
   `Q3` text NOT NULL,
   `Q4` text NOT NULL,
-  `_Q1` text NOT NULL,
-  `_Q2` text NOT NULL,
-  `_Q3` text NOT NULL,
-  `_Q4` text NOT NULL,
-  `_Q5` text NOT NULL,
-  `_Q6` text NOT NULL,
-  `_Q7` text NOT NULL,
-  `_Q8` text NOT NULL,
-  `_Q9` text NOT NULL,
-  `_Q10` text NOT NULL,
-  `_Q11` text NOT NULL,
-  `user_status` tinyint(3) NOT NULL,
-  `verify_admin_id` int(11) NOT NULL,
-  `verify_time` datetime NOT NULL,
-  `verify_status` tinyint(3) NOT NULL,
-  `time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `_Q1` text,
+  `_Q2` text,
+  `_Q3` text,
+  `_Q4` text,
+  `_Q5` text,
+  `_Q6` text,
+  `_Q7` text,
+  `_Q8` text,
+  `_Q9` text,
+  `_Q10` text,
+  `_Q11` text,
+  `user_status` tinyint(3) DEFAULT NULL COMMENT '旧版用户状态 已废弃',
+  `verify_admin_id` int(11) DEFAULT NULL COMMENT '审核管理员的ID',
+  `verify_time` datetime DEFAULT NULL COMMENT '审核时间',
+  `verify_status` tinyint(3) DEFAULT NULL COMMENT '审核状态 1 未审核 2 通过 3 未通过',
+  `time` datetime NOT NULL COMMENT '申请时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='志愿者报名数据';
+
+
+ALTER TABLE `t_log`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `t_user`
+  ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `t_volunteer`
   ADD PRIMARY KEY (`id`);
-  
-#Lee Fixed db bug, add increment to volunteer.pk#
-ALTER TABLE `t_volunteer` 
-CHANGE COLUMN `id` `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT ;
 
-#Lee Fixed db bug, remove no need not null#
-ALTER TABLE `t_volunteer` 
-CHANGE COLUMN `_age` `_age` TINYINT(3) NULL ,
-CHANGE COLUMN `_edu_high_level` `_edu_high_level` VARCHAR(100) NULL ,
-CHANGE COLUMN `_user_post_addr` `_user_post_addr` VARCHAR(200) NULL ,
-CHANGE COLUMN `is_disability` `is_disability` TEXT NULL ,
-CHANGE COLUMN `is_experience` `is_experience` TEXT NULL ,
-CHANGE COLUMN `_Q1` `_Q1` TEXT NULL ,
-CHANGE COLUMN `_Q2` `_Q2` TEXT NULL ,
-CHANGE COLUMN `_Q3` `_Q3` TEXT NULL ,
-CHANGE COLUMN `_Q4` `_Q4` TEXT NULL ,
-CHANGE COLUMN `_Q5` `_Q5` TEXT NULL ,
-CHANGE COLUMN `_Q6` `_Q6` TEXT NULL ,
-CHANGE COLUMN `_Q7` `_Q7` TEXT NULL ,
-CHANGE COLUMN `_Q8` `_Q8` TEXT NULL ,
-CHANGE COLUMN `_Q9` `_Q9` TEXT NULL ,
-CHANGE COLUMN `_Q10` `_Q10` TEXT NULL ,
-CHANGE COLUMN `_Q11` `_Q11` TEXT NULL ,
-CHANGE COLUMN `user_status` `user_status` TINYINT(3) NULL ,
-CHANGE COLUMN `verify_admin_id` `verify_admin_id` INT(11) NULL ,
-CHANGE COLUMN `verify_time` `verify_time` DATETIME NULL ,
-CHANGE COLUMN `verify_status` `verify_status` TINYINT(3) NULL ;
 
-#Lee Fixed db bug, add missing field#
-ALTER TABLE `t_volunteer` 
-ADD COLUMN `urgent_addr` VARCHAR(500) NOT NULL AFTER `urgent_workplace`;
-
-#Lee Fixed db bug, remove require from urgent fields, because we may donot need it.#
-ALTER TABLE `t_volunteer` 
-CHANGE COLUMN `urgent_title` `urgent_title` VARCHAR(20) NULL ,
-CHANGE COLUMN `urgent_name` `urgent_name` VARCHAR(20) NULL ,
-CHANGE COLUMN `urgent_contact` `urgent_contact` VARCHAR(100) NULL ,
-CHANGE COLUMN `urgent_workplace` `urgent_workplace` VARCHAR(200) NULL ,
-CHANGE COLUMN `urgent_addr` `urgent_addr` VARCHAR(500) NULL ;
-
-#Lee Fixed db bug, add default value for verify_status#
-ALTER TABLE `t_volunteer` 
-CHANGE COLUMN `verify_status` `verify_status` TINYINT(3) UNSIGNED NULL DEFAULT 1 COMMENT 'API: 1 - just add, 2 - passed, 3 - fail' ;
-
-#Lee Fixed db bug, remove not null from special and work_experience#
-ALTER TABLE `t_volunteer` 
-CHANGE COLUMN `special` `special` TEXT NULL ,
-CHANGE COLUMN `work_experience` `work_experience` TEXT NULL ;
+ALTER TABLE `t_log`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `t_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `t_volunteer`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;

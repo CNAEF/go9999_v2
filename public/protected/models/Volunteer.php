@@ -216,7 +216,7 @@ class Volunteer extends CActiveRecord
 	}
 
 	public function getSex() {
-		return $this->sex ? '男' : '女';
+		return $this->sex == 1 ? '男' : '女';
 	}
 
 	public function getMarried() {
