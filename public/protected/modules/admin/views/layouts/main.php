@@ -173,10 +173,22 @@
                     <span class="menu-text"> 志愿者 </span>
                 </a>
             </li>
+            <li class="<?php echo $this->id == 'gallery' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/gallery');?>"  >
+                    <i class="menu-icon fa fa-picture-o"></i>
+                    <span class="menu-text"> 相册 </span>
+                </a>
+            </li>
             <li class="<?php echo $this->id == 'user' && !in_array($this->getAction()->getId(), array('profile')) ? 'active open' : ''; ?>">
                 <a href="/admin/user/index"  >
-                    <i class="menu-icon fa fa-users"></i>
+                    <i class="menu-icon fa fa-user"></i>
                     <span class="menu-text"> 管理员 </span>
+                </a>
+            </li>
+            <li class="<?php echo $this->id == 'option' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/option');?>"  >
+                    <i class="menu-icon fa fa-cogs"></i>
+                    <span class="menu-text"> 系统设置 </span>
                 </a>
             </li>
             <li class="<?php echo $this->id == 'log' ? 'active open' : ''; ?>">
