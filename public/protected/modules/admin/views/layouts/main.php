@@ -19,20 +19,22 @@
     <meta name="description" content="overview &amp; stats" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/font-awesome.min.css" />
+    <!--     important for UE Editor keep this css file at the begin plz -->
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/ueMini/themes/default/css/umeditor.css" />
     <!-- page specific plugin styles -->
     <!-- text fonts -->
-    <link rel="stylesheet" href="/assets/css/ace-fonts.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/ace-fonts.css" />
     <!-- ace styles -->
-    <link rel="stylesheet" href="/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/ace.min.css" />
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="/assets/css/ace-part2.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/ace-part2.min.css" />
     <![endif]-->
-    <link rel="stylesheet" href="/assets/css/ace-skins.min.css" />
-    <link rel="stylesheet" href="/assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/ace-skins.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/ace-rtl.min.css" />
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="/assets/css/ace-ie.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/ace-ie.min.css" />
     <![endif]-->
     <!--
     <?php if (file_exists(Yii::app()->basePath . '/../css/styles.css')) {?>
@@ -41,38 +43,38 @@
     -->
     <?php if(isset($this->module)) { ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'. $this->module->id .'/styles.css')) {?>
-        <link rel="stylesheet" href="/css/<?php echo $this->module->id;?>/styles.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo $this->module->id;?>/styles.css" />
         <?php } ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'. $this->module->id .'/'.$this->id.'/styles.css')) {?>
-        <link rel="stylesheet" href="/css/<?php echo $this->module->id;?>/<?php echo $this->id;?>/styles.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo $this->module->id;?>/<?php echo $this->id;?>/styles.css" />
         <?php } ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'. $this->module->id .'/'.$this->id.'/'.$this->action->id.'/styles.css')) {?>
-        <link rel="stylesheet" href="/css/<?php echo $this->module->id;?>/<?php echo $this->id;?>/<?php echo $this->action->id;?>/styles.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo $this->module->id;?>/<?php echo $this->id;?>/<?php echo $this->action->id;?>/styles.css" />
         <?php } ?>
     <?php } else {?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'.Yii::app()->controller->id.'/styles.css')) {?>
-        <link rel="stylesheet" href="/css/<?php echo Yii::app()->controller->id;?>/styles.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo Yii::app()->controller->id;?>/styles.css" />
         <?php } ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'.Yii::app()->controller->id.'/'.$this->action->id.'/styles.css')) {?>
-        <link rel="stylesheet" href="/css/<?php echo Yii::app()->controller->id;?>/<?php echo $this->action->id;?>/styles.css" />
+        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo Yii::app()->controller->id;?>/<?php echo $this->action->id;?>/styles.css" />
         <?php } ?>
     <?php } ?>
     <!-- inline styles related to this page -->
     <!-- ace settings handler -->
-    <script src="/assets/js/ace-extra.min.js"></script>
+    <script src="<?php echo Yii::app()->baseUrl?>/assets/js/ace-extra.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lte IE 8]>
-    <script src="/assets/js/html5shiv.js"></script>
-    <script src="/assets/js/respond.min.js"></script>
+    <script src="<?php echo Yii::app()->baseUrl?>/assets/js/html5shiv.js"></script>
+    <script src="<?php echo Yii::app()->baseUrl?>/assets/js/respond.min.js"></script>
     <![endif]-->
     <!--[if !IE]> -->
     <script type="text/javascript">
-        window.jQuery || document.write("<script src='/assets/js/jquery.min.js'>"+"<"+"/script>");
+        window.jQuery || document.write("<script src='<?php echo Yii::app()->baseUrl?>/assets/js/jquery.min.js'>"+"<"+"/script>");
     </script>
     <!-- <![endif]-->
     <!--[if IE]>
     <script type="text/javascript">
-        window.jQuery || document.write("<script src='/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+        window.jQuery || document.write("<script src='<?php echo Yii::app()->baseUrl?>/assets/js/jquery1x.min.js'>"+"<"+"/script>");
     </script>
     <![endif]-->
 </head>
@@ -173,10 +175,22 @@
                     <span class="menu-text"> 志愿者 </span>
                 </a>
             </li>
+            <li class="<?php echo $this->id == 'gallery' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/gallery');?>"  >
+                    <i class="menu-icon fa fa-picture-o"></i>
+                    <span class="menu-text"> 相册 </span>
+                </a>
+            </li>
             <li class="<?php echo $this->id == 'user' && !in_array($this->getAction()->getId(), array('profile')) ? 'active open' : ''; ?>">
                 <a href="/admin/user/index"  >
-                    <i class="menu-icon fa fa-users"></i>
+                    <i class="menu-icon fa fa-user"></i>
                     <span class="menu-text"> 管理员 </span>
+                </a>
+            </li>
+            <li class="<?php echo $this->id == 'option' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/option');?>"  >
+                    <i class="menu-icon fa fa-cogs"></i>
+                    <span class="menu-text"> 系统设置 </span>
                 </a>
             </li>
             <li class="<?php echo $this->id == 'log' ? 'active open' : ''; ?>">
@@ -285,12 +299,12 @@
 <script type="text/javascript">
     if('ontouchstart' in document.documentElement) document.write("<script src='/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
-<script src="/assets/js/bootstrap.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl?>/assets/js/bootstrap.min.js"></script>
 <!-- ace scripts -->
-<script src="/assets/js/ace-elements.min.js"></script>
-<script src="/assets/js/ace.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl?>/assets/js/ace-elements.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl?>/assets/js/ace.min.js"></script>
 <script type="text/javascript"> ace.vars['base'] = '..'; </script>
-<script src="/assets/js/ace/ace.onpage-help.js"></script>
+<script src="<?php echo Yii::app()->baseUrl?>/assets/js/ace/ace.onpage-help.js"></script>
 <!---
 <?php if (file_exists(Yii::app()->basePath . '/../js/scripts.js')) {?>
 <script src="/js/scripts.js"></script>
