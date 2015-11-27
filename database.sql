@@ -147,3 +147,13 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  
+  
+ALTER TABLE `t_volunteer` 
+`special` text NULL COMMENT '特殊技能',
+`work_experience` text  NULL COMMENT '工作经验',
+`urgent_title` varchar(20)  NULL COMMENT '紧急联系人称谓',
+`urgent_name` varchar(20)  NULL COMMENT '紧急联系人姓名',
+`urgent_contact` varchar(100)  NULL COMMENT '紧急联系人联系方式',
+`urgent_workplace` varchar(200)  NULL COMMENT '紧急联系人工作单位',
+`urgent_addr` varchar(500) NULL;
