@@ -7,7 +7,13 @@ class DefaultController extends WBasedController
      */
 	public function actionIndex()
 	{
-		$this->render('index');
+	    //load last 5 news
+	    $criteria = new CDbCriteria();
+	    $criteria->limit = 5;
+	    $criteria->order = 'n_id DESC';
+	    
+	    $news = News::model()->findAll($criteria);
+		$this->render('index', array('news'=>$news));
 	}
 	
 	/**

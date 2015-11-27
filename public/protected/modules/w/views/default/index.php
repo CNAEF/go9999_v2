@@ -1,10 +1,22 @@
 <header class="jumbotron subhead" id="overview">
     <div class="row">
         <div class="span6">
-            <h1>中国·支教联盟</h1>
-            <p class="lead">2016年度支教志愿者招募</p>
+            <div>
+                <h1>中国·支教联盟</h1>
+                <p class="lead">2016年度支教志愿者招募</p>            
+            </div>
+            <div>
+<div class="list-group">
+    <?php foreach ($news as $oneNew):?>
+  <a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>" class="list-group-item">
+    <?php echo CHtml::encode($oneNew->n_title);?>
+  </a>
+  <?php endforeach;?>
+</div>              
+            </div>
+
         </div>
-        <div class="span6">
+        <div class="span6">     
             <div class="well" style="padding: 25px 25px 15px 25px;">
                 <a href="http://www.go9999.com" style="display: block;">
                   <span style="float: left; margin: 0 15px 10px 0;display: block;">
