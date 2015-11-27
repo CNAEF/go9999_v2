@@ -106,3 +106,43 @@ ALTER TABLE `t_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `t_volunteer`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  
+CREATE TABLE `t_option` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) DEFAULT NULL COMMENT '设置名',
+  `key` varchar(100) DEFAULT NULL COMMENT '变量名',
+  `type` varchar(20) DEFAULT NULL COMMENT '类型text,textarea,radio,select',
+  `data` text COMMENT '单选 以逗号分割',
+  `value` text COMMENT '选项值',
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `t_option` (`id`, `name`, `key`, `type`, `data`, `value`, `created_at`, `updated_at`) VALUES
+(1, 'test1_name', 'test1', 'text', NULL, 'test1_value a', NULL, NULL),
+(2, 'test2_name', 'test2', 'radio', 'o1,o2,o3', 'o1', NULL, NULL),
+(3, 'test3_name', 'test3', 'textarea', NULL, 'test3_value b', NULL, NULL),
+(4, 'test4_name', 'test4', 'select', 'o1,o2,o3,o4', 'o2', NULL, NULL);
+
+
+ALTER TABLE `t_option`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `key_UNIQUE` (`key`);
+
+
+ALTER TABLE `t_option`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+    
+  
+#Nov 25 Lee added news table  #
+CREATE TABLE IF NOT EXISTS `t_news` (
+  `n_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `n_title` VARCHAR(200) NOT NULL DEFAULT NULL,
+  `n_content` VARCHAR(21600) NULL DEFAULT NULL,
+  `n_readCount` INT(10) UNSIGNED NULL DEFAULT NULL COMMENT 'how many time the news already be read',
+  `n_creationUser_id` INT(10) UNSIGNED NULL DEFAULT NULL,
+  `n_creationDate` DATETIME NULL DEFAULT NULL,
+  PRIMARY KEY (`n_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
