@@ -43,7 +43,7 @@
     -->
     <?php if(isset($this->module)) { ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'. $this->module->id .'/styles.css')) {?>
-        <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo $this->module->id;?>/styles.css" />
+         <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo $this->module->id;?>/styles.css" />
         <?php } ?>
         <?php if (file_exists(Yii::app()->basePath . '/../css/'. $this->module->id .'/'.$this->id.'/styles.css')) {?>
         <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/css/<?php echo $this->module->id;?>/<?php echo $this->id;?>/styles.css" />
