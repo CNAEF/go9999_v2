@@ -193,12 +193,6 @@
                     <span class="menu-text"> 管理员 </span>
                 </a>
             </li>
-            <li class="<?php echo $this->id == 'option' ? 'active open' : ''; ?>">
-                <a href="<?php echo $this->createUrl('/admin/option');?>"  >
-                    <i class="menu-icon fa fa-cogs"></i>
-                    <span class="menu-text"> 系统设置 </span>
-                </a>
-            </li>
             <li class="<?php echo $this->id == 'log' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/log');?>"  >
                     <i class="menu-icon fa fa-book"></i>
