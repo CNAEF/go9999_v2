@@ -6,12 +6,14 @@
                 <p class="lead">2016年度支教志愿者招募</p>            
             </div>
             <div>
-<div class="list-group">
+<div class="list-group" style="margin-top: 80px;">
+    <h2>新闻中心</h2>
+    <hr/>
     <?php foreach ($news as $oneNew):?>
-  <a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>" class="list-group-item">
-    <?php echo CHtml::encode($oneNew->n_title);?>
-  </a>
-  <?php endforeach;?>
+      <a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>" class="list-group-item">
+        <?php echo CHtml::encode($oneNew->n_title);?>
+      </a>
+    <?php endforeach;?>
 </div>              
             </div>
 

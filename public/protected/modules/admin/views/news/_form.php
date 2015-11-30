@@ -3,7 +3,7 @@
 $uploadImagePath = $this->createUrl('//image/upload');
 //var_dump($uploadImagePath);
 
-//TODO register js and css
+//register js and css
 $cs = Yii::app()->getClientScript();
 $cs->registerScriptFile(Yii::app()->baseUrl.'/assets/ueMini/third-party/jquery.min.js', CClientScript::POS_HEAD);
 $cs->registerScriptFile(Yii::app()->baseUrl.'/assets/ueMini/umeditor.config.js', CClientScript::POS_HEAD);

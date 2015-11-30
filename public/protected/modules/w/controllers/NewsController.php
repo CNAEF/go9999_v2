@@ -8,6 +8,7 @@ class NewsController extends WBasedController
 	public function actionView($id)
 	{
 	    $news = News::model()->findByPk($id);
+	    $news->readOnce();
 	    
 		$this->render('view', array('news'=>$news));
 	}

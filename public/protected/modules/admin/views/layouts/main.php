@@ -169,6 +169,12 @@
                 </a>
                 <b class="arrow"></b>
             </li>
+            <li class="<?php echo $this->id == 'news' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/news');?>"  >
+                    <i class="menu-icon fa fa-users"></i>
+                    <span class="menu-text"> 新闻 </span>
+                </a>
+            </li>
             <li class="<?php echo $this->id == 'volunteer' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/volunteer');?>"  >
                     <i class="menu-icon fa fa-users"></i>
@@ -185,12 +191,6 @@
                 <a href="/admin/user/index"  >
                     <i class="menu-icon fa fa-user"></i>
                     <span class="menu-text"> 管理员 </span>
-                </a>
-            </li>
-            <li class="<?php echo $this->id == 'option' ? 'active open' : ''; ?>">
-                <a href="<?php echo $this->createUrl('/admin/option');?>"  >
-                    <i class="menu-icon fa fa-cogs"></i>
-                    <span class="menu-text"> 系统设置 </span>
                 </a>
             </li>
             <li class="<?php echo $this->id == 'option' ? 'active open' : ''; ?>">

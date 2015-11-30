@@ -111,4 +111,9 @@ class News extends CActiveRecord
 	        return false;
 	    }
 	}
+	
+	public function readOnce() {
+	    $this->n_readCount ++;
+	    $this->save();
+	}
 }
