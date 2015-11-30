@@ -165,7 +165,7 @@ class HTMLPurifier
      */
     public function purify($html, $config = null)
     {
-        // :TODO: make the config merge in, instead of replace
+        // :TOD: make the config merge in, instead of replace
         $config = $config ? HTMLPurifier_Config::create($config) : $this->config;
 
         // implementation is partially environment dependant, partially
@@ -1641,7 +1641,7 @@ class HTMLPurifier_CSSDefinition extends HTMLPurifier_Definition
             }
             // emit errors
             foreach ($allowed_properties as $name => $d) {
-                // :TODO: Is this htmlspecialchars() call really necessary?
+                // :TOD: Is this htmlspecialchars() call really necessary?
                 $name = htmlspecialchars($name);
                 trigger_error("Style attribute '$name' is not supported $support", E_USER_WARNING);
             }
@@ -6424,7 +6424,7 @@ class HTMLPurifier_HTMLModuleManager
                 // this will usually result in a full replacement.
                 $def->mergeIn($new_def);
             } else {
-                // :TODO:
+                // : TOD:
                 // non-standalone definitions that don't have a standalone
                 // to merge into could be deferred to the end
                 // HOWEVER, it is perfectly valid for a non-standalone
@@ -11823,7 +11823,7 @@ class HTMLPurifier_AttrDef_CSS_ImportantDecorator extends HTMLPurifier_AttrDef
         // test for ! and important tokens
         $string = trim($string);
         $is_important = false;
-        // :TODO: optimization: test directly for !important and ! important
+        // :TOD: optimization: test directly for !important and ! important
         if (strlen($string) >= 9 && substr($string, -9) === 'important') {
             $temp = rtrim(substr($string, 0, -9));
             // use a temp, because we might want to restore important
@@ -16663,13 +16663,13 @@ class HTMLPurifier_HTMLModule_Scripting extends HTMLPurifier_HTMLModule
      */
     public function setup($config)
     {
-        // TODO: create custom child-definition for noscript that
+        // TOD: create custom child-definition for noscript that
         // auto-wraps stray #PCDATA in a similar manner to
         // blockquote's custom definition (we would use it but
         // blockquote's contents are optional while noscript's contents
         // are required)
 
-        // TODO: convert this to new syntax, main problem is getting
+        // TOD: convert this to new syntax, main problem is getting
         // both content sets working
 
         // In theory, this could be safe, but I don't see any reason to
@@ -18097,7 +18097,7 @@ class HTMLPurifier_Injector_RemoveEmpty extends HTMLPurifier_Injector
 
     /**
      * @type array
-     * TODO: make me configurable
+     * TOD: make me configurable
      */
     private $_exclude = array('colgroup' => 1, 'th' => 1, 'td' => 1, 'iframe' => 1);
 

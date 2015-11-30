@@ -174,7 +174,7 @@
                     <i class="menu-icon fa fa-users"></i>
                     <span class="menu-text"> 新闻 </span>
                 </a>
-            </li>
+            </li>            
             <li class="<?php echo $this->id == 'volunteer' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/volunteer');?>"  >
                     <i class="menu-icon fa fa-users"></i>
