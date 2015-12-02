@@ -65,8 +65,8 @@ class DefaultController extends WBasedController
 	            $volunteer->attributes = $_POST; //massive attribute
 	            //move
 	            foreach ($fileCheckId as $oneFileId => $v) {
-	                $volunteer->{$oneFileId} = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage']);
-// 	                $fileCheckId[$oneFileId] = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage']);
+					if (in_array($oneFileId, array('user_photo', 'id_photo', 'edu_photo')))
+	                	$volunteer->{$oneFileId} = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage'] . $oneFileId);
 	            }
 	            
 	            if (!$volunteer->save()){
