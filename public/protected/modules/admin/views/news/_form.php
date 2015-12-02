@@ -28,12 +28,14 @@ $form=$this->beginWidget('CActiveForm', array(
                 <?php echo $form->textField($model,'n_title',array('size'=>60,'maxlength'=>200,'class' => 'col-xs-10')); ?>
             </div>
         </div>
+        <!--
         <div class="form-group">
             <?php echo $form->labelEx($model, 'n_readCount', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
             <div class="col-sm-9">
                 <?php echo $form->textField($model,'n_readCount',array('size'=>10,'maxlength'=>10,'class' => 'col-xs-10')); ?>
             </div>
         </div>
+        -->
         <div class="form-group">
             <?php echo $form->labelEx($model, 'n_content', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
             <div class="col-sm-9">

@@ -1,6 +1,8 @@
 <?php
 class News extends CActiveRecord
 {
+	public $n_readCount = 0;
+
 	/**
 	 * @return string the associated database table name
 	 */
