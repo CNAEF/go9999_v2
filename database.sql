@@ -150,11 +150,21 @@ ALTER TABLE `t_news`
 MODIFY `n_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
   
   
-ALTER TABLE `t_volunteer` MODIFY
-`special` text NULL COMMENT '特殊技能',
-`work_experience` text  NULL COMMENT '工作经验',
-`urgent_title` varchar(20)  NULL COMMENT '紧急联系人称谓',
-`urgent_name` varchar(20)  NULL COMMENT '紧急联系人姓名',
-`urgent_contact` varchar(100)  NULL COMMENT '紧急联系人联系方式',
-`urgent_workplace` varchar(200)  NULL COMMENT '紧急联系人工作单位',
-`urgent_addr` varchar(500) NULL;
+-- ALTER TABLE `t_volunteer` MODIFY
+-- `special` text NULL COMMENT '特殊技能',
+-- `work_experience` text  NULL COMMENT '工作经验',
+-- `urgent_title` varchar(20)  NULL COMMENT '紧急联系人称谓',
+-- `urgent_name` varchar(20)  NULL COMMENT '紧急联系人姓名',
+-- `urgent_contact` varchar(100)  NULL COMMENT '紧急联系人联系方式',
+-- `urgent_workplace` varchar(200)  NULL COMMENT '紧急联系人工作单位',
+-- `urgent_addr` varchar(500) NULL;
+
+
+ALTER TABLE `t_volunteer`
+CHANGE `special` `special` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '特殊技能',
+CHANGE `work_experience` `work_experience` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '工作经验',
+CHANGE `urgent_title` `urgent_title` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '紧急联系人称谓',
+CHANGE `urgent_name` `urgent_name` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '紧急联系人姓名',
+CHANGE `urgent_contact` `urgent_contact` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '紧急联系人联系方式',
+CHANGE `urgent_workplace` `urgent_workplace` VARCHAR(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '紧急联系人工作单位',
+CHANGE `urgent_addr` `urgent_addr` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT ' ';
