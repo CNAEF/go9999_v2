@@ -85,6 +85,9 @@ return array(
             //    'jquery.ui'=>false
             //),
         ),
+        'session' => array (
+            'autoStart' => true,
+        ),
 
     ),
     // application-level parameters that can be accessed

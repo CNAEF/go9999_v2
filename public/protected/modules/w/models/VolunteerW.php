@@ -3,6 +3,8 @@ class VolunteerW extends CActiveRecord
 {
     public $verifyStatusText = '';
     public $verifyStatusMessage = '';
+
+    public $verify_status = 1;
     
     /**
      * @return string the associated database table name
