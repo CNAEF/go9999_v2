@@ -137,7 +137,7 @@ ALTER TABLE `t_option`
 #Nov 25 Lee added news table  #
 CREATE TABLE IF NOT EXISTS `t_news` (
   `n_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `n_title` VARCHAR(200) NOT NULL DEFAULT NULL,
+  `n_title` VARCHAR(200) NOT NULL,
   `n_content` VARCHAR(21600) NULL DEFAULT NULL,
   `n_readCount` INT(10) UNSIGNED NULL DEFAULT NULL COMMENT 'how many time the news already be read',
   `n_creationUser_id` INT(10) UNSIGNED NULL DEFAULT NULL,
@@ -146,7 +146,7 @@ CREATE TABLE IF NOT EXISTS `t_news` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `n_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
   
   
 ALTER TABLE `t_volunteer` 
