@@ -171,7 +171,7 @@
             </li>
             <li class="<?php echo $this->id == 'news' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/news');?>"  >
-                    <i class="menu-icon fa fa-users"></i>
+                    <i class="menu-icon fa fa-newspaper-o"></i>
                     <span class="menu-text"> 新闻 </span>
                 </a>
             </li>            
