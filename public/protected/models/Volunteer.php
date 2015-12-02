@@ -17,7 +17,7 @@ class Volunteer extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, name, sex, birthday, married, hometown_province, hometown_city, id_num, id_photo, user_photo, edu_level, edu_photo, edu_university, profession, work, phone, email, qq, cur_province, cur_city, cur_addr, post_code, family_title, family_name, family_contact, family_workplace, family_addr, predict_deadline, begin_date, cur_status, cur_income, info_from, Q1, Q2, Q3, Q4, user_status, verify_admin_id, verify_time, verify_status, time', 'required'),
+			array('id, name, sex, birthday, married, hometown_province, hometown_city, id_num, id_photo, user_photo, edu_level, edu_photo, edu_university, profession, work, phone, email, qq, cur_province, cur_city, cur_addr, post_code, family_title, family_name, family_contact, family_workplace, family_addr, predict_deadline, begin_date, cur_status, cur_income, info_from, Q1, Q2, Q3, Q4, verify_admin_id, verify_time, verify_status, time', 'required'),
 			array('id, sex, birthday, _age, married, edu_level, post_code, begin_date, cur_status, user_status, verify_admin_id, verify_status', 'numerical', 'integerOnly'=>true),
 			array('name, predict_deadline', 'length', 'max'=>50),
 			array('hometown_province, hometown_city', 'length', 'max'=>40),
