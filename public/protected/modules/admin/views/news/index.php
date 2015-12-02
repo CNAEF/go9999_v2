@@ -1,11 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'News'=>array('index'),
+	'新闻'=>array('index'),
 	'管理',
 );
 ?>
 <div class="page-header">
-    <h1>管理News</h1>
+    <h1>管理新闻</h1>
     <a class="btn btn-success" href="<?php echo $this->createUrl('news/create');?>">创建News</a>
 </div>
 <div class="row">
@@ -23,14 +23,6 @@ $this->breadcrumbs=array(
 		),
 		array(
 			'name' => 'n_title',
-			'htmlOptions' => array(
-				'width' => 80,
-			),
-		),
-		array(
-			'name' => 'n_content',
-		    'value'=>'$data->n_content',
-		    'type'=>'raw',
 			'htmlOptions' => array(
 				'width' => 80,
 			),
