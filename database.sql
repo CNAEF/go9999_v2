@@ -146,10 +146,11 @@ CREATE TABLE IF NOT EXISTS `t_news` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
 COLLATE = utf8_unicode_ci;
-  MODIFY `n_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `t_news`
+MODIFY `n_id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
   
   
-ALTER TABLE `t_volunteer` 
+ALTER TABLE `t_volunteer` MODIFY
 `special` text NULL COMMENT '特殊技能',
 `work_experience` text  NULL COMMENT '工作经验',
 `urgent_title` varchar(20)  NULL COMMENT '紧急联系人称谓',
