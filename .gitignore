@@ -6,4 +6,5 @@ public/.project
 public/index_l.php
 public/protected/config/main.php
 public/protected/config/main_l.php
+public/protected/runtime
 .*
