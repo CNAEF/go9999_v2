@@ -97,5 +97,13 @@ class GalleryImage extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
+	// 自动更新时间
+	public function beforeSave()
+	{
+		$this->updated_at = time();
+		if ($this->isNewRecord)
+			$this->created_at = time();
+		return true;
+	}
 }

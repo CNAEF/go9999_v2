@@ -24,36 +24,6 @@
                 <?php echo $form->textField($model,'author',array('size'=>60,'maxlength'=>100,'class' => 'col-xs-10')); ?>
             </div>
         </div>
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'user_id', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textField($model,'user_id',array('class' => 'col-xs-10')); ?>
-            </div>
-        </div>
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'viewed', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textField($model,'viewed',array('class' => 'col-xs-10')); ?>
-            </div>
-        </div>
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'verify_status', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textField($model,'verify_status',array('class' => 'col-xs-10')); ?>
-            </div>
-        </div>
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'created_at', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textField($model,'created_at',array('class' => 'col-xs-10')); ?>
-            </div>
-        </div>
-        <div class="form-group">
-            <?php echo $form->labelEx($model, 'updated_at', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textField($model,'updated_at',array('class' => 'col-xs-10')); ?>
-            </div>
-        </div>
         <div class="clearfix form-actions">
             <div class="col-md-offset-3 col-md-9">
                 <button class="btn btn-info" type="submit">

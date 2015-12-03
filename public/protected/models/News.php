@@ -47,7 +47,7 @@ class News extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'n_id' => 'N',
+			'n_id' => 'ID',
 			'n_title' => '新闻标题',
 			'n_content' => '新闻内容',
 			'n_readCount' => '阅读次数',

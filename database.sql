@@ -168,3 +168,32 @@ CHANGE `urgent_name` `urgent_name` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_g
 CHANGE `urgent_contact` `urgent_contact` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '紧急联系人联系方式',
 CHANGE `urgent_workplace` `urgent_workplace` VARCHAR(200) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '紧急联系人工作单位',
 CHANGE `urgent_addr` `urgent_addr` VARCHAR(500) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT ' ';
+
+CREATE TABLE `t_gallery` (
+  `id` int(11) NOT NULL,
+  `title` varchar(200) NOT NULL COMMENT '相册标题',
+  `content` text COMMENT '简要说明',
+  `author` varchar(100) DEFAULT NULL COMMENT '照片来源',
+  `user_id` int(11) DEFAULT NULL COMMENT '后台 审核／创建人',
+  `viewed` int(11) DEFAULT '0' COMMENT '查看人数',
+  `verify_status` tinyint(3) DEFAULT '1' COMMENT '审核状态 1 待审核 2 通过 3 未通过',
+  `created_at` int(11) DEFAULT NULL COMMENT '创建时间',
+  `updated_at` int(11) DEFAULT NULL COMMENT '更新时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `t_gallery_image` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `gallery_id` int(11) NOT NULL COMMENT '所属相册ID',
+  `file` varchar(200) DEFAULT NULL COMMENT '上传文件路径',
+  `sort_order` int(11) DEFAULT '0' COMMENT '显示顺序 大数优先',
+  `is_recommend` tinyint(1) DEFAULT '0' COMMENT '首页推荐',
+  `created_at` int(11) DEFAULT NULL,
+  `updated_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE `t_gallery`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `t_gallery_image`
+  ADD PRIMARY KEY (`id`);
+ALTER TABLE `t_gallery`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `t_gallery_image`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
