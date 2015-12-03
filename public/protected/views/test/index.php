@@ -1,10 +1,11 @@
+<link type="text/css" rel="stylesheet" href="/assets/swfupload/default.css"/>
 <?php
 $this->widget('application.extensions.swfupload.CSwfUpload', array(
-    'jsHandlerUrl'=>'path/to/handler.js', //Relative path
+    'jsHandlerUrl'=>'/assets/swfupload/handlers.js', //Relative path
     'postParams'=>array(),
     'config'=>array(
         'use_query_string'=>true,
-        'upload_url'=>'/test/upload', //Use $this->createUrl method or define yourself
+        'upload_url'=>'/test/upload?test=1&test=2', //Use $this->createUrl method or define yourself
         'file_size_limit'=>'2 MB',
         'file_types'=>'*.jpg;*.png;*.gif',
         'file_types_description'=>'Image Files',
@@ -19,8 +20,8 @@ $this->widget('application.extensions.swfupload.CSwfUpload', array(
         'button_placeholder_id'=>'swfupload',
         'button_width'=>170,
         'button_height'=>20,
-        'button_text'=>'<span class="button">'.Yii::t('messageFile', 'ButtonLabel').' (Max 2 MB)</span>',
-        'button_text_style'=>'.button { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-size: 11pt; text-align: center; }',
+        'button_text'=>'<span class="button">上传图片(2 MB)</span>',
+        'button_text_style'=>'.button {}',
         'button_text_top_padding'=>0,
         'button_text_left_padding'=>0,
         'button_window_mode'=>'js:SWFUpload.WINDOW_MODE.TRANSPARENT',
@@ -34,7 +35,7 @@ $this->widget('application.extensions.swfupload.CSwfUpload', array(
 <div class="form">
     <div class="row">
     <div id="divFileProgressContainer"></div>
-    <div class="swfupload"><span id="swfupload"></span></div>
+    <div class="swfupload" style="background:red;display:inline-block;"><span id="swfupload"></span></div>
     </div>
 </div>
 <?php echo CHtml::endForm(); ?>

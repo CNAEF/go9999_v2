@@ -24,13 +24,7 @@ $this->breadcrumbs=array(
 		array(
 			'name' => 'title',
 			'htmlOptions' => array(
-				'width' => 80,
-			),
-		),
-		array(
-			'name' => 'content',
-			'htmlOptions' => array(
-				'width' => 80,
+				//'width' => 80,
 			),
 		),
 		array(
@@ -42,8 +36,9 @@ $this->breadcrumbs=array(
 		array(
 			'name' => 'user_id',
 			'htmlOptions' => array(
-				'width' => 80,
+				'width' => 120,
 			),
+            'value' => '$data->admin->username'
 		),
 		array(
 			'name' => 'viewed',
@@ -51,30 +46,11 @@ $this->breadcrumbs=array(
 				'width' => 80,
 			),
 		),
-		/*
-		array(
-			'name' => 'verify_status',
-			'htmlOptions' => array(
-				'width' => 80,
-			),
-		),
-		array(
-			'name' => 'created_at',
-			'htmlOptions' => array(
-				'width' => 80,
-			),
-		),
-		array(
-			'name' => 'updated_at',
-			'htmlOptions' => array(
-				'width' => 80,
-			),
-		),
-		*/
 		array(
             'header' => '操作',
 			'class'=>'CButtonColumn',
             'headerHtmlOptions' => array('width'=>'80'),
+            'template'=>'{update} {delete}',
 		),
 	),
 )); ?>

@@ -16,6 +16,7 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
+        'application.helpers.*',
         //'admin.components.*'
     ),
     'modules' => array(
@@ -87,6 +88,13 @@ return array(
         ),
         'session' => array (
             'autoStart' => true,
+        ),
+        'image'=>array(
+            'class'=>'application.extensions.image.CImageComponent',
+            // GD or ImageMagick
+            'driver'=>'GD',
+            // ImageMagick setup path
+            //'params'=>array('directory'=>'/opt/local/bin'),
         ),
 
     ),

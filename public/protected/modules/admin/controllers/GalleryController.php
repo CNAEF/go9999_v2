@@ -52,6 +52,7 @@ class GalleryController extends Controller
 		if(isset($_POST['Gallery']))
 		{
 			$model->attributes=$_POST['Gallery'];
+            $model->user_id = Yii::app()->getUser()->getId();
 			if($model->save()) {
 				Yii::app()->user->setFlash('success','创建成功');
 				$this->redirect(array('update','id'=>$model->id));

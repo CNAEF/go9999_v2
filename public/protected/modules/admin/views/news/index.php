@@ -6,7 +6,7 @@ $this->breadcrumbs=array(
 ?>
 <div class="page-header">
     <h1>管理新闻</h1>
-    <a class="btn btn-success" href="<?php echo $this->createUrl('news/create');?>">创建News</a>
+    <a class="btn btn-success" href="<?php echo $this->createUrl('news/create');?>">创建新闻</a>
 </div>
 <div class="row">
     <div class="col-xs-12">
@@ -24,7 +24,7 @@ $this->breadcrumbs=array(
 		array(
 			'name' => 'n_title',
 			'htmlOptions' => array(
-				'width' => 80,
+				//'width' => 80,
 			),
 		),
 		array(
@@ -38,17 +38,19 @@ $this->breadcrumbs=array(
 			'htmlOptions' => array(
 				'width' => 80,
 			),
+            'value' => '$data->nCreationUser->username'
 		),
 		array(
 			'name' => 'n_creationDate',
 			'htmlOptions' => array(
-				'width' => 80,
+				'width' => 150,
 			),
 		),
 		array(
             'header' => '操作',
 			'class'=>'CButtonColumn',
             'headerHtmlOptions' => array('width'=>'80'),
+            'template'=>'{update} {delete}',
 		),
 	),
 )); ?>
