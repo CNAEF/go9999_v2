@@ -65,8 +65,18 @@ class DefaultController extends WBasedController
 	            $volunteer->attributes = $_POST; //massive attribute
 	            //move
 	            foreach ($fileCheckId as $oneFileId => $v) {
-					if (in_array($oneFileId, array('user_photo', 'id_photo', 'edu_photo')))
-	                	$volunteer->{$oneFileId} = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage'] . $oneFileId);
+					if (in_array($oneFileId, array('user_photo', 'id_photo', 'edu_photo'))) {
+						$volunteer->{$oneFileId} = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage'] . $oneFileId);
+
+						// 压缩图片
+						$info = pathinfo($volunteer->{$oneFileId});
+						$smallFile = Yii::app()->params['uploadPathImage'] . $oneFileId . '/' . $volunteer->{$oneFileId};
+						$bigFile   = Yii::app()->params['uploadPathImage'] . $oneFileId . '/' . $info['filename'] . '_origin.' . $info['extension'];
+						$image = Yii::app()->image->load($smallFile);
+						$image->save($bigFile); // 保存原文件
+						$image->resize(Yii::app()->params['uploadMaxWidth'], Yii::app()->params['uploadMaxHeight'])->quality(Yii::app()->params['uploadQuality']);
+						$image->save($smallFile); // 保存压缩后文件
+					}
 	            }
 	            
 	            if (!$volunteer->save()){

@@ -101,10 +101,15 @@ return array(
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(
-        'secret' => '',
-        'company' => 'params.company',
-        'uploadMaxSize' => 2048000,
-        'uploadPath' => dirname(__FILE__).'/../../uploads/',
+        'secret'          => '',      // 用于密码加密
+        'company'         => 'CNAEF', // 页面上显示的团队名称
+
+        'uploadMaxSize'   => 2048000, // 图片大小限制
+        'uploadPath'      => dirname(__FILE__).'/../../uploads/',
         'uploadPathImage' => dirname(__FILE__).'/../../uploads/',
+
+        'uploadMaxWidth'  => 1000, // 图片压缩尺寸
+        'uploadMaxHeight' => 1000, // 图片压缩尺寸
+        'uploadQuality'   => 75,   // 图片压缩质量
     ),
 );

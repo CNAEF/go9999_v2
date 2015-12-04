@@ -6,8 +6,7 @@ class GalleryimageController extends Controller
 	public function filters()
 	{
 		return array(
-			'accessControl',
-			//'postOnly + delete',
+			'accessControl'
 		);
 	}
 
@@ -24,9 +23,9 @@ class GalleryimageController extends Controller
 		);
 	}
 
+    // upload and create
 	public function actionCreate()
 	{
-        //session_id($_GET['PHPSESSID']);
         $id = intval($_GET['id']);
         if (!$id) {
             exit('error 1');
@@ -40,9 +39,18 @@ class GalleryimageController extends Controller
             if (!file_exists($dir)) {
                 mkdir($dir, 0777, true);
             }
-            $upload->saveAs($dir . '/' . $model->id . '.' . $upload->getExtensionName());
-            // todo: 压缩文件
-            $model->file = $id . '/' . $model->id . '.' . $upload->getExtensionName();
+
+            $bigFile   = $dir . '/' . $model->id . '_origin.' . $upload->getExtensionName();
+            $smallFile = $dir . '/' . $model->id . '.' . $upload->getExtensionName();
+
+            $upload->saveAs($bigFile);
+
+            // 压缩文件
+            $image = Yii::app()->image->load($bigFile);
+            $image->resize(Yii::app()->params['uploadMaxWidth'], Yii::app()->params['uploadMaxHeight'])->quality(Yii::app()->params['uploadQuality']);
+            $image->save($smallFile);
+
+            $model->file = $smallFile;
             $model->save();
             echo json_encode([
                     'id'   => $model->id,
@@ -51,26 +59,18 @@ class GalleryimageController extends Controller
         } else {
             exit('error 2');
         }
-        /*
-        $image = Yii::app()->image->load('images/test.jpg');
-        $image->resize(400, 100)->rotate(-45)->quality(75)->sharpen(20);
-        $image->save(); // or $image->save('images/small.jpg');
-
-        Yii::import('application.extensions.image.Image');
-        $image = new Image('images/test.jpg');
-        $image->resize(400, 100)->rotate(-45)->quality(75)->sharpen(20);
-        $image->render();
-        */
 	}
 
+    // ajax delete
 	public function actionDelete($id)
 	{
-		$mode = $this->loadModel($id)->delete();
+		$this->loadModel($id)->delete();
         echo json_encode([
             'id' => $id
         ]);
 	}
 
+    // ajax get image list
 	public function actionIndex()
 	{
         $gallery_id = $_POST['gallery_id'];
