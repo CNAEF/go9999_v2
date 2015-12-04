@@ -9,7 +9,7 @@
 
 账号 admin 密码 123456
 
-请使 uploads 目录 protected/runtime 目录可写入
+请使 uploads 目录 public/protected/runtime public/assets 目录可写入
 
 ## 目录结构说明
 

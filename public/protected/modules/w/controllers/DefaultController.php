@@ -66,7 +66,7 @@ class DefaultController extends WBasedController
 	            //move
 	            foreach ($fileCheckId as $oneFileId => $v) {
 					if (in_array($oneFileId, array('user_photo', 'id_photo', 'edu_photo'))) {
-						$volunteer->{$oneFileId} = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage'] . $oneFileId);
+						$volunteer->{$oneFileId} = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage'] . $oneFileId . '/');
 
 						// 压缩图片
 						$info = pathinfo($volunteer->{$oneFileId});

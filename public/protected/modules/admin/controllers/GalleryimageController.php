@@ -50,7 +50,7 @@ class GalleryimageController extends Controller
             $image->resize(Yii::app()->params['uploadMaxWidth'], Yii::app()->params['uploadMaxHeight'])->quality(Yii::app()->params['uploadQuality']);
             $image->save($smallFile);
 
-            $model->file = $smallFile;
+            $model->file = $model->id . '.' . $upload->getExtensionName();
             $model->save();
             echo json_encode([
                     'id'   => $model->id,
