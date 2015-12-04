@@ -1,16 +1,11 @@
 <?php
 $this->breadcrumbs=array(
 	'相册'=>array('index'),
-	//$model->title=>array('update','id'=>$model->id),
 	'编辑',
 );
 ?>
 <div class="page-header">
-    <h1>
-        编辑相册        <small>
-            <i class="ace-icon fa fa-angle-double-right"></i>
-            #<?php echo $model->id; ?>        </small>
-    </h1>
+    <h1>编辑相册<small><i class="ace-icon fa fa-angle-double-right"></i>#<?php echo $model->id; ?></small></h1>
 </div>
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'gallery-form',
@@ -56,8 +51,6 @@ $this->breadcrumbs=array(
     </div>
 </div>
 <?php $this->endWidget(); ?>
-
-<link type="text/css" rel="stylesheet" href="/assets/swfupload/default.css"/>
 <?php
 $this->widget('application.extensions.swfupload.CSwfUpload', array(
     'jsHandlerUrl'=>'/assets/swfupload/handlers.js', 
@@ -90,100 +83,6 @@ $this->widget('application.extensions.swfupload.CSwfUpload', array(
     )
 );
 ?>
-<style>
-.swfupload{
-    margin-left:0px;
-}
-#gallery{
-    background:#fff;
-    overflow:hidden;
-}
-.gallery-image{
-    float:left;
-    background:#eee;
-    margin:20px 20px 20px 0;
-    width:200px;
-    height:250px;
-    position:relative;
-}
-.image-delete{
-    display:inline-block;
-    padding:5px;
-    background:#eee;
-    color:#000;
-    font-size:16px;
-    text-align:right;
-    position:absolute;
-    top:0;
-    right:0;
-}
-.image-content{
-    width:180px;
-    height:180px;
-    margin:10px;
-}
-.image-content img{
-    width:180px;
-    height:180px;
-}
-.image-caption{
-}
-</style>
 <script>
 var gallery_id = <?php echo $model->id;?>;
-function add_image(id, file) {
-    html = '<div class="gallery-image" id="image-'+id+'" data="'+id+'">';
-    html += '<a class="image-delete fa fa-times"></a>';
-    html += '<div class="image-content">';
-    html += '<img src="/uploads/gallery/'+file+'">';
-    html += '</div>';
-    html += '<div class="image-caption">';
-    html += '</div>';
-    html += '</div>';
-    $('#gallery').append(html);
-}
-function delete_image(id) {
-    $.ajax({
-        method:'POST',
-        url:'/admin/galleryimage/delete',
-        data: {
-            id:id
-        },
-        dataType: 'json',
-        success:function(data){
-            $('#image-'+id).remove();
-        }
-    });
-}
-function load_images() {
-    $.ajax({
-        method:'POST',
-        url:'/admin/galleryimage/index',
-        data: {
-            gallery_id:gallery_id
-        },
-        dataType: 'json',
-        success:function(data){
-            $('#gallery').empty();
-            for(i in data) {
-                add_image(data[i].id, data[i].file);
-            }
-        }
-    });
-}
-$(function(){
-    load_images(); 
-    $(document).on("click",".image-delete",function(){
-        $.ajax({
-            method:'POST',
-            url:'/admin/galleryimage/delete/id/'+$(this).closest('.gallery-image').attr('data'),
-            dataType: 'json',
-            success:function(data){
-                $('#image-'+data.id).fadeOut('slow', function() {
-                    $(this).remove();
-                });
-            }
-        });
-    });
-});
 </script>

@@ -291,3 +291,59 @@ FileProgress.prototype.toggleCancel = function (show, swfuploadInstance) {
 		};
 	}
 };
+
+function add_image(id, file) {
+	html = '<div class="gallery-image" id="image-'+id+'" data="'+id+'">';
+	html += '<a class="image-delete fa fa-times"></a>';
+	html += '<div class="image-content">';
+	html += '<img src="/uploads/gallery/'+file+'">';
+	html += '</div>';
+	html += '<div class="image-caption">';
+	html += '</div>';
+	html += '</div>';
+	$('#gallery').append(html);
+}
+function delete_image(id) {
+	$.ajax({
+		method:'POST',
+		url:'/admin/galleryimage/delete',
+		data: {
+			id:id
+		},
+		dataType: 'json',
+		success:function(data){
+			$('#image-'+id).remove();
+		}
+	});
+}
+function load_images() {
+	$.ajax({
+		method:'POST',
+		url:'/admin/galleryimage/index',
+		data: {
+			gallery_id:gallery_id
+		},
+		dataType: 'json',
+		success:function(data){
+			$('#gallery').empty();
+			for(i in data) {
+				add_image(data[i].id, data[i].file);
+			}
+		}
+	});
+}
+$(function(){
+	load_images();
+	$(document).on("click",".image-delete",function(){
+		$.ajax({
+			method:'POST',
+			url:'/admin/galleryimage/delete/id/'+$(this).closest('.gallery-image').attr('data'),
+			dataType: 'json',
+			success:function(data){
+				$('#image-'+data.id).fadeOut('slow', function() {
+					$(this).remove();
+				});
+			}
+		});
+	});
+});

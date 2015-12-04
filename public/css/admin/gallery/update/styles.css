@@ -97,4 +97,39 @@ a.progressCancel:hover {
 /* -- SWFUpload Object Styles ------------------------------- */
 .swfupload {
 	vertical-align: top;
+	margin-left:0px;
+}
+#gallery{
+	background:#fff;
+	overflow:hidden;
+}
+.gallery-image{
+	float:left;
+	background:#eee;
+	margin:20px 20px 20px 0;
+	width:200px;
+	height:250px;
+	position:relative;
+}
+.image-delete{
+	display:inline-block;
+	padding:5px;
+	background:#eee;
+	color:#000;
+	font-size:16px;
+	text-align:right;
+	position:absolute;
+	top:0;
+	right:0;
+}
+.image-content{
+	width:180px;
+	height:180px;
+	margin:10px;
+}
+.image-content img{
+	width:180px;
+	height:180px;
+}
+.image-caption{
 }
