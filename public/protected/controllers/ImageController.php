@@ -78,8 +78,8 @@ class ImageController extends Controller
 	            
 	            $fileInfo['original'] = 'aa';
 	            $fileInfo['type'] = EEH::uploadFileExt($_FILES[$oneFileId]['type']);
-                $fileInfo['name'] = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathImage'].'news/');
-                $fileInfo['url'] = Yii::app()->baseUrl.'/uploads/'.$fileInfo['name'];
+                $fileInfo['name'] = EEH::moveUploadFile($_FILES[$oneFileId], Yii::app()->params['uploadPathNewsImage']);
+                $fileInfo['url'] = Yii::app()->baseUrl.Yii::app()->params['newsImagePath'].$fileInfo['name'];
                 $fileInfo['size'] = $_FILES[$oneFileId]['size'];
                 $fileInfo['state'] = 'SUCCESS';
             }
