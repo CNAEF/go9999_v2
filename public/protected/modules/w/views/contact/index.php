@@ -11,7 +11,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="ds-thread" data-thread-key="1356619227791884290" data-title="留言墙 - 中国·支教联盟" data-url="http://www.go9999.com/contact"></div>
+        <div class="ds-thread"></div>
         <script type="text/javascript">
             var duoshuoQuery = {short_name : 'go9999'};
             (function (d) {
