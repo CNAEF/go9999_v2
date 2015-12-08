@@ -300,7 +300,7 @@ button.list-group-item-danger.active:focus {
         <a href="http://zhan.renren.com/go9999">人人小站</a>
         <a href="http://page.renren.com/601714744">人人主页</a>
         <a href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a>
-        <a href="#CMD:ADMIN" id="admin-login">管理后台</a>
+        <a href="/admin/default/index" id="admin-login">管理后台</a>
     </div>
     Rebuild by <a href="http://www.soulteary.com">soulteary</a>, inspired by <a href="http://thomaspark.me">Thomas
         Park</a>.<br>
