@@ -105,7 +105,7 @@ class DefaultController extends Controller
 			// validate user input and redirect to the previous page if valid
 			if($model->validate() && $model->login())
 				$this->redirect(
-					Yii::app()->user->returnUrl ? Yii::app()->user->returnUrl : '/admin/default/index'
+					Yii::app()->user->returnUrl ? Yii::app()->user->returnUrl : '/admin'
 				);
 		}
 		// display the login form
