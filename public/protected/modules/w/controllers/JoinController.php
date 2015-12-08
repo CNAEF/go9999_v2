@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController extends WBasedController
+class JoinController extends WBasedController
 {
     /**
      * Index Page, for now just render all static content.

@@ -1,6 +1,6 @@
 <?php
 
-class DefaultController extends WBasedController
+class ProcessController extends WBasedController
 {
     /**
      * Index Page, for now just render all static content.
