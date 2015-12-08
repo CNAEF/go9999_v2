@@ -258,45 +258,12 @@
         <h1 id="our-album">支教掠影</h1>
     </div>
     <ul class="thumbnails">
-        <li class="span4">
-            <a href="#" class="thumbnail">
-                <img style="width: 360px; height: 270px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-1.jpg">
-            </a>
-        </li>
-        <li class="span3">
-            <a href="#" class="thumbnail">
-                <img style="width: 260px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-2.jpg">
-            </a>
-        </li>
-        <li class="span2">
-            <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-3.jpg">
-            </a>
-        </li>
-        <li class="span3">
-            <a href="#" class="thumbnail">
-                <img style="width: 260px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-4.jpg">
-            </a>
-        </li>
-        <li class="span2">
-            <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-5.jpg">
-            </a>
-        </li>
-        <li class="span2">
-            <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-6.jpg">
-            </a>
-        </li>
-        <li class="span2">
-            <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-7.jpg">
-            </a>
-        </li>
-        <li class="span2">
-            <a href="#" class="thumbnail">
-                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-8.jpg">
-            </a>
-        </li>
+        <?php foreach ($images as $oneImage):?>
+            <li class="span2">
+                <a href="#" class="thumbnail">
+                    <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/uploads/gallery/<?php echo CHtml::encode($oneImage->file);?>">
+                </a>
+            </li>
+        <?php endforeach;?>
     </ul>
 </section>

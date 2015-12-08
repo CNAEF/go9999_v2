@@ -13,11 +13,17 @@ class DefaultController extends WBasedController
 	    $criteria = new CDbCriteria();
 	    $criteria->limit = 5;
 	    $criteria->order = 'n_id DESC';
-	    
 	    $news = News::model()->findAll($criteria);
 	    
+	    //load last 20 suggestion images
+	    $criteria = new CDbCriteria();
+	    $criteria->limit = 20;
+	    $criteria->order = 'id DESC';
+	    $criteria->condition = 'is_recommend = 1';
+	    $images = GalleryImage::model()->findAll($criteria);
 	    
-		$this->render('index', array('news'=>$news));
+	    
+		$this->render('index', array('news'=>$news, 'images'=>$images));
 	}
 	
 	/**
