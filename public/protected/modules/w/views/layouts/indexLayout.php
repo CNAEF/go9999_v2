@@ -300,10 +300,12 @@ button.list-group-item-danger.active:focus {
         <a href="http://zhan.renren.com/go9999">人人小站</a>
         <a href="http://page.renren.com/601714744">人人主页</a>
         <a href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a>
-        <a href="/admin/default/index" id="admin-login">管理后台</a>
+        <a href="/admin/default/index" id="admin-login-disabled">管理后台</a>
     </div>
+    <!--
     Rebuild by <a href="http://www.soulteary.com">soulteary</a>, inspired by <a href="http://thomaspark.me">Thomas
         Park</a>.<br>
+        -->
     Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.<br>
     Based on <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>. Hosted on <a href="http://pages.github.com/">GitHub</a>.
     Icons from <a href="http://fortawesome.github.com/Font-Awesome/">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts">Google</a>. Favicon by <a href="https://twitter.com/geraldhiller">Gerald
@@ -312,7 +314,7 @@ button.list-group-item-danger.active:focus {
     <p>Copyright ©2005-2015 Go9999.com All Rights Reserved. 原备案号
         <del style="color: #A8A3A3;">浙ICP备07022599号</del>
         ，现备案号<a href="http://www.miibeian.gov.cn/" target="_blank">浙ICP备12032988号-1</a>
-        </p><div class="logo-container">
+        </p><!--<div class="logo-container">
             <a class="logo-pic" href="http://sae.sina.com.cn" target="_blank" title="中国支教联盟网站正运行在Sina App Engine上。">
                 <img border="0" src="<?php echo Yii::app()->baseUrl;?>/assets/img/sae-support.png?v=20150610">
             </a>
@@ -322,7 +324,7 @@ button.list-group-item-danger.active:focus {
             <a class="logo-pic" href="http://webscan.360.cn/index/checkwebsite/url/www.go9999.com">
                 <img border="0" src="http://img.webscan.360.cn/status/pai/hash/48769dbd5f34f2752487196d0b70a0ea?v=20150610">
             </a>
-        </div>
+        </div>-->
     <p></p>
 </footer>
 </div>
