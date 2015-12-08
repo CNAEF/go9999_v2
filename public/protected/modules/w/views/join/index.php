@@ -10,7 +10,7 @@
                 </blockquote>
             </div>
         </div>
-        <form class="form-horizontal " id="action-form2" action="<?php echo $this->createAbsoluteUrl('default/join');?>" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal " id="action-form2" action="<?php echo $this->createAbsoluteUrl('join/index');?>" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>基本资料</legend>
 				

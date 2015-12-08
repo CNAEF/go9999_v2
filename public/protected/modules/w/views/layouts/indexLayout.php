@@ -253,13 +253,13 @@ button.list-group-item-danger.active:focus {
                         <li><a href="#conditions">志愿者须知</a></li>
                         <li><a href="#our-album">支教掠影</a></li>
                     <?php endif;?>
-                    <li><a href="<?php echo $this->createAbsoluteUrl('default/contact');?>">留言墙</a></li>
+                    <li><a href="/contact">留言墙</a></li>
                     <li><a href="http://bbs.go9999.com" target="_blank" id="our-bbs" style="opacity: 0.506603;">联盟论坛</a></li>
                 </ul>
                 <ul class="nav pull-right" id="main-menu-right">
                     
-                        <li><a rel="tooltip" href="<?php echo $this->createAbsoluteUrl('default/join');?>" title="我要报名参加">我要报名 <i class="icon-tasks"></i></a></li>
-                        <li><a rel="tooltip" href="<?php echo $this->createAbsoluteUrl('default/progress');?>" title="查询报名进度">查询报名进度 <i class="icon-search"></i></a></li>
+                        <li><a rel="tooltip" href="/join" title="我要报名参加">我要报名 <i class="icon-tasks"></i></a></li>
+                        <li><a rel="tooltip" href="/process" title="查询报名进度">查询报名进度 <i class="icon-search"></i></a></li>
                     
                     <li><a rel="tooltip" href="http://bbs.go9999.com/forum.php?mod=forumdisplay&amp;fid=118" title="我要反馈建议" target="_blank">反馈建议 <i class="icon-share-alt"></i></a></li>
                 </ul>

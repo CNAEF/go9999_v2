@@ -247,8 +247,8 @@
         <h1>加入我们</h1>
     </div>
     <p>欢迎有志之士加入联盟大家庭！</p>
-    <p><a class="btn btn-primary btn-large" href="http://www.go9999.com/join/">我要报名参加</a></p>
-    <p><a href="<?php echo $this->createAbsoluteUrl('default/progress');?>">查看申请进度</a></p>
+    <p><a class="btn btn-primary btn-large" href="/join">我要报名参加</a></p>
+    <p><a href="/process">查看申请进度</a></p>
 
     <div class="page-header">
         <h1 id="our-album">支教掠影</h1>
