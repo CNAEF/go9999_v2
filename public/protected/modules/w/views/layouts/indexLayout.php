@@ -243,7 +243,7 @@ button.list-group-item-danger.active:focus {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="<?php echo $this->createAbsoluteUrl('default/index');?>">中国·支教联盟</a>
+            <a class="brand" href="/">中国·支教联盟</a>
 
             <div class="nav-collapse collapse" id="main-menu">
                 <ul class="nav" id="main-menu-left">
