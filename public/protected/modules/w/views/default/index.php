@@ -3,22 +3,20 @@
         <div class="span6">
             <div>
                 <h1>中国·支教联盟</h1>
-                <p class="lead">2016年度支教志愿者招募</p>            
+                <p class="lead">2016年度支教志愿者招募</p>
             </div>
             <div>
-<div class="list-group" style="margin-top: 80px;">
-    <h2>新闻中心</h2>
-    <hr/>
-    <?php foreach ($news as $oneNew):?>
-      <a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>" class="list-group-item">
-        <?php echo CHtml::encode($oneNew->n_title);?>
-      </a>
-    <?php endforeach;?>
-</div>              
+                <div class="list-group">
+                    <?php foreach ($news as $oneNew):?>
+                        <a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>" class="list-group-item">
+                            <?php echo CHtml::encode($oneNew->n_title);?>
+                        </a>
+                    <?php endforeach;?>
+                </div>
             </div>
 
         </div>
-        <div class="span6">     
+        <div class="span6">
             <div class="well" style="padding: 25px 25px 15px 25px;">
                 <a href="http://www.go9999.com" style="display: block;">
                   <span style="float: left; margin: 0 15px 10px 0;display: block;">
@@ -250,20 +248,51 @@
     </div>
     <p>欢迎有志之士加入联盟大家庭！</p>
     <p><a class="btn btn-primary btn-large" href="http://www.go9999.com/join/">我要报名参加</a></p>
-    <!--
     <p><a href="<?php echo $this->createAbsoluteUrl('default/progress');?>">查看申请进度</a></p>
-    -->
 
     <div class="page-header">
         <h1 id="our-album">支教掠影</h1>
     </div>
     <ul class="thumbnails">
-        <?php foreach ($images as $oneImage):?>
-            <li class="span2">
-                <a href="#" class="thumbnail">
-                    <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/uploads/gallery/<?php echo CHtml::encode($oneImage->file);?>">
-                </a>
-            </li>
-        <?php endforeach;?>
+        <li class="span4">
+            <a href="#" class="thumbnail">
+                <img style="width: 360px; height: 270px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-1.jpg">
+            </a>
+        </li>
+        <li class="span3">
+            <a href="#" class="thumbnail">
+                <img style="width: 260px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-2.jpg">
+            </a>
+        </li>
+        <li class="span2">
+            <a href="#" class="thumbnail">
+                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-3.jpg">
+            </a>
+        </li>
+        <li class="span3">
+            <a href="#" class="thumbnail">
+                <img style="width: 260px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-4.jpg">
+            </a>
+        </li>
+        <li class="span2">
+            <a href="#" class="thumbnail">
+                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-5.jpg">
+            </a>
+        </li>
+        <li class="span2">
+            <a href="#" class="thumbnail">
+                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-6.jpg">
+            </a>
+        </li>
+        <li class="span2">
+            <a href="#" class="thumbnail">
+                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-7.jpg">
+            </a>
+        </li>
+        <li class="span2">
+            <a href="#" class="thumbnail">
+                <img style="width: 160px; height: 120px;" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-8.jpg">
+            </a>
+        </li>
     </ul>
 </section>
