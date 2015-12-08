@@ -96,7 +96,7 @@ $this->breadcrumbs=array(
 												<span class="block input-icon input-icon-right">
                                                     <?php echo $form->textField($model,'username', array(
                                                         'class' => 'form-control',
-                                                        'placeholder' => '登陆邮箱'
+                                                        'placeholder' => '登陆账号或邮箱'
                                                     )); ?>
 													<i class="ace-icon fa fa-user"></i>
 												</span>
