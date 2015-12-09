@@ -35,6 +35,15 @@ class DefaultController extends WBasedController
 	}
 	
 	/**
+	 * staff page
+	 */
+	public function actionStaff()
+	{
+	    $departs  = Department::model()->with('staff')->findAllByAttributes(array('d_isShown'=>1));
+		$this->render('staff', array('departs'=>$departs));
+	}
+	
+	/**
 	 * join page
 	 */
 	public function actionJoin()
