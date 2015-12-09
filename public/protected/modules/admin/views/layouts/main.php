@@ -181,6 +181,18 @@
                     <span class="menu-text"> 志愿者 </span>
                 </a>
             </li>
+            <li class="<?php echo $this->id == 'department' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/department');?>"  >
+                    <i class="menu-icon fa fa-users"></i>
+                    <span class="menu-text"> 部门管理 </span>
+                </a>
+            </li>
+            <li class="<?php echo $this->id == 'staff' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/staff');?>"  >
+                    <i class="menu-icon fa fa-users"></i>
+                    <span class="menu-text"> 人员管理 </span>
+                </a>
+            </li>
             <li class="<?php echo $this->id == 'gallery' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/gallery');?>"  >
                     <i class="menu-icon fa fa-picture-o"></i>
