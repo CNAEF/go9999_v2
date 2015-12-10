@@ -177,11 +177,11 @@ $this->breadcrumbs=array(
     </tr>
     <tr>
         <th>预计支教期限</th>
-        <td><?php echo $model->predict_deadline;?></td>
+        <td><?php echo $model->getPredictDeadline();?></td>
     </tr>
     <tr>
         <th>愿意开始支教的时间</th>
-        <td><?php echo $model->begin_date;?></td>
+        <td><?php echo $model->getBeginDate();?></td>
     </tr>
     <tr>
         <th>何处得知本活动</th>

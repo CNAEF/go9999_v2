@@ -263,5 +263,23 @@ class Volunteer extends CActiveRecord
 				return '已拒绝';
 		}
 	}
+
+	public function getPredictDeadline() {
+		switch ($this->predict_deadline) {
+			case '1':
+				return '一学期';
+			case '2':
+				return '一学年';
+		}
+	}
+
+	public function getBeginDate() {
+		switch ($this->begin_date) {
+			case '1':
+				return '秋季';
+			case '2':
+				return '春季';
+		}
+	}
 	
 }
