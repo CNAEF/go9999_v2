@@ -96,7 +96,10 @@ return array(
             // ImageMagick setup path
             //'params'=>array('directory'=>'/opt/local/bin'),
         ),
-
+        'cache' => array (
+            'class' => 'system.caching.CFileCache',
+            'directoryLevel' => 2,
+        ),
     ),
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
