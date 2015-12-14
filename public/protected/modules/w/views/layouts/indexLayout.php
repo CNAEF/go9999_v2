@@ -318,9 +318,11 @@ button.list-group-item-danger.active:focus {
             <a class="logo-pic" href="http://sae.sina.com.cn" target="_blank" title="中国支教联盟网站正运行在Sina App Engine上。">
                 <img border="0" src="<?php echo Yii::app()->baseUrl;?>/assets/img/sae-support.png?v=20150610">
             </a>
+            -->
             <a class="logo-pic" href="http://mos.meituan.com" target="_blank" title="美团云赞助联盟一年运行时间。">
                 <img border="0" src="<?php echo Yii::app()->baseUrl;?>/assets/img/mt-logo.png?v=20150610">
             </a>
+    <!--
             <a class="logo-pic" href="http://webscan.360.cn/index/checkwebsite/url/www.go9999.com">
                 <img border="0" src="http://img.webscan.360.cn/status/pai/hash/48769dbd5f34f2752487196d0b70a0ea?v=20150610">
             </a>
