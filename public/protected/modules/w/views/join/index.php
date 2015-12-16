@@ -35,7 +35,7 @@
 				<div class="control-group">
 					<label class="control-label" for="form_birthday">出生日期</label>
 					<div class="controls">
-						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="">
+						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="20140101"> 格式20140101
 					</div>
 				</div>
 				
