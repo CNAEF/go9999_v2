@@ -1,4 +1,4 @@
-    <section id="page-box-apply">   
+    <section id="page-box-apply">    
         <div class="page-header">
             <h1>志愿者申请表</h1>
         </div>
