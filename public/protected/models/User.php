@@ -1,19 +1,4 @@
 <?php
-
-/**
- * This is the model class for table "t_user".
- *
- * The followings are the available columns in table 't_user':
- * @property integer $id
- * @property string $email
- * @property string $username
- * @property string $nickname
- * @property string $password
- * @property string $last_ip
- * @property integer $is_deleted
- * @property integer $created
- * @property integer $updated
- */
 class User extends CActiveRecord
 {
     public function getDbConnection() {
