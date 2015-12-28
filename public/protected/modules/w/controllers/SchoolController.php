@@ -4,6 +4,7 @@ class SchoolController extends WBasedController
 {
 	public function actionIndex()
 	{
+		$this->bodyId = 'page-school';
 		if(Yii::app()->request->isPostRequest) {
 			$school = new School();
 			$school->attributes = $_POST;

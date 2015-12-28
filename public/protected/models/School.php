@@ -141,7 +141,7 @@ class School extends CActiveRecord
 						'sort'=>array(
                 'defaultOrder'=>'id DESC',
             ),
-					));
+		));
 	}
 
 	/**

@@ -1,11 +1,11 @@
-    <section id="page-box-apply">
+    <section id="page-box-school">
         <div class="page-header">
             <h1>学校申请表</h1>
         </div>
         <div class="row">
             <div class="span12">
                 <blockquote>
-                    <p>请认真如实填写以下表单，以便我们能够更好的了解您-------的意愿。</p>
+                    <p>请认真如实填写以下表单，以便我们能够更好的了解您的意愿。</p>
                     <small>支教联盟管理 <cite title="衷心希望">年小恩</cite></small>
                 </blockquote>
             </div>

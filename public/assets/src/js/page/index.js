@@ -9,7 +9,15 @@
         w.console = {};
         w.console.log = function () {return true;};
     }
-    var suSays = ['至看到这段文字的你：', 'Hi~', '  中国支教联盟网站急缺建设志愿者&维护志愿者，如果你对维护联盟网站感兴趣，即使因为现实的原因你不能投身偏远地区，', '但是你的行为一样可以帮助到所有的有志于支教的人们，如果你心动了，不妨用页面中的联系方式联系我们。', '当然，如果你发现了网站的缺陷或者漏洞，也不妨告知我们。', '                                                                                    @soulteary', '                                                                                    2013/07/20'];
+    var suSays = [
+        '至看到这段文字的你：',
+        'Hi~',
+        '  中国支教联盟网站急缺建设志愿者&维护志愿者，如果你对维护联盟网站感兴趣，即使因为现实的原因你不能投身偏远地区，',
+        '但是你的行为一样可以帮助到所有的有志于支教的人们，如果你心动了，不妨用页面中的联系方式联系我们。',
+        '当然，如果你发现了网站的缺陷或者漏洞，也不妨告知我们。',
+        '                                                                                    @soulteary',
+        '                                                                                    2013/07/20'
+    ];
     for (var i = 0, j = suSays.length; i < j; i++) {
         console.log(suSays[i]);
     }
@@ -88,6 +96,7 @@
             e.preventDefault();
             showWeiXin();
         });
+        /*
         $('#action-form').on('submit', function (e) {
             e.preventDefault();
             var target = $(e.target);
@@ -130,6 +139,7 @@
                 window.location.href = 'http://apply.go9999.com/join/?mode=admin&k=' + ret;
             }
         });
+        */
 
     });
 })(window, document, window.jQuery, 'soulteary 2013/10/30');

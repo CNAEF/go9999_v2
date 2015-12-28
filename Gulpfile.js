@@ -51,8 +51,10 @@ gulp.task('scripts:build', function () {
         .pipe(gulpif(!devMode, replace(/^!f/, sign + '\n!f')))
         .pipe(gulp.dest(config.jsDistDir));
 
-    gulp.src([config.jsSrcDir + 'page/index.js',
-        config.jsSrcDir + 'page/join.js'
+    gulp.src([
+        config.jsSrcDir + 'page/index.js',
+        config.jsSrcDir + 'page/join.js',
+        config.jsSrcDir + 'page/school.js'
     ])
         .pipe(concat('app.min.js'))
         .pipe(gulpif(!devMode, uglyfly()))
