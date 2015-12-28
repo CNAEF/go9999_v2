@@ -8,3 +8,4 @@ public/protected/config/main.php
 public/protected/config/main_l.php
 public/protected/runtime
 .*
+node_modules

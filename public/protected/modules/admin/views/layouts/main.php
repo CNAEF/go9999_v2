@@ -174,11 +174,17 @@
                     <i class="menu-icon fa fa-file-text"></i>
                     <span class="menu-text"> 新闻 </span>
                 </a>
-            </li>            
+            </li>
             <li class="<?php echo $this->id == 'volunteer' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/volunteer');?>"  >
                     <i class="menu-icon fa fa-users"></i>
                     <span class="menu-text"> 志愿者 </span>
+                </a>
+            </li>
+            <li class="<?php echo $this->id == 'volunteer' ? 'active open' : ''; ?>">
+                <a href="<?php echo $this->createUrl('/admin/school');?>"  >
+                    <i class="menu-icon fa fa-home"></i>
+                    <span class="menu-text"> 学校 </span>
                 </a>
             </li>
             <li class="<?php echo $this->id == 'gallery' ? 'active open' : ''; ?>">
