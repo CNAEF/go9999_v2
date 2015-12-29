@@ -193,8 +193,8 @@
                     </div>
                 </div>
 
-                <legend>紧急联系人（直系亲属/家人）</legend>
-				
+                <legend>紧急联系人（直系亲属/家人）会做亲属调查</legend>
+
                 <div class="control-group">
                     <label class="control-label" for="form_family_title">称　　谓</label>
                     <div class="controls">
