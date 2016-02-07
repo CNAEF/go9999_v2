@@ -35,7 +35,7 @@
 				<div class="control-group">
 					<label class="control-label" for="form_birthday">出生日期</label>
 					<div class="controls">
-						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="20140101"> 格式20140101
+						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="20140101"> 格式20140101，志愿者的年龄要求是22~60周岁
 					</div>
 				</div>
 				
@@ -66,7 +66,7 @@
 				<div class="control-group">
 					<label class="control-label" for="form_id_num">身份证号</label>
 					<div class="controls">
-						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder="">
+						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder=""> 非大陆证件请联系我们的行政人员进行报名
 					</div>
 				</div>
 				
