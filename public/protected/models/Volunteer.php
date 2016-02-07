@@ -24,9 +24,10 @@ class Volunteer extends CActiveRecord
 			array('id_num, phone, family_title, family_name, urgent_title, urgent_name', 'length', 'max'=>20),
 			array('id_photo, user_photo, edu_photo, _edu_high_level, edu_university, profession, work, email, qq, cur_province, cur_city, cur_addr, family_contact, family_workplace, urgent_contact, info_from', 'length', 'max'=>100),
 			array('_user_post_addr, family_addr, urgent_workplace', 'length', 'max'=>200),
+			array('reason, remark', 'length', 'max'=>1000),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, sex, birthday, _age, married, hometown_province, hometown_city, id_num, id_photo, user_photo, edu_level, edu_photo, _edu_high_level, edu_university, profession, special, work, work_experience, phone, email, qq, cur_province, cur_city, cur_addr, _user_post_addr, post_code, family_title, family_name, family_contact, family_workplace, family_addr, urgent_title, urgent_name, urgent_contact, urgent_workplace, is_disability, is_experience, predict_deadline, begin_date, cur_status, cur_income, info_from, Q1, Q2, Q3, Q4, _Q1, _Q2, _Q3, _Q4, _Q5, _Q6, _Q7, _Q8, _Q9, _Q10, _Q11, user_status, verify_admin_id, verify_time, verify_status, time', 'safe', 'on'=>'search'),
+			array('id, name, sex, birthday, _age, married, hometown_province, hometown_city, id_num, id_photo, user_photo, edu_level, edu_photo, _edu_high_level, edu_university, profession, special, work, work_experience, phone, email, qq, cur_province, cur_city, cur_addr, _user_post_addr, post_code, family_title, family_name, family_contact, family_workplace, family_addr, urgent_title, urgent_name, urgent_contact, urgent_workplace, is_disability, is_experience, predict_deadline, begin_date, cur_status, cur_income, info_from, Q1, Q2, Q3, Q4, _Q1, _Q2, _Q3, _Q4, _Q5, _Q6, _Q7, _Q8, _Q9, _Q10, _Q11, user_status, remark, reason,verify_admin_id, verify_time, verify_status, time', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -107,6 +108,8 @@ class Volunteer extends CActiveRecord
 			'_Q10' 				=> 'Q10',
 			'_Q11' 				=> 'Q11',
 			'user_status' 		=> '旧版用户状态',
+			'reason' 			=> '拒绝原因',
+			'remark' 			=> '备注',
 			'verify_admin_id' 	=> '审核人',
 			'verify_time' 		=> '审核时间',
 			'verify_status' 	=> '审核状态',

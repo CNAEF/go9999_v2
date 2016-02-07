@@ -26,6 +26,9 @@ class ProcessController extends WBasedController
 	        if ($oneV->verify_status == 3) {
 	            $oneV->verifyStatusText = '未通过';
 	            $oneV->verifyStatusMessage = '抱歉，您的申请没有通过我们的审核';
+				if ($oneV->reason) {
+					$oneV->verifyStatusMessage .= '，原因：' . $oneV->reason;
+				}
 	        }
 	    }
 	    

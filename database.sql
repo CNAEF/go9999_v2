@@ -197,3 +197,8 @@ ALTER TABLE `t_gallery`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `t_gallery_image`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE `t_gallery_image` ADD `title` VARCHAR(200) NULL AFTER `gallery_id`;
+
+
+ALTER TABLE `t_volunteer` ADD `remark` TEXT NULL COMMENT '备注，仅管理员可见' AFTER `verify_status`, ADD `reason` TEXT NULL COMMENT '拒绝原因，用户可见' AFTER `remark`;

@@ -313,60 +313,85 @@ $this->breadcrumbs=array(
     <?php } ?>
 </table>
 
-<?php if ($model->verify_status == 1) { ?>
-    <?php $form=$this->beginWidget('CActiveForm', array(
-        'id'=>'volunteer-form',
-        'enableAjaxValidation'=>false,
-        'htmlOptions' => array('class' => 'form-horizontal')
-    )); ?>
-    <?php echo $form->hiddenField($model,'verify_admin_id',array('class' => 'col-xs-10', 'value' => Yii::app()->user->getId())); ?>
-    <?php echo $form->hiddenField($model,'verify_time',array('class' => 'col-xs-10', 'value' => date('Y-m-d H:i:s'))); ?>
-    <?php echo $form->hiddenField($model,'verify_status',array('class' => 'col-xs-10')); ?>
-    <!--
-    <div class="row">
-        <div class="col-xs-12">
-            <div class="form-group">
-                <?php //echo $form->labelEx($model,'reaaon', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-                <div class="col-sm-9">
-                    <?php //echo $form->textField($model,'reaaon',array('size'=>60,'maxlength'=>100,'class' => 'col-xs-10 col-sm-10')); ?>
-                </div>
-            </div>
+
+
+<h2>审核信息</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>审核状态</th>
+        <td><?php echo $model->getVerifyStatus();?></td>
+    </tr>
+    <tr>
+        <th>审核人</th>
+        <td><?php echo $model->admin->username;?></td>
+    </tr>
+    <tr>
+        <th>审核时间</th>
+        <td><?php echo $model->verify_time;?></td>
+    </tr>
+</table>
+<?php $form=$this->beginWidget('CActiveForm', array(
+    'id'=>'volunteer-form',
+    'enableAjaxValidation'=>false,
+    'htmlOptions' => array('class' => 'form-horizontal')
+)); ?>
+<?php echo $form->hiddenField($model,'verify_admin_id',array('class' => 'col-xs-10', 'value' => Yii::app()->user->getId())); ?>
+<?php echo $form->hiddenField($model,'verify_time',array('class' => 'col-xs-10', 'value' => date('Y-m-d H:i:s'))); ?>
+<?php echo $form->hiddenField($model,'verify_status',array('class' => 'col-xs-10')); ?>
+<!--
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <?php echo $form->labelEx($model,'remark', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
+            <div class="col-sm-9">
+                <?php echo $form->textArea($model,'remark',array('class' => 'col-xs-10 col-sm-10')); ?>
             </div>
         </div>
     </div>
-    -->
-    <div class="clearfix form-actions row">
-        <div class="col-md-6">
-            <button class="btn btn-success" type="button">
-                <i class="ace-icon fa fa-check bigger-110"></i>
-                审核通过
-            </button>
-        </div>
-        <div class="col-md-6 text-right">
-            <button class="btn btn-danger" type="button">
-                <i class="ace-icon glyphicon glyphicon-remove bigger-110"></i>
-                审核拒绝
-            </button>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="form-group">
+            <?php echo $form->labelEx($model,'reason', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
+            <div class="col-sm-9">
+                <?php echo $form->textArea($model,'reason',array('class' => 'col-xs-10 col-sm-10')); ?>
+            </div>
         </div>
     </div>
-    <?php $this->endWidget(); ?>
-<?php } else { ?>
-    <h2>审核信息</h2>
-    <table class="table table-bordered">
-        <tr>
-            <th>审核状态</th>
-            <td><?php echo $model->getVerifyStatus();?></td>
-        </tr>
-        <tr>
-            <th>审核人</th>
-            <td><?php echo $model->admin->username;?></td>
-        </tr>
-        <tr>
-            <th>审核时间</th>
-            <td><?php echo $model->verify_time;?></td>
-        </tr>
-    </table>
-<?php } ?>
+</div>
+-->
+<h2><?php echo $form->labelEx($model,'remark', array('class'=>'')); ?> <span style="font-size:10px;" class="red">仅管理员可见</span></h2>
+<div class="row">
+    <div class="col-xs-12">
+        <?php echo $form->textArea($model,'remark',array('class' => 'col-xs-12')); ?>
+    </div>
+</div>
+
+
+<h2><?php echo $form->labelEx($model,'reason', array('class'=>'')); ?> <span style="font-size:10px;" class="red">志愿者可见</span></h2>
+<div class="row">
+    <div class="col-xs-12">
+        <?php echo $form->textArea($model,'reason',array('class' => 'col-xs-12')); ?>
+    </div>
+</div>
+
+
+
+<div class="clearfix form-actions row">
+    <div class="col-md-6">
+        <button class="btn btn-success" type="button">
+            <i class="ace-icon fa fa-check bigger-110"></i>
+            审核通过
+        </button>
+    </div>
+    <div class="col-md-6 text-right">
+        <button class="btn btn-danger" type="button">
+            <i class="ace-icon glyphicon glyphicon-remove bigger-110"></i>
+            审核拒绝
+        </button>
+    </div>
+</div>
+<?php $this->endWidget(); ?>
 
 
 
