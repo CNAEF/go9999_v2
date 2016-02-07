@@ -66,7 +66,7 @@ function uploadSuccess(file, serverData) {
     //console.log(serverData);
     //console.log(serverData);
     obj = JSON.parse(serverData);
-    add_image(obj.id,obj.file);
+    add_image(obj.id, obj.file, '');
 	try {
 		var progress = new FileProgress(file,  this.customSettings.upload_target);
 
@@ -292,13 +292,14 @@ FileProgress.prototype.toggleCancel = function (show, swfuploadInstance) {
 	}
 };
 
-function add_image(id, file) {
+function add_image(id, file, title) {
 	html = '<div class="gallery-image" id="image-'+id+'" data="'+id+'">';
 	html += '<a class="image-delete fa fa-times"></a>';
 	html += '<div class="image-content">';
 	html += '<img src="/uploads/gallery/'+file+'">';
 	html += '</div>';
 	html += '<div class="image-caption">';
+    html += '<textarea>'+title+'</textarea>';
 	html += '</div>';
 	html += '</div>';
 	$('#gallery').append(html);
@@ -327,7 +328,7 @@ function load_images() {
 		success:function(data){
 			$('#gallery').empty();
 			for(i in data) {
-				add_image(data[i].id, data[i].file);
+				add_image(data[i].id, data[i].file, data[i].title);
 			}
 		}
 	});
@@ -346,4 +347,15 @@ $(function(){
 			}
 		});
 	});
+    $(document).on("blur",".image-caption textarea",function(){
+        var id = $(this).closest('.gallery-image').attr('data');
+        var title = $(this).val();
+		$.ajax({
+			method:'GET',
+			url:'/admin/galleryimage/title?id='+id+'&title='+title,
+			dataType: 'json',
+			success:function(data){
+			}
+		});
+    });
 });

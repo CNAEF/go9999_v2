@@ -14,7 +14,7 @@ class GalleryimageController extends Controller
 	{
 		return array(
 			array('allow', 
-				'actions'=>array('index','create','delete'),
+				'actions'=>array('index','create','delete','title'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -22,6 +22,22 @@ class GalleryimageController extends Controller
 			),
 		);
 	}
+
+    public function actionTitle()
+    {
+        $id = intval($_GET['id']);
+        $title = $_GET['title'];
+        if (!$id) {
+            exit('error 1');
+        }
+        $image = $this->loadModel($id);
+        $image->title = $title;
+        if($image->save()) {
+            // success
+        } else {
+            // failed
+        }
+    }
 
     // upload and create
 	public function actionCreate()
@@ -85,6 +101,7 @@ class GalleryimageController extends Controller
                 $data[] = [
                     'id'   => $v->id,
                     'file' => $v->file,
+                    'title' => $v->title ? $v->title : '',
                 ];
             }
         }
