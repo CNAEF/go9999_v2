@@ -133,3 +133,8 @@ a.progressCancel:hover {
 }
 .image-caption{
 }
+.image-caption textarea {
+    width:180px;
+    height:40px;
+    margin-left:10px;
+}

@@ -20,9 +20,10 @@ class GalleryImage extends CActiveRecord
 			array('gallery_id', 'required'),
 			array('gallery_id, sort_order, is_recommend, created_at, updated_at', 'numerical', 'integerOnly'=>true),
 			array('file', 'length', 'max'=>200),
+			array('title', 'length', 'max'=>200),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, gallery_id, file, sort_order, is_recommend, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('id, gallery_id, title, file, sort_order, is_recommend, created_at, updated_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -45,6 +46,7 @@ class GalleryImage extends CActiveRecord
 		return array(
 			'id' => 'ID',
 			'gallery_id' => '所属相册ID',
+			'title' => '标题',
 			'file' => '上传文件路径',
 			'sort_order' => '显示顺序',
 			'is_recommend' => '首页推荐',
@@ -73,6 +75,7 @@ class GalleryImage extends CActiveRecord
 
 		$criteria->compare('id',$this->id,true);
 		$criteria->compare('gallery_id',$this->gallery_id);
+		$criteria->compare('title',$this->title);
 		$criteria->compare('file',$this->file,true);
 		$criteria->compare('sort_order',$this->sort_order);
 		$criteria->compare('is_recommend',$this->is_recommend);
