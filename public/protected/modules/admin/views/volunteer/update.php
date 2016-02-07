@@ -323,7 +323,7 @@ $this->breadcrumbs=array(
     </tr>
     <tr>
         <th>审核人</th>
-        <td><?php echo $model->admin->username;?></td>
+        <td><?php echo $model->admin ? $model->admin->username : '';?></td>
     </tr>
     <tr>
         <th>审核时间</th>
