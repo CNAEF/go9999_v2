@@ -1,6 +1,13 @@
+<<<<<<< HEAD:public/protected/modules/w/views/join/index.php
     <section id="page-box-apply">    
+=======
+<div class="container" id="eeJoin">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <section id="page-box-apply">
+>>>>>>> leeDev:public/protected/modules/w/views/default/join.php
         <div class="page-header">
-            <h1>志愿者申请表</h1>
+            <h2>志愿者申请表<small>Volunteer Join</small></h2>
         </div>
         <div class="row">
             <div class="span12">
@@ -35,7 +42,12 @@
 				<div class="control-group">
 					<label class="control-label" for="form_birthday">出生日期</label>
 					<div class="controls">
+<<<<<<< HEAD:public/protected/modules/w/views/join/index.php
 						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="20140101"> 格式20140101，志愿者的年龄要求是22~60周岁
+=======
+						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="">
+						 格式20140101，志愿者的年龄要求是22~60周岁
+>>>>>>> leeDev:public/protected/modules/w/views/default/join.php
 					</div>
 				</div>
 				
@@ -66,7 +78,11 @@
 				<div class="control-group">
 					<label class="control-label" for="form_id_num">身份证号</label>
 					<div class="controls">
+<<<<<<< HEAD:public/protected/modules/w/views/join/index.php
 						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder=""> 非大陆证件请联系我们的行政人员进行报名
+=======
+						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder="">非大陆证件请联系我们的行政人员进行报名
+>>>>>>> leeDev:public/protected/modules/w/views/default/join.php
 					</div>
 				</div>
 				
@@ -376,3 +392,7 @@
 			</blockquote>
 		</div>
 	</section>
+	
+</div>
+</div>
+</div>

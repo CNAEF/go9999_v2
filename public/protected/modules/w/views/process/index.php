@@ -1,8 +1,11 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <section id="page-box-apply">
         <div class="page-header">
-            <h1>志愿者申请进度</h1>
+            <h2>志愿者申请进度<small>Progress</small></h2>
         </div>
-        <table class="table">
+        <table class="table" id="eeProgress">
             <thead>
                 <tr>
                     <th>姓名</th>
@@ -25,3 +28,6 @@
             </tbody>
         </table>
     </section>
+    </div>
+    </div>
+    </div>

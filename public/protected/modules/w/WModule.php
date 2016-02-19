@@ -18,7 +18,7 @@ class WModule extends CWebModule
 	{
 		if(parent::beforeControllerAction($controller, $action))
 		{
-		    $controller->layout = '/layouts/indexLayout';
+		    $controller->layout = '/layouts/layout2016';
 			// this method is called before any module controller action is performed
 			// you may place customized code here
 			return true;

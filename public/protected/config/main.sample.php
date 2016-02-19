@@ -108,6 +108,7 @@ return array(
         'uploadPath'      => dirname(__FILE__).'/../../uploads/', //basic upload path
         'uploadPathImage' => dirname(__FILE__).'/../../uploads/', //basic image upload path
         'uploadPathNewsImage' => dirname(__FILE__).'/../../uploads/news/', //path for upload image to news folder
+        'uploadPathStaffImage' => dirname(__FILE__).'/../../uploads/staff_photo/', //path for upload image to news folder
         'newsImagePath' => '/uploads/news/',//path in url
 
         'uploadMaxWidth'  => 1000, // 图片压缩尺寸

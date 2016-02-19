@@ -1,12 +1,12 @@
 <?php
-class Gallery extends CActiveRecord
+class Department extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return '{{gallery}}';
+		return '{{department}}';
 	}
 
 	/**
@@ -17,14 +17,13 @@ class Gallery extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title', 'required'),
-			array('user_id, viewed, verify_status, created_at, updated_at', 'numerical', 'integerOnly'=>true),
-			array('title', 'length', 'max'=>200),
-			array('author', 'length', 'max'=>100),
-			array('content', 'safe'),
+			array('d_title', 'required'),
+			array('d_title', 'length', 'max'=>45),
+			array('d_desc', 'length', 'max'=>500),
+			array('d_isShown', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, title, content, author, user_id, viewed, verify_status, created_at, updated_at', 'safe', 'on'=>'search'),
+			array('d_id, d_title, d_desc, d_creationDate, d_creationUser_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -36,8 +35,7 @@ class Gallery extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'admin' => array(self::BELONGS_TO, 'User', 'user_id'),
-			'galleryImages' => array(self::HAS_MANY, 'GalleryImage', 'gallery_id'),
+			'staff' => array(self::HAS_MANY, 'Staff', 's_department_id'),
 		);
 	}
 
@@ -47,15 +45,12 @@ class Gallery extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'title' => '相册标题',
-			'content' => '简要说明',
-			'author' => '照片来源',
-			'user_id' => '审核／创建人',
-			'viewed' => '查看人数',
-			'verify_status' => '审核状态',
-			'created_at' => '创建时间',
-			'updated_at' => '更新时间',
+			'd_id' => 'D',
+			'd_title' => '名称',
+			'd_desc' => '描述',
+			'd_isShown' => '是否显示',
+			'd_creationDate' => '添加时间',
+			'd_creationUser_id' => '添加用户',
 		);
 	}
 
@@ -77,20 +72,16 @@ class Gallery extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('title',$this->title,true);
-		$criteria->compare('content',$this->content,true);
-		$criteria->compare('author',$this->author,true);
-		$criteria->compare('user_id',$this->user_id);
-		$criteria->compare('viewed',$this->viewed);
-		$criteria->compare('verify_status',$this->verify_status);
-		$criteria->compare('created_at',$this->created_at);
-		$criteria->compare('updated_at',$this->updated_at);
+		$criteria->compare('d_id',$this->d_id,true);
+		$criteria->compare('d_title',$this->d_title,true);
+		$criteria->compare('d_desc',$this->d_desc,true);
+		$criteria->compare('d_creationDate',$this->d_creationDate,true);
+		$criteria->compare('d_creationUser_id',$this->d_creationUser_id,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 						'sort'=>array(
-                'defaultOrder'=>'id DESC',
+                'defaultOrder'=>'d_id DESC',
             ),
 					));
 	}
@@ -99,20 +90,46 @@ class Gallery extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Gallery the static model class
+	 * @return Department the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
 	}
-
-	// 自动更新时间
-	public function beforeSave()
-	{
-		$this->updated_at = time();
-		if ($this->isNewRecord)
-			$this->created_at = time();
-		return true;
+	
+	/**
+	 * auto save creationUser_id and creationDate
+	 */
+	public function beforeSave(){
+	    if (parent::beforeSave()) {
+	         
+	        if ($this->isNewRecord) {
+	            $this->d_creationUser_id = Yii::app()->user->id;
+	            $this->d_creationDate = EED::f();
+	        }
+	         
+	        return true;
+	    }else{
+	        return false;
+	    }
+	}
+	
+	/**
+	 * load department list, can use shownControl to filter data
+	 * @param string $shownControl // all - all department, 0 - not show department, 1 - show department
+	 */
+	public static function loadDepartmentList($shownControl = 'all') {
+	    $criteria = new CDbCriteria();
+	    
+	    if ($shownControl != 'all') {
+	        $criteria->addCondition(' d_isShown = :showControl ');
+	        $criteria->params[':showControl'] = (int)$shownControl;
+	    }
+	    
+	    $departs = self::model()->findAll($criteria);
+	    
+	    return CHtml::listData($departs, 'd_id', 'd_title');
+	    
 	}
 	
 }

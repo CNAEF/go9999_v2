@@ -198,7 +198,61 @@ ALTER TABLE `t_gallery`
 ALTER TABLE `t_gallery_image`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
+
 ALTER TABLE `t_gallery_image` ADD `title` VARCHAR(200) NULL AFTER `gallery_id`;
 
 
 ALTER TABLE `t_volunteer` ADD `remark` TEXT NULL COMMENT '备注，仅管理员可见' AFTER `verify_status`, ADD `reason` TEXT NULL COMMENT '拒绝原因，用户可见' AFTER `remark`;
+
+
+-- #new table for staff page#
+CREATE TABLE IF NOT EXISTS `t_department` (
+  `d_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `d_title` VARCHAR(45) NOT NULL COMMENT 'Department Name.',
+  `d_desc` VARCHAR(500) NULL DEFAULT NULL,
+  `d_creationDate` DATETIME NULL DEFAULT NULL,
+  `d_creationUser_id` INT(10) UNSIGNED NULL DEFAULT NULL,
+  PRIMARY KEY (`d_id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS `t_staff` (
+  `s_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `s_user_id` INT(11) NULL DEFAULT NULL COMMENT 'the link between user and staff',
+  `s_department_id` INT(10) UNSIGNED NULL DEFAULT NULL,
+  `s_name` VARCHAR(45) NULL DEFAULT NULL,
+  `s_avatar` VARCHAR(2500) NULL DEFAULT NULL,
+  `s_duty` VARCHAR(45) NULL DEFAULT NULL,
+  `s_location` VARCHAR(500) NULL DEFAULT NULL,
+  `s_tel` VARCHAR(45) NULL DEFAULT NULL,
+  `s_desc` VARCHAR(5000) NULL DEFAULT NULL,
+  `s_creationDate` DATETIME NULL DEFAULT NULL,
+  `s_creationUser_id` INT(10) UNSIGNED NULL DEFAULT NULL,
+  PRIMARY KEY (`s_id`),
+  INDEX `sUser_idx` (`s_user_id` ASC),
+  INDEX `sDepartment_idx` (`s_department_id` ASC),
+  CONSTRAINT `sUser`
+    FOREIGN KEY (`s_user_id`)
+    REFERENCES `lm950`.`t_user` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `sDepartment`
+    FOREIGN KEY (`s_department_id`)
+    REFERENCES `lm950`.`t_department` (`d_id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8
+COLLATE = utf8_unicode_ci;  
+
+
+ALTER TABLE `t_department` 
+ADD UNIQUE INDEX `d_title_UNIQUE` (`d_title` ASC);
+ADD COLUMN `d_isShown` TINYINT(3) NULL DEFAULT 0 COMMENT 'display control, if 0 do not display this department on page.' AFTER `d_creationUser_id`;
+
+ALTER TABLE `t_news` 
+CHANGE COLUMN `n_content` `n_content` VARCHAR(21510) NULL DEFAULT NULL 
+ALTER TABLE `t_news` 
+ADD COLUMN `n_shortDesc` VARCHAR(45) NULL DEFAULT NULL AFTER `n_title`
+
