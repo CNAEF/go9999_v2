@@ -245,3 +245,8 @@ COLLATE = utf8_unicode_ci;
 ALTER TABLE `t_department` 
 ADD UNIQUE INDEX `d_title_UNIQUE` (`d_title` ASC);
 ADD COLUMN `d_isShown` TINYINT(3) NULL DEFAULT 0 COMMENT 'display control, if 0 do not display this department on page.' AFTER `d_creationUser_id`;
+
+ALTER TABLE `t_news` 
+CHANGE COLUMN `n_content` `n_content` VARCHAR(21510) NULL DEFAULT NULL 
+ALTER TABLE `t_news` 
+ADD COLUMN `n_shortDesc` VARCHAR(45) NULL DEFAULT NULL AFTER `n_title`

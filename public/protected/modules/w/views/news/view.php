@@ -1,3 +1,6 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <section id="page-box-contact">
     <div class="page-header">
         <h1><?php echo CHtml::encode($news->n_title);?></h1>
@@ -9,3 +12,6 @@
         </div>
     </div>
 </section>
+</div>
+</div>
+</div>

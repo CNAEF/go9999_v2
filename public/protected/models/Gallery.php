@@ -37,6 +37,7 @@ class Gallery extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'admin' => array(self::BELONGS_TO, 'User', 'user_id'),
+			'galleryImages' => array(self::HAS_MANY, 'GalleryImage', 'gallery_id'),
 		);
 	}
 

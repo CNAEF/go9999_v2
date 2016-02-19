@@ -1,6 +1,9 @@
-    <section id="page-box-apply">
+<div class="container" id="eeJoin">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <section id="page-box-apply">
         <div class="page-header">
-            <h1>志愿者申请表</h1>
+            <h2>志愿者申请表<small>Volunteer Join</small></h2>
         </div>
         <div class="row">
             <div class="span12">
@@ -36,6 +39,7 @@
 					<label class="control-label" for="form_birthday">出生日期</label>
 					<div class="controls">
 						<input type="text" class="input-xlarge required" name="birthday" id="form_birthday" placeholder="">
+						 格式20140101，志愿者的年龄要求是22~60周岁
 					</div>
 				</div>
 				
@@ -66,7 +70,7 @@
 				<div class="control-group">
 					<label class="control-label" for="form_id_num">身份证号</label>
 					<div class="controls">
-						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder="">
+						<input name="id_num" class="input-xlarge required" id="form_id_num" type="text" placeholder="">非大陆证件请联系我们的行政人员进行报名
 					</div>
 				</div>
 				
@@ -376,3 +380,7 @@
 			</blockquote>
 		</div>
 	</section>
+	
+</div>
+</div>
+</div>

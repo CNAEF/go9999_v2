@@ -15,9 +15,9 @@ class DefaultController extends WBasedController
 	    $criteria->order = 'n_id DESC';
 	    $news = News::model()->findAll($criteria);
 	    
-	    //load last 20 suggestion images
+	    //load last 9 suggestion images
 	    $criteria = new CDbCriteria();
-	    $criteria->limit = 20;
+	    $criteria->limit = 9;
 	    $criteria->order = 'id DESC';
 	    $criteria->condition = 'is_recommend = 1';
 	    $images = GalleryImage::model()->findAll($criteria);
@@ -41,6 +41,14 @@ class DefaultController extends WBasedController
 	{
 	    $departs  = Department::model()->with('staff')->findAllByAttributes(array('d_isShown'=>1));
 		$this->render('staff', array('departs'=>$departs));
+	}
+	
+	/**
+	 * about page
+	 */
+	public function actionAbout()
+	{
+		$this->render('about');
 	}
 	
 	/**
