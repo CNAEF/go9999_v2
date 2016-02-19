@@ -338,28 +338,7 @@ $this->breadcrumbs=array(
 <?php echo $form->hiddenField($model,'verify_admin_id',array('class' => 'col-xs-10', 'value' => Yii::app()->user->getId())); ?>
 <?php echo $form->hiddenField($model,'verify_time',array('class' => 'col-xs-10', 'value' => date('Y-m-d H:i:s'))); ?>
 <?php echo $form->hiddenField($model,'verify_status',array('class' => 'col-xs-10')); ?>
-<!--
-<div class="row">
-    <div class="col-xs-12">
-        <div class="form-group">
-            <?php echo $form->labelEx($model,'remark', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textArea($model,'remark',array('class' => 'col-xs-10 col-sm-10')); ?>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-xs-12">
-        <div class="form-group">
-            <?php echo $form->labelEx($model,'reason', array('class'=>'col-sm-3 control-label no-padding-right')); ?>
-            <div class="col-sm-9">
-                <?php echo $form->textArea($model,'reason',array('class' => 'col-xs-10 col-sm-10')); ?>
-            </div>
-        </div>
-    </div>
-</div>
--->
+
 <h2><?php echo $form->labelEx($model,'remark', array('class'=>'')); ?> <span style="font-size:10px;" class="red">仅管理员可见</span></h2>
 <div class="row">
     <div class="col-xs-12">
@@ -374,8 +353,6 @@ $this->breadcrumbs=array(
         <?php echo $form->textArea($model,'reason',array('class' => 'col-xs-12')); ?>
     </div>
 </div>
-
-
 
 <div class="clearfix form-actions row">
     <div class="col-md-6">
