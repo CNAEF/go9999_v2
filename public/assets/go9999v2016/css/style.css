@@ -1,5 +1,5 @@
 body {
-  font: 18px "微软雅黑", Arial;
+  font: 14px "微软雅黑", Arial;
 }
 h2 {
   margin: 50px 0 20px 0;
@@ -28,6 +28,7 @@ a:hover {
 }
 .f_header {
   border-top: 5px solid #eb5255;
+  background: #f7f7f7;
 }
 .f_header h1 {
   margin: 0;
@@ -45,7 +46,7 @@ a:hover {
 }
 .f_header .nav_btn {
   float: right;
-  padding-top: 40px;
+  padding-top: 54px;
 }
 .f_header .nav_btn .btn {
   line-height: 40px;
@@ -122,8 +123,13 @@ a:hover {
 }
 .m_map {
   text-align: center;
-  height: 370px;
-  background: url("../img/map.gif") no-repeat center top;
+  height: 450px;
+  background: url("../img/map.jpg") no-repeat center top;
+
+  /*
+  width: 1140px;
+  margin: auto;
+  */
 }
 .f_picture img {
   margin-bottom: 20px;
@@ -179,25 +185,30 @@ a:hover {
 
 
 /* for old join page copy from 9999v0 version  */
+/*
 #eeJoin{
 	font-size: 14px;
 }
+*/
 
+/*
 #eeJoin .error{
 	margin-top: 2px;
 	color: red;
 	display: block;
 }
+*/
 
 /* for join progress page */
+/*
 #eeProgress{
 	font-size: 14px;
 }
-
+*/
 
 @media (min-width: 768px) {
   .f_header .nav {
-    margin-top: 34px;
+    /*margin-top: 34px;*/
   }
   .f_header .nav_btn .btn {
     line-height: 2em;
@@ -207,9 +218,58 @@ a:hover {
   .f_picture img {
     margin-bottom: 30px;
   }
+  .f_picture .gallery-box-1{
+
+  }
+  .f_picture .gallery-box-1-inner{
+    height:360px;
+    overflow:hidden;
+
+    position:relative;
+  }
+  .f_picture .gallery-box-1 img{
+    max-width:none;
+    max-height:100%;
+
+    position:absolute;
+    left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+  }
+
+  .f_picture .gallery-box-2{
+    padding-bottom:30px;
+  }
+  .f_picture .gallery-box-2-inner{
+    height:165px;
+    overflow:hidden;
+
+    position:relative;
+
+    padding:0;
+    margin:0;
+  }
+  .f_picture .gallery-box-2 img{
+    max-width:none;
+    max-height:100%;
+
+    position:absolute;
+    left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+  }
+
+  .m_map {
+    width: 1140px;
+    margin: auto;
+  }
+
+  .qr .img-responsive {
+    display:inline;
+  }
 }
 @media (max-width: 768px) {
-  .f_banner .m_banner .banner_main {
+  .f_banner .m_banner .banner_main .map{
     position: initial;
     width: auto;
     margin: 0 auto;

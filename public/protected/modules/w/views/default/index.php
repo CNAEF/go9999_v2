@@ -1,7 +1,9 @@
     <div class="f_banner">
       <div class="m_banner">
         <div class="banner_main">
+          <!--
           <p>2016年度支教志愿者招募</p>
+          -->
         </div>
       </div>
     </div>
@@ -25,12 +27,27 @@
               </div>
               <div class="news_main">
                 <ul class="notice_main">
+                    <?php if ($news) { ?>
                     <?php foreach ($news as $oneNew):?>                      
                       <li>
                         <h5><a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>"><?php echo CHtml::encode($oneNew->n_title);?><small>- <?php $oneNew->n_creationDate;?></small></a></h5>
                         <p><a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>"><?php echo CHtml::encode(substr($oneNew->n_shortDesc,0,  45));?>...</a></p>
                       </li>                      
-                    <?php endforeach;?>                
+                    <?php endforeach;?>
+                    <?php } else { ?>
+                        <li>
+                            <h5><a href="#">自愿支持农村中小学教育的社会各界爱心人士<small>- 3天前</small></a></h5>
+                            <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                        </li>
+                        <li>
+                            <h5><a href="#">不再有人因为闭塞而绝望<small>- 3个月前</small></a></h5>
+                            <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                        </li>
+                        <li>
+                            <h5><a href="#">不再有人因为贫穷而失学<small>- 3天前</small></a></h5>
+                            <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                        </li>
+                    <?php } ?>
                 </ul>
                 <ul class="log_main">
                   <li>
@@ -52,6 +69,7 @@
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <div class="m_weibo">
               <h2>新浪微博<small>Sina Weibo</small></h2>
+              <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1771918357&verifier=d5b79a5b&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd&dpc=1"></iframe>
             </div>
           </div>
         </div>
@@ -72,7 +90,8 @@
       <div class="container">
         <h2>支教掠影<small>Volunteer picture</small></h2>
         <div class="row">
-        <?php 
+            <?php if ($images) { ?>
+        <?php
             $imgRound = 1;
             foreach ($images as $key=>$oneImage):?>
                 <?php if ($key == 0):?>
@@ -97,7 +116,66 @@
                         
                 <?php endif;?>
         <?php endforeach;?>
-                </div>          
+                </div>
+            <?php } else { ?>
+
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="row">
+                        <div class="gallery-box-1 col-lg-12 col-md-12 col-xs-12">
+                            <div class="gallery-box-1-inner">
+                                <img style="" src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-1.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="row">
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-2.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-3.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-4.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-5.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-6.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-7.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-8.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                        <div class="gallery-box-2 col-lg-3 col-md-3 col-sm-3 col-xs-6">
+                            <div class="gallery-box-2-inner">
+                                <img src="<?php echo Yii::app()->baseUrl;?>/assets/img/pic-9.jpg" alt="picture" title="picture" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
         </div>
       </div>
     </div>

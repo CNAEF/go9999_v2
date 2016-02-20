@@ -2,10 +2,15 @@
 
 class JoinController extends WBasedController
 {
+	public function actionIndex()
+	{
+		$this->render('program');
+	}
+
     /**
      * Index Page, for now just render all static content.
      */
-	public function actionIndex()
+	public function actionApply()
 	{
 	    $this->bodyId = 'page-join';
 	    
@@ -88,6 +93,6 @@ class JoinController extends WBasedController
             exit;
 	    }
 	    
-		$this->render('index');
+		$this->render('apply');
 	}
 }
