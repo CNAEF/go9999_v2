@@ -31,17 +31,29 @@ a:hover {
 }
 .f_header {
     border-top: 5px solid #eb5255;
-    background: #f7f7f7;
+    position: relative;
+    height: 450px;
+    background: url("../img/banner_5.jpg") center top;
 }
+
+.f_header .f_nav_box{
+    background:#fff;
+    filter:alpha(Opacity=90);
+    -moz-opacity:0.9;
+    opacity: 0.9;
+}
+
 .f_header h1 {
     margin: 0;
 }
 .f_header .nav {
-    margin-top: 50px;
+    margin-top: 60px;
 }
 .f_header .nav a {
     font-size: 18px;
     color: #2f2732;
+
+
 }
 .f_header .nav a:hover {
     color: #eb5255;
@@ -49,7 +61,7 @@ a:hover {
 }
 .f_header .nav_btn {
     float: right;
-    padding-top: 54px;
+    padding-top: 62px;
 }
 .f_header .nav_btn .btn {
     line-height: 40px;
@@ -72,10 +84,11 @@ a:hover {
 .f_header .nav_btn .sign_school {
     margin-left: 20px;
 }
+/*
 .f_banner .m_banner {
     position: relative;
     height: 450px;
-    background: url("../img/banner.jpg") center top;
+    background: url("../img/banner_1.jpg") center top;
 }
 .f_banner .m_banner .banner_main {
     position: absolute;
@@ -90,6 +103,7 @@ a:hover {
     font-size: 280%;
     font-weight: bold;
 }
+*/
 .m_about {
     color: #5f5764;
 }
@@ -193,6 +207,9 @@ a:hover {
     .f_header .nav {
         /*margin-top: 34px;*/
     }
+    .f_header .nav a {
+        padding-bottom:0;
+    }
     .f_header .nav_btn .btn {
         line-height: 2em;
         padding: 0 10px;
@@ -252,12 +269,14 @@ a:hover {
     }
 }
 @media (max-width: 768px) {
+    /*
     .f_banner .m_banner .banner_main .map{
         position: initial;
         width: auto;
         margin: 0 auto;
         font-size: 10px;
     }
+    */
     .f_header h1 {
         text-align: center;
     }

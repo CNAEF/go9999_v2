@@ -1,12 +1,12 @@
+    <!--
     <div class="f_banner">
       <div class="m_banner">
         <div class="banner_main">
-          <!--
           <p>2016年度支教志愿者招募</p>
-          -->
         </div>
       </div>
     </div>
+    -->
     <div class="f_main">
       <div class="container">
         <div class="row">
@@ -69,7 +69,8 @@
           <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
             <div class="m_weibo">
               <h2>新浪微博<small>Sina Weibo</small></h2>
-              <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=1771918357&verifier=d5b79a5b&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd&dpc=1"></iframe>
+              <!-- todo: 现在是错的 -->
+              <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=550&fansRow=1&ptype=1&speed=0&skin=5&isTitle=0&noborder=0&isWeibo=1&isFans=0&uid=2637693154&verifier=d5b79a5b&colors=d6f3f7,ffffff,666666,0082cb,ecfbfd&dpc=1"></iframe>
             </div>
           </div>
         </div>
@@ -174,7 +175,6 @@
                         </div>
                     </div>
                 </div>
-
             <?php } ?>
         </div>
       </div>

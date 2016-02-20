@@ -22,42 +22,45 @@
   </head>
   <body>
     <div class="f_header">
-      <div class="container">
-        <div class="row m_nav">
-          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-            <h1 class="logo"><a href="/"><img src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/img/logo.png" alt="logo" title="logo" class="img-responsive"></a></h1>
-          </div>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-            <ul class="nav nav-pills">
-              <li><a href="/">首页</a></li>
-              <!--
-              <li><a href="/gallery">相册</a></li>
-              <li><a href="/about">关于</a></li>
-              <li><a href="/staff">人员</a></li>
-              -->
-              <li><a href="/contact">留言</a></li>
-              <li><a target="_blank" href="http://bbs.go9999.com/">论坛</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
-            <div class="nav_btn">
-              <div class="dropdown">
-                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                  志愿者报名
-                  <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                  <li><a href="/join/apply">志愿者报名</a></li>
-                  <li><a href="/process">查看报名进度</a></li>
-                </ul>
-              </div>
+      <div class="f_nav_box">
+        <div class="container">
+          <div class="row m_nav">
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+              <h1 class="logo"><a href="/"><img src="<?php echo Yii::app()->baseUrl?>/assets/v2/img/logo.png" alt="logo" title="logo" class="img-responsive"></a></h1>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <ul class="nav nav-pills">
+                <li><a href="/">首页</a></li>
+                <!--
+                <li><a href="/gallery">相册</a></li>
+                <li><a href="/about">关于</a></li>
+                <li><a href="/staff">人员</a></li>
+                -->
+                <li><a href="/contact">留言</a></li>
+                <li><a target="_blank" href="http://bbs.go9999.com/">论坛</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
+              <div class="nav_btn">
+                <div class="dropdown">
+                  <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    志愿者报名
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a href="/join/apply">志愿者报名</a></li>
+                    <li><a href="/process">查看报名进度</a></li>
+                  </ul>
+                </div>
                 <!--
                 <a href="/school" class="btn sign_school">学校报名</a>
                 -->
+              </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
     
     <?php echo $content;?>
@@ -94,12 +97,13 @@
             <ul>
               <li><a href="mailto:admin@go9999.com">邮箱：admin@go9999.com</a></li>
               <li>QQ群：104151030、166393586</li>
-              <li><a href="#">新浪微博：@中国支教联盟网站</a></li>
-              <li><a href="#">新浪微博：@年小恩</a></li>
+              <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
+              <li><a href="http://weibo.com/516691809?is_all=1">新浪微博：@年小恩</a></li>
               <li>微信：CNAEF</li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+            <!-- todo: 二维码要更换 -->
             <div class="qr"><img src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/img/qr.jpg" alt="二维码" title="二维码" class="img-responsive"></div>
           </div>
         </div>
