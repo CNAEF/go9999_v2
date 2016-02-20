@@ -80,7 +80,7 @@
     </div>
     <div class="f_picture">
       <div class="container">
-        <h2>支教掠影<small>Volunteer picture</small></h2>
+        <h2>支教掠影<small>Volunteer photos</small></h2>
         <div class="row">
             <?php if ($images) { ?>
         <?php

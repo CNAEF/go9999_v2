@@ -16,6 +16,6 @@
                     <?php endforeach;?>
                 </div>
             </section>
-</div>
-</div>
+        </div>
+    </div>
 </div>

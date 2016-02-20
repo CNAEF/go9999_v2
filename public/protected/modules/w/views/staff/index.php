@@ -1,7 +1,6 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-        
             <section id="page-box-contact">
                 <div class="page-header">
                     <h2>成员列表<small>Staff List</small></h2>
@@ -26,8 +25,7 @@
                         </div>
                     </div>
                 <?php endforeach;?>
-            
             </section>
-</div>
-</div>
+        </div>
+    </div>
 </div>
