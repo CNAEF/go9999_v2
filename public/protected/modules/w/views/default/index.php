@@ -1,12 +1,3 @@
-    <!--
-    <div class="f_banner">
-      <div class="m_banner">
-        <div class="banner_main">
-          <p>2016年度支教志愿者招募</p>
-        </div>
-      </div>
-    </div>
-    -->
     <div class="f_main">
       <div class="container">
         <div class="row">
