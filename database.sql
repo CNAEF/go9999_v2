@@ -234,12 +234,12 @@ CREATE TABLE IF NOT EXISTS `t_staff` (
   INDEX `sDepartment_idx` (`s_department_id` ASC),
   CONSTRAINT `sUser`
     FOREIGN KEY (`s_user_id`)
-    REFERENCES `lm950`.`t_user` (`id`)
+    REFERENCES `t_user` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT `sDepartment`
     FOREIGN KEY (`s_department_id`)
-    REFERENCES `lm950`.`t_department` (`d_id`)
+    REFERENCES `t_department` (`d_id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -248,11 +248,12 @@ COLLATE = utf8_unicode_ci;
 
 
 ALTER TABLE `t_department` 
-ADD UNIQUE INDEX `d_title_UNIQUE` (`d_title` ASC);
+ADD UNIQUE INDEX `d_title_UNIQUE` (`d_title` ASC),
 ADD COLUMN `d_isShown` TINYINT(3) NULL DEFAULT 0 COMMENT 'display control, if 0 do not display this department on page.' AFTER `d_creationUser_id`;
 
 ALTER TABLE `t_news` 
-CHANGE COLUMN `n_content` `n_content` VARCHAR(21510) NULL DEFAULT NULL 
+CHANGE COLUMN `n_content` `n_content` VARCHAR(21510) NULL DEFAULT NULL ;
+
 ALTER TABLE `t_news` 
-ADD COLUMN `n_shortDesc` VARCHAR(45) NULL DEFAULT NULL AFTER `n_title`
+ADD COLUMN `n_shortDesc` VARCHAR(45) NULL DEFAULT NULL AFTER `n_title`;
 

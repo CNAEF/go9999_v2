@@ -10,10 +10,10 @@ var replace = require('gulp-replace');
 
 var devMode = false;
 var config = {
-    jsSrcDir   : './public/assets/src/js/',
-    jsDistDir  : './public/assets/go9999v0/js/',
-    cssSrcDir  : './public/assets/src/less/',
-    cssDistDir : './public/assets/go9999v0/css/'
+    jsSrcDir   : './public/assets/src2/js/',
+    jsDistDir  : './public/assets/v2/js/',
+    cssSrcDir  : './public/assets/src2/less/',
+    cssDistDir : './public/assets/v2/css/'
 };
 
 gulp.task('default', ['style:less', 'scripts:build'], function () {});
@@ -27,7 +27,6 @@ gulp.task('style:less', function () {
 
     return gulp.src([
         config.cssSrcDir + 'bootstrap.min.css',
-        config.cssSrcDir + 'bootstrap-responsive.min.css',
         config.cssSrcDir + 'app.min.css'
     ])
         .pipe(concat('core.min.css'))
@@ -51,7 +50,8 @@ gulp.task('scripts:build', function () {
         .pipe(gulpif(!devMode, replace(/^!f/, sign + '\n!f')))
         .pipe(gulp.dest(config.jsDistDir));
 
-    gulp.src([config.jsSrcDir + 'page/index.js',
+    gulp.src([
+        config.jsSrcDir + 'page/index.js',
         config.jsSrcDir + 'page/join.js'
     ])
         .pipe(concat('app.min.js'))
@@ -59,5 +59,8 @@ gulp.task('scripts:build', function () {
         .pipe(gulpif(!devMode, replace(/^!f/, sign + '\n!f')))
         .pipe(gulp.dest(config.jsDistDir));
 
-    return gulp.src([config.jsSrcDir + 'lib/html5.js']).pipe(gulp.dest(config.jsDistDir));
+    return gulp.src([
+        config.jsSrcDir + 'lib/html5.js',
+        config.jsSrcDir + 'lib/respond.js'
+    ]).pipe(gulp.dest(config.jsDistDir));
 });

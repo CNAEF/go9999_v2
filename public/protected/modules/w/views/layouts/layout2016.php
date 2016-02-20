@@ -14,12 +14,11 @@
                                                                     @soulteary
                                                                     2013/07/20
     -->
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/go9999v0/css/core.min.css">
-    <link href="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/bootstrap-3.3.5-dist/css/bootstrap.css" rel="stylesheet">
-    <link href="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css">
     <!--[if gt IE 6]>
-    <link href="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/css/style_ie.css" rel="stylesheet">
-    <![endif]-->
+    <!-- todo: 这个文件还没有 -->
+    <link href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/style_ie.css" rel="stylesheet">
+    <!--[endif]-->
   </head>
   <body>
     <div class="f_header">
@@ -33,20 +32,28 @@
               <li><a href="/">首页</a></li>
               <!--
               <li><a href="/gallery">相册</a></li>
-              -->
               <li><a href="/about">关于</a></li>
               <li><a href="/staff">人员</a></li>
+              -->
               <li><a href="/contact">留言</a></li>
               <li><a target="_blank" href="http://bbs.go9999.com/">论坛</a></li>
             </ul>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
             <div class="nav_btn">
-                <a href="/join" class="btn sign_volunteers">志愿者报名</a>
+              <div class="dropdown">
+                <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  志愿者报名
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                  <li><a href="/join/apply">志愿者报名</a></li>
+                  <li><a href="/process">查看报名进度</a></li>
+                </ul>
+              </div>
                 <!--
-                <a href="progress" class="btn sign_volunteers">报名结果查询</a>
-                -->
                 <a href="/school" class="btn sign_school">学校报名</a>
+                -->
             </div>
           </div>
         </div>
@@ -106,13 +113,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/js/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/js/scripts.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/js/html5shiv.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/js/respond.js"></script>
-
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/go9999v0/js/core.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/go9999v0/js/app.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js"></script>
   </body>
 </html>

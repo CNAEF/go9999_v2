@@ -1,20 +1,3 @@
-
-/*
-$(document).ready(function(){
-    $(".news_title").children().hover(function(){
-        $(this).animate({
-            opacity:1
-        },200);
-        $(this).siblings().animate({
-            opacity:0.7
-        },200);
-        $(".news_main ul").hide().eq($(this).index()).show();
-    });
-});
-*/
-
-
-
 $(document).ready(function(){
     var index=0;
     var play=null;

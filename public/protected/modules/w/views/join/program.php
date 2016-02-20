@@ -151,7 +151,7 @@
     </div>
     -->
     <p>欢迎有志之士加入联盟大家庭！</p>
-    <p><a class="btn btn-primary btn-large" href="/join/apply">我要报名参加</a></p>
+    <p><a class="btn btn-danger btn-lg" href="/join/apply">我要报名参加</a></p>
     <p><a href="/process">查看申请进度</a></p>
 
 </section>
