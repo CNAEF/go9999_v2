@@ -104,7 +104,7 @@
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <!-- todo: 二维码要更换 -->
-            <div class="qr"><img src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/img/qr.jpg" alt="二维码" title="二维码" class="img-responsive"></div>
+            <div class="qr"><img src="<?php echo Yii::app()->baseUrl?>/assets/v2/img/qr.jpg" alt="二维码" title="二维码" class="img-responsive"></div>
           </div>
         </div>
         <div class="version">

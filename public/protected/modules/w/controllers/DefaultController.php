@@ -23,6 +23,11 @@ class DefaultController extends WBasedController
 	    $images = GalleryImage::model()->findAll($criteria);
 	    
 	    
-		$this->render('index', array('news'=>$news, 'images'=>$images));
+		$this->render('index', array(
+			'news'    => $news, // 新版新闻
+			'posts'   => BlogPosts::post(),   // 抓取日记
+			'notices' => BlogPosts::notice(), // 抓取公告
+			'images'  => $images
+		));
 	}
 }

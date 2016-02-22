@@ -13,13 +13,13 @@
             <div class="m_news">
               <h2>支教快讯<small>Volunteer news</small></h2>
               <div class="row news_title">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 notice"><img src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/img/notice.jpg" alt="notice" title="notice" class="img-responsive"></div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 log"><img src="<?php echo Yii::app()->baseUrl?>/assets/go9999v2016/img/log.jpg" alt="log" title="log" class="img-responsive"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 notice"><img src="<?php echo Yii::app()->baseUrl?>/assets/v2/img/notice.jpg" alt="notice" title="notice" class="img-responsive"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 log"><img src="<?php echo Yii::app()->baseUrl?>/assets/v2/img/log.jpg" alt="log" title="log" class="img-responsive"></div>
               </div>
               <div class="news_main">
                 <ul class="notice_main">
-                    <?php if ($news) { ?>
-                    <?php foreach ($news as $oneNew):?>                      
+                    <?php if (false && $news) { ?>
+                    <?php foreach ($news as $oneNew):?>
                       <li>
                         <h5><a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>"><?php echo CHtml::encode($oneNew->n_title);?><small>- <?php $oneNew->n_creationDate;?></small></a></h5>
                         <p><a href="<?php echo Yii::app()->createUrl('w/news/view', array('id'=> $oneNew->n_id));?>"><?php echo CHtml::encode(substr($oneNew->n_shortDesc,0,  45));?>...</a></p>
@@ -27,31 +27,31 @@
                     <?php endforeach;?>
                     <?php } else { ?>
                         <li>
-                            <h5><a href="#">自愿支持农村中小学教育的社会各界爱心人士<small>- 3天前</small></a></h5>
-                            <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                            <h5><a target="_blank" href="<?php echo $notices[0]['link'];?>"><?php echo $notices[0]['title'];?><small>- <?php echo $notices[0]['friendlyDate'];?></small></a></h5>
+                            <p><a target="_blank" href="<?php echo $notices[0]['link'];?>"><?php echo mb_substr($notices[0]['description'],0,50);?>...</a></p>
                         </li>
                         <li>
-                            <h5><a href="#">不再有人因为闭塞而绝望<small>- 3个月前</small></a></h5>
-                            <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                            <h5><a target="_blank" href="<?php echo $notices[1]['link'];?>"><?php echo $notices[1]['title'];?><small>- <?php echo $notices[1]['friendlyDate'];?></small></a></h5>
+                            <p><a target="_blank" href="<?php echo $notices[1]['link'];?>"><?php echo mb_substr($notices[1]['description'],0,50);?>...</a></p>
                         </li>
                         <li>
-                            <h5><a href="#">不再有人因为贫穷而失学<small>- 3天前</small></a></h5>
-                            <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                            <h5><a target="_blank" href="<?php echo $notices[2]['link'];?>"><?php echo $notices[2]['title'];?><small>- <?php echo $notices[2]['friendlyDate'];?></small></a></h5>
+                            <p><a target="_blank" href="<?php echo $notices[2]['link'];?>"><?php echo mb_substr($notices[2]['description'],0,50);?>...</a></p>
                         </li>
                     <?php } ?>
                 </ul>
                 <ul class="log_main">
                   <li>
-                    <h5><a href="#">不再失学<small>- 3天前</small></a></h5>
-                    <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                      <h5><a target="_blank" href="<?php echo $posts[0]['link'];?>"><?php echo $posts[0]['title'];?><small>- <?php echo $posts[0]['friendlyDate'];?></small></a></h5>
+                      <p><a target="_blank" href="<?php echo $posts[0]['link'];?>"><?php echo mb_substr($posts[0]['description'],0,50);?>...</a></p>
                   </li>
                   <li>
-                    <h5><a href="#">不再有人绝望<small>- 3个月前</small></a></h5>
-                    <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构...</a></p>
+                      <h5><a target="_blank" href="<?php echo $posts[1]['link'];?>"><?php echo $posts[1]['title'];?><small>- <?php echo $posts[1]['friendlyDate'];?></small></a></h5>
+                      <p><a target="_blank" href="<?php echo $posts[1]['link'];?>"><?php echo mb_substr($posts[1]['description'],0,50);?>...</a></p>
                   </li>
                   <li>
-                    <h5><a href="#">不再有人失学<small>- 3天前</small></a></h5>
-                    <p><a href="#">由自愿支持农村中小学教育的社会各界爱心人士自发组织的全国性民间公益机构......</a></p>
+                      <h5><a target="_blank" href="<?php echo $posts[2]['link'];?>"><?php echo $posts[2]['title'];?><small>- <?php echo $posts[2]['friendlyDate'];?></small></a></h5>
+                      <p><a target="_blank" href="<?php echo $posts[2]['link'];?>"><?php echo mb_substr($posts[2]['description'],0,50);?>...</a></p>
                   </li>
                 </ul>
               </div>
