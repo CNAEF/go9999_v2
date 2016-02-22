@@ -98,7 +98,5 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/go9999v0/js/core.min.js?20150806"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/go9999v0/js/app.min.js?20150806"></script>
   </body>
 </html>

@@ -1,3 +1,9 @@
+<?php 
+    $cs = Yii::app()->clientScript;
+    $cs->registerScriptFile(Yii::app()->baseUrl.'/assets/go9999v0/js/core.min.js?20150806', CClientScript::POS_END);
+    $cs->registerScriptFile(Yii::app()->baseUrl.'/assets/go9999v0/js/app.min.js?20150806', CClientScript::POS_END);
+
+?>
 <div class="container" id="eeJoin">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
