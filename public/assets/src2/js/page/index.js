@@ -90,4 +90,4 @@
         }
         autoplay();
     });
-})(window, document, window.jQuery, 'soulteary 2013/10/30');
+})(window, document, window.jQuery);

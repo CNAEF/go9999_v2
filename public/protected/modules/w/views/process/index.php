@@ -3,9 +3,9 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <section id="page-box-apply">
                 <div class="page-header">
-                    <h2>志愿者申请进度<small>Progress</small></h2>
+                    <h2>志愿者申请进度<small>Apply Progress</small></h2>
                 </div>
-                <table class="table" id="eeProgress">
+                <table class="table">
                     <thead>
                         <tr>
                             <th>姓名</th>
@@ -24,9 +24,9 @@
                             <td><?php echo $oneV->verifyStatusMessage;?></td>
                         </tr>
                         <?php endforeach;?>
-
                     </tbody>
                 </table>
+                <p class="bg-warning" style="padding:20px;text-align:center;">由于个人隐私等原因, 半年以上的申请记录已经隐藏.</p>
             </section>
         </div>
     </div>

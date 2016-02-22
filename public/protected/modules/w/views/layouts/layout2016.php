@@ -5,20 +5,8 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>中国·支教联盟</title>
-    <!--
-    至看到这段文字的你：
-    Hi~
-    中国支教联盟网站急缺建设志愿者&维护志愿者，如果你对维护联盟网站感兴趣，即使因为现实的原因你不能投身偏远地区，
-    但是你的行为一样可以帮助到所有的有志于支教的人们，如果你心动了，不妨用页面中的联系方式联系我们。
-    当然，如果你发现了网站的缺陷或者漏洞，也不妨告知我们。
-                                                                    @soulteary
-                                                                    2013/07/20
-    -->
     <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css">
-    <!--[if gt IE 6]>
-    <!-- todo: 这个文件还没有 -->
-    <link href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/style_ie.css" rel="stylesheet">
-    <!--[endif]-->
+    <!-- todo: 浏览器兼容还没有 -->
   </head>
   <body>
     <div class="f_header">
