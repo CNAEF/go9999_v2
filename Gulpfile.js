@@ -27,6 +27,7 @@ gulp.task('style:less', function () {
 
     return gulp.src([
         config.cssSrcDir + 'bootstrap.min.css',
+        config.cssSrcDir + 'bootstrap-responsive.min.css',
         config.cssSrcDir + 'app.min.css'
     ])
         .pipe(concat('core.min.css'))
@@ -53,6 +54,8 @@ gulp.task('scripts:build', function () {
     gulp.src([
         config.jsSrcDir + 'page/index.js',
         config.jsSrcDir + 'page/join.js'
+        config.jsSrcDir + 'page/join.js',
+        config.jsSrcDir + 'page/school.js'
     ])
         .pipe(concat('app.min.js'))
         .pipe(gulpif(!devMode, uglyfly()))
