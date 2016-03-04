@@ -17,9 +17,9 @@ class School extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, location_province, location_city, type, student_count, teacher_count, grade_count, class_count, description, photo, has_library, has_computer, has_internet, is_supported, need_volunteer, volunteer_work, need_other, attention, traffic, offer_support, bring_supplies, headmaster_name, headmaster_telephone, school_address, school_postcode, created_at', 'required'),
+			array('name, location_province, location_city, type, student_count, teacher_count, grade_count, class_count, description, photo, has_library, has_computer, has_internet, is_supported, project, need_volunteer, volunteer_work, need_other, attention, traffic, offer_support, bring_supplies, headmaster_name, headmaster_telephone, school_address, school_postcode', 'required'),
 			array('type, primary_school_type, student_count, teacher_count, grade_count, class_count, has_library, has_computer, has_internet, is_supported, need_volunteer, need_volunteer_count, need_other, custom, created_at', 'numerical', 'integerOnly'=>true),
-			array('name, project', 'length', 'max'=>200),
+			array('name', 'length', 'max'=>200),
 			array('location_province, location_city, headmaster_name, headmaster_telephone', 'length', 'max'=>20),
 			array('photo, public_name, school_address', 'length', 'max'=>100),
 			array('volunteer_work, need_other_content, attention, traffic, offer_support, bring_supplies', 'length', 'max'=>1000),
@@ -154,5 +154,43 @@ class School extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-	
+
+	public function setAttributes($values,$safeOnly=true){
+		parent::setAttributes($values,$safeOnly);
+		$this->photo = CUploadedFile::getInstanceByName('photo');
+	}
+
+
+	public function beforeSave()
+	{
+		if (parent::beforeSave()) {
+			if ($this->isNewRecord) {
+				$this->created_at = EED::f();
+
+				$photo = CUploadedFile::getInstanceByName('photo');
+				$photoPath = Yii::app()->params['uploadPathImage'] . 'school_photo/';
+				$extension = '.' . $photo->getExtensionName();
+				$suffix = '_origin';
+				$photoName = EEH::randomString(20, 1, 2, '_');
+				$originFile = $photoPath . $photoName . $suffix . $extension;
+				if ($photo->saveAs($originFile)) {
+					$image = Yii::app()->image->load($originFile);
+					$image->resize(Yii::app()->params['uploadMaxWidth'], Yii::app()->params['uploadMaxHeight'])->quality(Yii::app()->params['uploadQuality']);
+					$resizeFile = $photoPath . $photoName . $extension;
+					$image->save($resizeFile);
+					if(!file_exists($resizeFile)){
+						$this->photo =  $photoName . $extension;
+					} else {
+						$this->photo = $photoName . $suffix . $extension;
+					}
+					return true;
+				} else {
+					return false;
+				}
+			}
+			return true;
+		} else {
+			return false;
+		}
+	}
 }

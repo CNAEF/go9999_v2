@@ -53,7 +53,6 @@ gulp.task('scripts:build', function () {
 
     gulp.src([
         config.jsSrcDir + 'page/index.js',
-        config.jsSrcDir + 'page/join.js'
         config.jsSrcDir + 'page/join.js',
         config.jsSrcDir + 'page/school.js'
     ])

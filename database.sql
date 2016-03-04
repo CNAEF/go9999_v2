@@ -260,7 +260,7 @@ ADD COLUMN `n_shortDesc` VARCHAR(45) NULL DEFAULT NULL AFTER `n_title`;
 
 
 CREATE TABLE `t_school` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `name` varchar(200) NOT NULL COMMENT '学校名称',
   `location_province` varchar(20) NOT NULL COMMENT '所在省份',
   `location_city` varchar(20) NOT NULL COMMENT '所在城市',

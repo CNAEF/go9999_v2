@@ -6,29 +6,34 @@ class SchoolController extends WBasedController
 	{
 		$this->bodyId = 'page-school';
 		if(Yii::app()->request->isPostRequest) {
+			$obj = array();
+
+			//图片不存在
+			if (!isset($_FILES['photo'])) {
+				$obj['extra']['code'] = '400';
+				exit(json_encode($obj));
+			}
+			//图片超过 2M
+			$maxFileSize = Yii::app()->params['uploadMaxSize'] + 1;
+			if ($_FILES['photo']['size'] > $maxFileSize) {
+				$obj['extra']['code'] = '400';
+				$obj['extra']['errors'] = ['photo' => '最大2M'];
+				exit(json_encode($obj));
+			}
+
 			$school = new School();
 			$school->attributes = $_POST;
-			$school->photo=CUploadedFile::getInstance($school, 'photo');
+
 			if (!$school->save()) {
-
-				// 压缩图片
-				//$info = pathinfo($volunteer->{$oneFileId});
-				//$smallFile = Yii::app()->params['uploadPathImage'] . $oneFileId . '/' . $volunteer->{$oneFileId};
-				//$bigFile   = Yii::app()->params['uploadPathImage'] . $oneFileId . '/' . $info['filename'] . '_origin.' . $info['extension'];
-
-				$school->photo->saveAs(Yii::app()->params['uploadPathImage'] . 'school/' . $school->photo);
-
-				$obj = array();
 				$obj['extra']['code'] = '400';
 				foreach ($school->errors as $key => $value) {
 					$obj['extra']['errors'][$key] = $value;
 				}
-				echo json_encode($obj);
 			} else {
-				$obj = array();
 				$obj['extra']['desc'] = '报名成功。';
 				$obj['extra']['code'] = '200';
-				echo json_encode($obj);}
+			}
+			exit(json_encode($obj));
 		}
 		$this->render('index');
 	}
