@@ -36,7 +36,7 @@
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="/join/apply">志愿者报名</a></li>
+                    <li><a href="/join/index">志愿者报名</a></li>
                     <li><a href="/process">查看报名进度</a></li>
                   </ul>
                 </div>
