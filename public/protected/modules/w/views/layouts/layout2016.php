@@ -78,6 +78,7 @@
               <li><a target="_blank" href="http://zhan.renren.com/go9999">人人小站</a></li>
               <li><a target="_blank" href="http://page.renren.com/601714744">人人主页</a></li>
               <li><a target="_blank" href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a></li>
+              <li><a target="_blank" href="/admin">管理后台</a></li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
@@ -91,7 +92,6 @@
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-            <!-- todo: 二维码要更换 -->
             <div class="qr"><img src="<?php echo Yii::app()->baseUrl?>/assets/v2/img/qr.jpg" alt="二维码" title="二维码" class="img-responsive"></div>
           </div>
         </div>
