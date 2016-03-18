@@ -19,30 +19,30 @@ $this->breadcrumbs=array(
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
     <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/assets/ace/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/ace/css/font-awesome.min.css" />
 
     <!-- text fonts -->
-    <link rel="stylesheet" href="/assets/css/ace-fonts.css" />
+    <link rel="stylesheet" href="/assets/ace/css/ace-fonts.css" />
 
     <!-- ace styles -->
-    <link rel="stylesheet" href="/assets/css/ace.min.css" />
+    <link rel="stylesheet" href="/assets/ace/css/ace.min.css" />
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="/assets/css/ace-part2.min.css" />
+    <link rel="stylesheet" href="/assets/ace/css/ace-part2.min.css" />
     <![endif]-->
-    <link rel="stylesheet" href="/assets/css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="/assets/ace/css/ace-rtl.min.css" />
 
     <!--[if lte IE 9]>
-    <link rel="stylesheet" href="/assets/css/ace-ie.min.css" />
+    <link rel="stylesheet" href="/assets/ace/css/ace-ie.min.css" />
     <![endif]-->
-    <link rel="stylesheet" href="/assets/css/ace.onpage-help.css" />
+    <link rel="stylesheet" href="/assets/ace/css/ace.onpage-help.css" />
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
     <!--[if lt IE 9]>
-    <script src="/assets/js/html5shiv.js"></script>
-    <script src="/assets/js/respond.min.js"></script>
+    <script src="/assets/ace/js/html5shiv.js"></script>
+    <script src="/assets/ace/js/respond.min.js"></script>
     <![endif]-->
 </head>
 
@@ -156,18 +156,18 @@ $this->breadcrumbs=array(
 
 <!--[if !IE]> -->
 <script type="text/javascript">
-    window.jQuery || document.write("<script src='/assets/js/jquery.min.js'>"+"<"+"/script>");
+    window.jQuery || document.write("<script src='/assets/ace/js/jquery.min.js'>"+"<"+"/script>");
 </script>
 
 <!-- <![endif]-->
 
 <!--[if IE]>
 <script type="text/javascript">
-    window.jQuery || document.write("<script src='/assets/js/jquery1x.min.js'>"+"<"+"/script>");
+    window.jQuery || document.write("<script src='/assets/ace/js/jquery1x.min.js'>"+"<"+"/script>");
 </script>
 <![endif]-->
 <script type="text/javascript">
-    if('ontouchstart' in document.documentElement) document.write("<script src='/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    if('ontouchstart' in document.documentElement) document.write("<script src='/assets/ace/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 </script>
 
 <!-- inline scripts related to this page -->
