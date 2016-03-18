@@ -24,7 +24,7 @@
                 <li><a href="/about">关于</a></li>
                 <li><a href="/staff">人员</a></li>
                 -->
-                <li><a href="/contact">留言</a></li>
+                <li><a href="/contact/">留言</a></li>
                 <li><a target="_blank" href="http://bbs.go9999.com/">论坛</a></li>
               </ul>
             </div>
@@ -36,7 +36,7 @@
                     <span class="caret"></span>
                   </button>
                   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                    <li><a href="/join/index">志愿者报名</a></li>
+                    <li><a href="/join">志愿者报名</a></li>
                     <li><a href="/process">查看报名进度</a></li>
                   </ul>
                 </div>
