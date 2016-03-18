@@ -70,9 +70,9 @@
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
             <h3>相关链接<small class="hidden-sm hidden-xs">Relevant</small></h3>
             <ul>
-              <li><a target="_blank" href="http://bbs.go9999.com/">论坛</a></li>
-              <li><a target="_blank" href="http://blog.go9999.com/">博客</a></li>
-              <li><a target="_blank" href="http://e.weibo.com/go9999">微博</a></li>
+              <li><a target="_blank" href="http://bbs.go9999.com/">官方论坛</a></li>
+              <li><a target="_blank" href="http://blog.go9999.com/">官方博客</a></li>
+              <li><a target="_blank" href="http://e.weibo.com/go9999">官方微博</a></li>
               <li><a target="_blank" href="http://site.douban.com/118628/">豆瓣小站</a></li>
               <li><a target="_blank" href="http://www.douban.com/group/go9999/">豆瓣小组</a></li>
               <li><a target="_blank" href="http://zhan.renren.com/go9999">人人小站</a></li>
