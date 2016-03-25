@@ -89,6 +89,7 @@
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
               <li><a href="http://weibo.com/516691809?is_all=1">新浪微博：@年小恩</a></li>
               <li>微信：CNAEF2006</li>
+              <li>地址：广东省深圳市南山区侨香路4060号香年广场C座1102室</li>
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
