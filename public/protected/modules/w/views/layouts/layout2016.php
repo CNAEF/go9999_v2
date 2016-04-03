@@ -56,7 +56,7 @@
     <div class="f_footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <h3>友情链接<small class="hidden-sm hidden-xs">Friendly link</small></h3>
             <ul>
               <li><a target="_blank" href="http://bbs.hfly.net/">庐阳教育论坛</a></li>
@@ -67,7 +67,7 @@
               <li><a target="_blank" href="http://www.ricedonate.com/">米公益</a></li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
             <h3>相关链接<small class="hidden-sm hidden-xs">Relevant</small></h3>
             <ul>
               <li><a target="_blank" href="http://bbs.go9999.com/">官方论坛</a></li>
@@ -81,7 +81,7 @@
               <li><a target="_blank" href="/admin">管理后台</a></li>
             </ul>
           </div>
-          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
             <h3>联系方式<small class="hidden-sm hidden-xs">Contact information</small></h3>
             <ul>
               <li><a href="mailto:admin@go9999.com">邮箱：admin@go9999.com</a></li>
@@ -89,9 +89,7 @@
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
               <li><a href="http://weibo.com/516691809?is_all=1">新浪微博：@年小恩</a></li>
               <li>微信：CNAEF2006</li>
-              <!--
               <li>地址：广东省深圳市南山区侨香路4060号香年广场C座1102室</li>
-              -->
             </ul>
           </div>
           <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
