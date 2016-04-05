@@ -244,16 +244,53 @@ CREATE TABLE IF NOT EXISTS `t_staff` (
     ON UPDATE CASCADE)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8
-COLLATE = utf8_unicode_ci;  
+COLLATE = utf8_unicode_ci;
 
 
-ALTER TABLE `t_department` 
+ALTER TABLE `t_department`
 ADD UNIQUE INDEX `d_title_UNIQUE` (`d_title` ASC),
 ADD COLUMN `d_isShown` TINYINT(3) NULL DEFAULT 0 COMMENT 'display control, if 0 do not display this department on page.' AFTER `d_creationUser_id`;
 
-ALTER TABLE `t_news` 
+ALTER TABLE `t_news`
 CHANGE COLUMN `n_content` `n_content` VARCHAR(21510) NULL DEFAULT NULL ;
 
-ALTER TABLE `t_news` 
+ALTER TABLE `t_news`
 ADD COLUMN `n_shortDesc` VARCHAR(45) NULL DEFAULT NULL AFTER `n_title`;
 
+
+
+CREATE TABLE `t_school` (
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `name` varchar(200) NOT NULL COMMENT '学校名称',
+  `location_province` varchar(20) NOT NULL COMMENT '所在省份',
+  `location_city` varchar(20) NOT NULL COMMENT '所在城市',
+  `type` tinyint(4) NOT NULL COMMENT '学校类型',
+  `primary_school_type` tinyint(4) DEFAULT NULL COMMENT '小学类型',
+  `student_count` int(11) NOT NULL COMMENT '学生人数',
+  `teacher_count` int(11) NOT NULL COMMENT '教师人数',
+  `grade_count` int(11) NOT NULL COMMENT '年级数量',
+  `class_count` int(11) NOT NULL COMMENT '班级数量',
+  `description` text NOT NULL COMMENT '学校简介',
+  `photo` varchar(100) NOT NULL COMMENT '学校照片',
+  `has_library` tinyint(4) NOT NULL COMMENT '是否有图书室',
+  `has_computer` tinyint(4) NOT NULL COMMENT '是否有电脑',
+  `has_internet` tinyint(4) NOT NULL COMMENT '是否能上网',
+  `is_supported` tinyint(4) NOT NULL COMMENT '是否有公益团队支持',
+  `public_name` varchar(100) DEFAULT NULL COMMENT '公益团队名称',
+  `project` varchar(200) DEFAULT NULL COMMENT '已开展项目',
+  `need_volunteer` tinyint(4) NOT NULL COMMENT '是否需要支教老师',
+  `need_volunteer_count` int(11) DEFAULT NULL COMMENT '需要支教老师人数',
+  `volunteer_work` varchar(1000) NOT NULL COMMENT '支教老师工作范围',
+  `need_other` tinyint(4) NOT NULL COMMENT '是否需要其他支持',
+  `need_other_content` varchar(1000) DEFAULT NULL COMMENT '请列举学校的需求',
+  `custom` tinyint(4) DEFAULT NULL COMMENT '是否有民俗习惯',
+  `attention` varchar(1000) NOT NULL COMMENT '注意事项',
+  `traffic` varchar(1000) NOT NULL COMMENT '交通指南',
+  `offer_support` varchar(1000) NOT NULL COMMENT '学校可提供哪些支持',
+  `bring_supplies` varchar(1000) NOT NULL COMMENT '志愿者需要带的物资明细',
+  `headmaster_name` varchar(20) NOT NULL COMMENT '校长姓名',
+  `headmaster_telephone` varchar(20) NOT NULL COMMENT '联系电话',
+  `school_address` varchar(100) NOT NULL COMMENT '学校地址',
+  `school_postcode` varchar(10) NOT NULL COMMENT '学校邮编',
+  `created_at` int(11) NOT NULL COMMENT '申请时间'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
