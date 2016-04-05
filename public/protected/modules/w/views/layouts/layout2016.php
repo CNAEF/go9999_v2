@@ -75,8 +75,6 @@
               <li><a target="_blank" href="http://e.weibo.com/go9999">官方微博</a></li>
               <li><a target="_blank" href="http://site.douban.com/118628/">豆瓣小站</a></li>
               <li><a target="_blank" href="http://www.douban.com/group/go9999/">豆瓣小组</a></li>
-              <li><a target="_blank" href="http://zhan.renren.com/go9999">人人小站</a></li>
-              <li><a target="_blank" href="http://page.renren.com/601714744">人人主页</a></li>
               <li><a target="_blank" href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a></li>
               <li><a target="_blank" href="/admin">管理后台</a></li>
             </ul>
@@ -86,6 +84,7 @@
             <ul>
               <li><a href="mailto:admin@go9999.com">邮箱：admin@go9999.com</a></li>
               <li>QQ群：104151030、166393586</li>
+              <li>深圳QQ群：340710619</li>
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
               <li><a href="http://weibo.com/516691809?is_all=1">新浪微博：@年小恩</a></li>
               <li>微信：CNAEF2006</li>
