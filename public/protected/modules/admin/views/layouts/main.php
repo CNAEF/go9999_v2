@@ -19,8 +19,8 @@
     <meta name="description" content="overview &amp; stats" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     <!-- bootstrap & fontawesome -->
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/ace/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/ace/css/font-awesome.min.css" />
     <!--     important for UE Editor keep this css file at the begin plz -->
     <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/ueMini/themes/default/css/umeditor.css" />
     <!-- page specific plugin styles -->
@@ -159,7 +159,7 @@
                     <span class="menu-text"> 人员管理 </span>
                 </a>
             </li>
-            <li class="<?php echo $this->id == 'volunteer' ? 'active open' : ''; ?>">
+            <li class="<?php echo $this->id == 'school' ? 'active open' : ''; ?>">
                 <a href="<?php echo $this->createUrl('/admin/school');?>"  >
                     <i class="menu-icon fa fa-home"></i>
                     <span class="menu-text"> 学校 </span>

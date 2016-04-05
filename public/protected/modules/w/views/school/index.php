@@ -1,21 +1,20 @@
 <div class="container" id="page-school">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
             <section id="page-box-school">
                 <div class="page-header">
-                    <h1>学校申请表</h1>
+                    <h2>学校申请表<small>School Join</small></h2>
                 </div>
                 <div class="row">
-                    <div class="span12">
+                    <div class="col-sm-12">
                         <blockquote>
                             <p>请认真如实填写以下表单，以便我们能够更好的了解您的意愿。</p>
                             <small>支教联盟管理 <cite title="衷心希望">年小恩</cite></small>
                         </blockquote>
                     </div>
                 </div>
-                <form class="form-horizontal " id="action-form2"
-                      action="<?php echo $this->createAbsoluteUrl('school/index'); ?>" method="post"
+                <form class="form-horizontal"
+                      id="action-form2" action="<?php echo $this->createAbsoluteUrl('school/index'); ?>" method="post"
                       enctype="multipart/form-data">
                     <legend>基本资料</legend>
 
@@ -355,7 +354,7 @@
                     </div>
 
                     <div class="form-actions">
-                        <button class="btn btn-large btn-primary" type="submit" id="submit_form">提交申请表</button>
+                        <button class="btn btn-primary btn-lg" type="submit" id="submit_form">提交申请表</button>
                     </div>
                 </form>
             </section>
@@ -371,7 +370,7 @@
                     </blockquote>
                 </div>
             </section>
-            <script src=""></script>
+
         </div>
     </div>
 </div>

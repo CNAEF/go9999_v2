@@ -1,12 +1,11 @@
 <?php
 $this->breadcrumbs=array(
-	'Schools'=>array('index'),
+	'学校'=>array('index'),
 	'管理',
 );
 ?>
 <div class="page-header">
-    <h1>管理Schools</h1>
-    <a class="btn btn-success" href="/admin/School/create">创建Schools</a>
+    <h1>管理学校</h1>
 </div>
 <div class="row">
     <div class="col-xs-12">

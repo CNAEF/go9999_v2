@@ -13,8 +13,11 @@
                         </blockquote>
                     </div>
                 </div>
-                <form class="form-horizontal " id="action-form2" action="<?php echo $this->createAbsoluteUrl('join/apply');?>" method="post" enctype="multipart/form-data">
+                <form class="form-horizontal"
+                      id="action-form2" action="<?php echo $this->createAbsoluteUrl('join/apply');?>" method="post"
+                      enctype="multipart/form-data">
                     <legend>基本资料</legend>
+
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form_name">姓　　名</label>
                         <div class="col-sm-4">
