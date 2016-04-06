@@ -116,7 +116,7 @@
                         <label class="col-sm-2 control-label" for="form_has_library">是否有图书室</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="has_library" id="form_has_library_1" value="1" checked>
+                                <input type="radio" name="has_library" id="form_has_library_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
@@ -131,7 +131,7 @@
                         <label class="col-sm-2 control-label" for="form_has_computer">是否有电脑</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="has_computer" id="form_has_computer_1" value="1" checked>
+                                <input type="radio" name="has_computer" id="form_has_computer_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
@@ -146,7 +146,7 @@
                         <label class="col-sm-2 control-label" for="form_has_internet">是否能上网</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="has_internet" id="form_has_internet_1" value="1" checked>
+                                <input type="radio" name="has_internet" id="form_has_internet_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
@@ -161,7 +161,7 @@
                         <label class="col-sm-2 control-label" for="form_is_supported">是否有公益团队支持</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="is_supported" id="form_is_supported_1" value="1" checked>
+                                <input type="radio" name="is_supported" id="form_is_supported_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
@@ -220,7 +220,7 @@
                         <label class="col-sm-2 control-label" for="form_need_volunteer">是否需要支教老师</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="need_volunteer" id="form_need_volunteer_1" value="1" checked>
+                                <input type="radio" name="need_volunteer" id="form_need_volunteer_1" value="1">
                                 是
                             </label>
                             <label class="radio-inline">
@@ -251,7 +251,7 @@
                         <label class="col-sm-2 control-label" for="form_need_other">是否需要其他支持</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="need_other" id="form_need_other_1" value="1" checked>
+                                <input type="radio" name="need_other" id="form_need_other_1" value="1">
                                 是
                             </label>
                             <label class="radio-inline">
@@ -276,7 +276,7 @@
                         <label class="col-sm-2 control-label" for="form_custom">当地民俗习惯</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="custom" id="form_custom_1" value="1" checked>
+                                <input type="radio" name="custom" id="form_custom_1" value="1">
                                 是
                             </label>
                             <label class="radio-inline">
