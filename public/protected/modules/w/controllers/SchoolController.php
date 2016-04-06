@@ -20,6 +20,7 @@ class SchoolController extends WBasedController
 				$obj['extra']['errors'] = ['photo' => '最大2M'];
 				exit(json_encode($obj));
 			}
+            $_POST['project'] = json_encode($_POST['project']);
 
 			$school = new School();
 			$school->attributes = $_POST;
