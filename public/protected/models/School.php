@@ -155,6 +155,63 @@ class School extends CActiveRecord
 		return parent::model($className);
 	}
 
+	public function getLocation() {
+		return $this->location_province . ' ' . $this->location_city;
+	}
+
+	public function getType() {
+		switch ($this->type) {
+			case 1:
+				return '幼儿园';
+			case 2:
+				return '小学';
+			case 3:
+				return '初中';
+			case 4:
+				return '民工子弟学校';
+			case 5:
+				return '孤儿院';
+			case 6:
+				return '特殊教育中心';
+			default:
+				return ' - ';
+		}
+	}
+
+	public function getPrimarySchoolType() {
+		switch ($this->type) {
+			case 1:
+				return '村小／教学点';
+			case 2:
+				return '完小';
+			case 3:
+				return '中心校';
+			default:
+				return ' - ';
+		}
+	}
+
+	public function getProject() {
+		$arr = json_decode($this->project);
+		$str = '';
+		if (in_array(1, $arr))
+			$str .= '支教 ';
+		if (in_array(2, $arr))
+			$str .= '助学 ';
+		if (in_array(3, $arr))
+			$str .= '捐物 ';
+		if (in_array(4, $arr))
+			$str .= '支农 ';
+		if (in_array(5, $arr))
+			$str .= '支医 ';
+		if (in_array(6, $arr))
+			$str .= '扶贫 ';
+		if (in_array(7, $arr))
+			$str .= '环保 ';
+		return $str;
+	}
+
+	/*
 	public function setAttributes($values,$safeOnly=true){
 		parent::setAttributes($values,$safeOnly);
 		$this->photo = CUploadedFile::getInstanceByName('photo');
@@ -193,4 +250,5 @@ class School extends CActiveRecord
 			return false;
 		}
 	}
+	*/
 }

@@ -60,8 +60,6 @@ class JoinController extends WBasedController
 	            
 	            if (!$volunteer->save()){
                     //display errors when save fail.
-//     	            var_dump($volunteer->errors);
-    	            
 	                $obj = array();
 	                $obj['extra']['code'] = '400';
 	                foreach ($volunteer->errors as $key =>$value) {

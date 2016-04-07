@@ -32,7 +32,7 @@ class SchoolController extends Controller
 	{
 		return array(
 			array('allow', 
-				'actions'=>array('index','create','update','delete'),
+				'actions'=>array('index','view','delete'),
 				'users'=>array('@'),
 			),
 			array('deny',  // deny all users
@@ -42,46 +42,15 @@ class SchoolController extends Controller
 	}
 
 	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{
-		$model=new School;
-
-		if(isset($_POST['School']))
-		{
-			$model->attributes=$_POST['School'];
-			if($model->save()) {
-				Yii::app()->user->setFlash('success','创建成功');
-				$this->redirect(array('update','id'=>$model->id));
-			}
-		}
-
-		$this->render('create',array(
-			'model'=>$model,
-		));
-	}
-
-	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.
 	 * @param integer $id the ID of the model to be updated
 	 */
-	public function actionUpdate($id)
+	public function actionView($id)
 	{
 		$model=$this->loadModel($id);
 
-		if(isset($_POST['School']))
-		{
-			$model->attributes=$_POST['School'];
-			if($model->save()) {
-				Yii::app()->user->setFlash('success','更新成功');
-				$this->redirect(array('update','id'=>$model->id));
-			}
-		}
-
-		$this->render('update',array(
+		$this->render('view',array(
 			'model'=>$model,
 		));
 	}

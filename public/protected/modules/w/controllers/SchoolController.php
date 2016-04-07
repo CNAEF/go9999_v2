@@ -25,6 +25,17 @@ class SchoolController extends WBasedController
 			$school = new School();
 			$school->attributes = $_POST;
 
+			$school->photo = EEH::moveUploadFile($_FILES['photo'], Yii::app()->params['uploadPathImage'] . 'school_photo/');
+
+			// 压缩图片
+			$info = pathinfo($school->{$oneFileId});
+			$smallFile = Yii::app()->params['uploadPathImage'] . $oneFileId . '/' . $school->photo;
+			$bigFile   = Yii::app()->params['uploadPathImage'] . $oneFileId . '/' . $info['filename'] . '_origin.' . $info['extension'];
+			$image = Yii::app()->image->load($smallFile);
+			$image->save($bigFile); // 保存原文件
+			$image->resize(Yii::app()->params['uploadMaxWidth'], Yii::app()->params['uploadMaxHeight'])->quality(Yii::app()->params['uploadQuality']);
+			$image->save($smallFile); // 保存压缩后文件
+
 			if (!$school->save()) {
 				$obj['extra']['code'] = '400';
 				foreach ($school->errors as $key => $value) {
