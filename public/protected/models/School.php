@@ -17,14 +17,14 @@ class School extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, location_province, location_city, type, student_count, teacher_count, grade_count, class_count, description, photo, has_library, has_computer, has_internet, is_supported, project, need_volunteer, volunteer_work, need_other, attention, traffic, offer_support, bring_supplies, headmaster_name, headmaster_telephone, school_address, school_postcode', 'required'),
+			array('name, location_province, location_city, type, student_count, teacher_count, grade_count, class_count, description, photo, has_library, has_computer, has_internet, is_supported, need_volunteer, need_other, attention, traffic, offer_support, bring_supplies, headmaster_name, headmaster_telephone, school_address, school_postcode', 'required'),
 			array('type, primary_school_type, student_count, teacher_count, grade_count, class_count, has_library, has_computer, has_internet, is_supported, need_volunteer, need_volunteer_count, need_other, custom, created_at', 'numerical', 'integerOnly'=>true),
 			array('name', 'length', 'max'=>200),
 			array('location_province, location_city, headmaster_name, headmaster_telephone', 'length', 'max'=>20),
 			array('photo, public_name, school_address', 'length', 'max'=>100),
 			array('volunteer_work, need_other_content, attention, traffic, offer_support, bring_supplies', 'length', 'max'=>1000),
 			array('school_postcode', 'length', 'max'=>10),
-			array('photo', 'file', 'types'=>'jpg, gif, png', 'maxSize'=>'2000000', 'tooLarge'=>'图片不要超过xxxK', 'safe' => false),
+			array('photo', 'file', 'types'=>'jpg, gif, png', 'maxSize'=>'2000000', 'tooLarge'=>'图片不要超过2M', 'safe' => false),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, location_province, location_city, type, primary_school_type, student_count, teacher_count, grade_count, class_count, description, has_library, has_computer, has_internet, is_supported, public_name, project, need_volunteer, need_volunteer_count, volunteer_work, need_other, need_other_content, custom, attention, traffic, offer_support, bring_supplies, headmaster_name, headmaster_telephone, school_address, school_postcode, created_at', 'safe', 'on'=>'search'),
