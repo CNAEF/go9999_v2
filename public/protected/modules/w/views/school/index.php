@@ -53,10 +53,10 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="primary_school_type_group">
                         <label class="col-sm-2 control-label" for="form_primary_school_type">小学类型</label>
                         <div class="col-sm-4">
-                            <select name="primary_school_type" id="form_primary_school_type" class="form-control required">
+                            <select name="primary_school_type" id="form_primary_school_type" class="form-control">
                                 <option value=""> -</option>
                                 <option value="1">村小／教学点</option>
                                 <option value="2">完小</option>
@@ -116,11 +116,11 @@
                         <label class="col-sm-2 control-label" for="form_has_library">是否有图书室</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="has_library" id="form_has_library_1" value="1">
+                                <input type="radio" name="has_library" class="required" id="form_has_library_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="has_library" id="form_has_library_0" value="0">
+                                <input type="radio" name="has_library" class="required" id="form_has_library_0" value="0">
                                 无
                             </label>
                             <label class="error" for="has_library" style="display:none;"></label>
@@ -131,11 +131,11 @@
                         <label class="col-sm-2 control-label" for="form_has_computer">是否有电脑</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="has_computer" id="form_has_computer_1" value="1">
+                                <input type="radio" name="has_computer" class="required" id="form_has_computer_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="has_computer" id="form_has_computer_0" value="0">
+                                <input type="radio" name="has_computer" class="required" id="form_has_computer_0" value="0">
                                 无
                             </label>
                             <label class="error" for="has_computer" style="display:none;"></label>
@@ -146,11 +146,11 @@
                         <label class="col-sm-2 control-label" for="form_has_internet">是否能上网</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="has_internet" id="form_has_internet_1" value="1">
+                                <input type="radio" name="has_internet" class="required" id="form_has_internet_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="has_internet" id="form_has_internet_0" value="0">
+                                <input type="radio" name="has_internet" class="required" id="form_has_internet_0" value="0">
                                 无
                             </label>
                             <label class="error" for="has_internet" style="display:none;"></label>
@@ -161,26 +161,26 @@
                         <label class="col-sm-2 control-label" for="form_is_supported">是否有公益团队支持</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="is_supported" id="form_is_supported_1" value="1">
+                                <input type="radio" name="is_supported" class="required" id="form_is_supported_1" value="1">
                                 有
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="is_supported" id="form_is_supported_0" value="0">
+                                <input type="radio" name="is_supported" class="required" id="form_is_supported_0" value="0">
                                 无
                             </label>
                             <label class="error" for="is_supported" style="display:none;"></label>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="public_name_group">
                         <label class="col-sm-2 control-label" for="form_public_name">公益团队名称</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control required" name="public_name" id="form_public_name"
+                            <input type="text" class="form-control" name="public_name" id="form_public_name"
                                    placeholder="">
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="project_group">
                         <label class="col-sm-2 control-label" for="form_project">已开展项目</label>
                         <div class="col-sm-5">
                             <label class="checkbox-inline">
@@ -231,18 +231,18 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="need_volunteer_count_group">
                         <label class="col-sm-2 control-label" for="form_need_volunteer_count">需要人数</label>
                         <div class="col-sm-4">
-                            <input type="text" class="form-control required" name="need_volunteer_count"
+                            <input type="text" class="form-control" name="need_volunteer_count"
                                    id="form_need_volunteer_count" placeholder="">
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="volunteer_work_group">
                         <label class="col-sm-2 control-label" for="form_volunteer_work">支教老师的工作范围</label>
                         <div class="col-sm-4">
-                            <textarea name="volunteer_work" class="form-control required" id="form_volunteer_work"
+                            <textarea name="volunteer_work" class="form-control" id="form_volunteer_work"
                                       type="text" rows="5" placeholder=""></textarea>
                         </div>
                     </div>
@@ -251,21 +251,21 @@
                         <label class="col-sm-2 control-label" for="form_need_other">是否需要其他支持</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="need_other" id="form_need_other_1" value="1">
+                                <input type="radio" name="need_other" class="required" id="form_need_other_1" value="1">
                                 是
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="need_other" id="form_need_other_0" value="0">
+                                <input type="radio" name="need_other" class="required" id="form_need_other_0" value="0">
                                 否
                             </label>
                             <label class="error" for="need_other" style="display:none;"></label>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" id="need_other_content_group">
                         <label class="col-sm-2 control-label" for="form_need_other_content">请列举学校的需要</label>
                         <div class="col-sm-4">
-                            <textarea name="need_other_content" class="form-control required"
+                            <textarea name="need_other_content" class="form-control"
                                       id="form_need_other_content" type="text" rows="5" placeholder=""></textarea>
                         </div>
                     </div>
@@ -276,11 +276,11 @@
                         <label class="col-sm-2 control-label" for="form_custom">当地民俗习惯</label>
                         <div class="col-sm-4">
                             <label class="radio-inline">
-                                <input type="radio" name="custom" id="form_custom_1" value="1">
+                                <input type="radio" name="custom" class="required" id="form_custom_1" value="1">
                                 是
                             </label>
                             <label class="radio-inline">
-                                <input type="radio" name="custom" id="form_custom_0" value="0">
+                                <input type="radio" name="custom" class="required" id="form_custom_0" value="0">
                                 否
                             </label>
                             <label class="error" for="custom" style="display:none;"></label>

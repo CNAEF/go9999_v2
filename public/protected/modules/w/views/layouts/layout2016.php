@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>中国·支教联盟</title>
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css">
-    <!-- todo: 浏览器兼容还没有 -->
+    <!--
+
+      贡献者名单:
+
+        @airycanon https://github.com/airycanon
+        @duandi https://github.com/duandi
+        @boylee
+        @m4ker https://github.com/m4ker
+        @leoandshaw
+        @soulteary https://github.com/soulteary
+
+      我们期待你的加入, QQ群: 249822315
+
+      感谢美团云提供服务器支持.
+
+    -->
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160410">
   </head>
   <body>
     <div class="f_header">
@@ -30,6 +45,9 @@
             </div>
             <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12">
               <div class="nav_btn">
+                <a class="btn btn-primary" href="/school">
+                  学校登记
+                </a>
                 <div class="dropdown">
                   <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                     志愿者报名
@@ -40,9 +58,6 @@
                     <li><a href="/process">查看报名进度</a></li>
                   </ul>
                 </div>
-                <!--
-                <a href="/school" class="btn sign_school">学校报名</a>
-                -->
               </div>
             </div>
           </div>
@@ -86,8 +101,8 @@
               <li>QQ群：104151030、166393586</li>
               <li>深圳QQ群：340710619</li>
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
-              <li><a href="http://weibo.com/516691809?is_all=1">新浪微博：@年小恩</a></li>
               <li>微信：CNAEF2006</li>
+              <li>电话：0755-26911012</li>
               <li>地址：广东省深圳市南山区侨香路4060号香年广场C座1102室</li>
             </ul>
           </div>
@@ -105,7 +120,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160410"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160410"></script>
   </body>
 </html>
