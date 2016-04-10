@@ -194,23 +194,36 @@ class School extends CActiveRecord
 	public function getProject() {
 		$arr = json_decode($this->project);
 		$str = '';
-		if (in_array(1, $arr))
-			$str .= '支教 ';
-		if (in_array(2, $arr))
-			$str .= '助学 ';
-		if (in_array(3, $arr))
-			$str .= '捐物 ';
-		if (in_array(4, $arr))
-			$str .= '支农 ';
-		if (in_array(5, $arr))
-			$str .= '支医 ';
-		if (in_array(6, $arr))
-			$str .= '扶贫 ';
-		if (in_array(7, $arr))
-			$str .= '环保 ';
+		if (is_array($arr)) {
+			if (in_array(1, $arr))
+				$str .= '支教 ';
+			if (in_array(2, $arr))
+				$str .= '助学 ';
+			if (in_array(3, $arr))
+				$str .= '捐物 ';
+			if (in_array(4, $arr))
+				$str .= '支农 ';
+			if (in_array(5, $arr))
+				$str .= '支医 ';
+			if (in_array(6, $arr))
+				$str .= '扶贫 ';
+			if (in_array(7, $arr))
+				$str .= '环保 ';
+		}
+
 		return $str;
 	}
 
+	public function beforeSave() {
+		if (parent::beforeSave()) {
+			if ($this->isNewRecord) {
+				$this->created_at = EED::f();
+			}
+			return true;
+		}else{
+			return false;
+		};
+	}
 	/*
 	public function setAttributes($values,$safeOnly=true){
 		parent::setAttributes($values,$safeOnly);
