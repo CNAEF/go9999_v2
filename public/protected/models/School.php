@@ -24,7 +24,7 @@ class School extends CActiveRecord
 			array('photo, public_name, school_address', 'length', 'max'=>100),
 			array('volunteer_work, need_other_content, attention, traffic, offer_support, bring_supplies', 'length', 'max'=>1000),
 			array('school_postcode', 'length', 'max'=>10),
-			array('photo', 'file', 'types'=>'jpg, gif, png', 'maxSize'=>'2000000', 'tooLarge'=>'图片不要超过2M', 'safe' => false),
+			//array('photo', 'file', 'types'=>'jpg, gif, png', 'maxSize'=>'2000000', 'tooLarge'=>'图片不要超过2M', 'safe' => false),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('id, name, location_province, location_city, type, primary_school_type, student_count, teacher_count, grade_count, class_count, description, has_library, has_computer, has_internet, is_supported, public_name, project, need_volunteer, need_volunteer_count, volunteer_work, need_other, need_other_content, custom, attention, traffic, offer_support, bring_supplies, headmaster_name, headmaster_telephone, school_address, school_postcode, created_at', 'safe', 'on'=>'search'),

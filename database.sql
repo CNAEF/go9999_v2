@@ -294,3 +294,6 @@ CREATE TABLE `t_school` (
   `school_postcode` varchar(10) NOT NULL COMMENT '学校邮编',
   `created_at` int(11) NOT NULL COMMENT '申请时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+ALTER TABLE `t_school` CHANGE `volunteer_work` `volunteer_work` VARCHAR(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '支教老师工作范围';
