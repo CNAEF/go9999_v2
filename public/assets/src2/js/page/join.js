@@ -31,7 +31,7 @@ var $validator;
                             modalTitle += '成功';
                             modalClass = 'alert-success';
                             target.fadeOut();
-                            $('#page-box-apply').find('blockquote p').text('如果您的资料通过审核，我们会第一时间联系您，请耐心等待，感谢您对支教联盟的支持！').addClass('alert alert-success');
+                            $('#page-box-apply').find('blockquote p').text('您的申请表已成功提交，感谢您对中国支教联盟的关注与支持。如果申请合格，初审组志愿者将于7天内通过QQ或微信与您联系。 同时您可以关注我们的微信公众号和微博，获取第一手的支教信息。').addClass('alert alert-success');
                         } else {
                             modalTitle += '失败';
                             modalClass = 'alert-warning';
@@ -704,21 +704,25 @@ var $validator;
 				begin_date: "required",
 				cur_status: "required",
 				confirm: "required",
+                form_work_experience: {
+                    required: true,
+                    rangelength: [50, 500]
+                },
                 Q1: {
                     required: true,
-                    rangelength: [100, 500]
+                    rangelength: [50, 500]
                 },
                 Q2: {
                     required: true,
-                    rangelength: [100, 500]
+                    rangelength: [50, 500]
                 },
                 Q3: {
                     required: true,
-                    rangelength: [100, 500]
+                    rangelength: [50, 500]
                 },
                 Q4: {
                     required: true,
-                    rangelength: [100, 500]
+                    rangelength: [50, 500]
                 },
 		   },
 		   messages: {
@@ -786,21 +790,25 @@ var $validator;
 				confirm: {
 					required: '请确认您已经准备好了！'
 				},
+               form_work_experience: {
+                   required: '请填写该内容！',
+                   rangelength: '请输入50-200字'
+               },
                Q1: {
                    required: '请填写该内容！',
-                   rangelength: '请输入100-500字'
+                   rangelength: '请输入50-200字'
                },
                Q2: {
                    required: '请填写该内容！',
-                   rangelength: '请输入100-500字'
+                   rangelength: '请输入50-200字'
                },
                Q3: {
                    required: '请填写该内容！',
-                   rangelength: '请输入100-500字'
+                   rangelength: '请输入50-200字'
                },
                Q4: {
                    required: '请填写该内容！',
-                   rangelength: '请输入100-500字'
+                   rangelength: '请输入50-200字'
                }
 			}
 		 });

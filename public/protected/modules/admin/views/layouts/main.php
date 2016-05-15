@@ -267,7 +267,7 @@
             <div class="footer-content">
 				<span class="bigger-120">
 					<span class="blue bolder"><?php echo Yii::app()->name;?></span>
-                        <?php echo Yii::app()->params['company'];?> &copy; 2014-<?php echo date('Y');?>
+                        <?php echo Yii::app()->params['company'];?> &copy; 2005-<?php echo date('Y');?>
 				    </span>
 				</span>
             </div>

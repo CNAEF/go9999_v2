@@ -217,51 +217,11 @@ class School extends CActiveRecord
 	public function beforeSave() {
 		if (parent::beforeSave()) {
 			if ($this->isNewRecord) {
-				$this->created_at = EED::f();
+				$this->created_at = time();
 			}
 			return true;
 		}else{
 			return false;
 		};
 	}
-	/*
-	public function setAttributes($values,$safeOnly=true){
-		parent::setAttributes($values,$safeOnly);
-		$this->photo = CUploadedFile::getInstanceByName('photo');
-	}
-
-
-	public function beforeSave()
-	{
-		if (parent::beforeSave()) {
-			if ($this->isNewRecord) {
-				$this->created_at = EED::f();
-
-				$photo = CUploadedFile::getInstanceByName('photo');
-				$photoPath = Yii::app()->params['uploadPathImage'] . 'school_photo/';
-				$extension = '.' . $photo->getExtensionName();
-				$suffix = '_origin';
-				$photoName = EEH::randomString(20, 1, 2, '_');
-				$originFile = $photoPath . $photoName . $suffix . $extension;
-				if ($photo->saveAs($originFile)) {
-					$image = Yii::app()->image->load($originFile);
-					$image->resize(Yii::app()->params['uploadMaxWidth'], Yii::app()->params['uploadMaxHeight'])->quality(Yii::app()->params['uploadQuality']);
-					$resizeFile = $photoPath . $photoName . $extension;
-					$image->save($resizeFile);
-					if(!file_exists($resizeFile)){
-						$this->photo =  $photoName . $extension;
-					} else {
-						$this->photo = $photoName . $suffix . $extension;
-					}
-					return true;
-				} else {
-					return false;
-				}
-			}
-			return true;
-		} else {
-			return false;
-		}
-	}
-	*/
 }

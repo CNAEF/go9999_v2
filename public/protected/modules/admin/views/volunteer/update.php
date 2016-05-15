@@ -84,10 +84,10 @@ $this->breadcrumbs=array(
     </tr>
 </table>
 
-<h2>工作经历</h2>
+<h2>个人简介</h2>
 <table class="table table-bordered">
     <tr>
-        <th>工作经历</th>
+        <th>学习、工作经历及特长</th>
         <td><?php echo $model->work_experience;?></td>
     </tr>
 </table>
@@ -157,13 +157,6 @@ $this->breadcrumbs=array(
         </tr>
     </table>
 <?php } ?>
-
-<h2>个人特别技能及资历</h2>
-<table class="table table-bordered">
-    <tr>
-        <td><?php echo $model->special;?></td>
-    </tr>
-</table>
 
 <h2>其他资料</h2>
 <table class="table table-bordered">

@@ -21,7 +21,7 @@
       感谢美团云提供服务器支持.
 
     -->
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160410">
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160510">
   </head>
   <body>
     <div class="f_header">
@@ -39,6 +39,8 @@
                 <li><a href="/about">关于</a></li>
                 <li><a href="/staff">人员</a></li>
                 -->
+                <li><a href="/about">简介</a></li>
+                <li><a href="http://blog.go9999.com">博客</a></li>
                 <li><a href="/contact/">留言</a></li>
                 <li><a target="_blank" href="http://bbs.go9999.com/">论坛</a></li>
               </ul>
@@ -101,8 +103,8 @@
               <li>QQ群：104151030、166393586</li>
               <li>深圳QQ群：340710619</li>
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
-              <li>微信：CNAEF2006</li>
-              <li>电话：0755-26911012</li>
+              <li>微信：CNAEF2006  louise956（年小恩）</li>
+              <li>电话：0755-26911012（周一至周五09：00—17：00）</li>
               <li>地址：广东省深圳市南山区侨香路4060号香年广场C座1102室</li>
             </ul>
           </div>
@@ -120,7 +122,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160410"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160410"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160510"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160510"></script>
   </body>
 </html>

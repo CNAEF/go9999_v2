@@ -126,14 +126,7 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label" for="form_special">个人特别技能及资历</label>
-                        <div class="col-sm-4">
-                            <textarea name="special" class="form-control" id="form_special" type="text" rows="5" placeholder="如果没有请留空。"></textarea>
-                        </div>
-                    </div>
-
-                    <legend>工作经历</legend>
+                    <legend>个人简介</legend>
 
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form_work">职　　业</label>
@@ -143,9 +136,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-sm-2 control-label" for="form_work_experience">工作经历</label>
+                        <label class="col-sm-2 control-label" for="form_work_experience">个人简介（学习、工作经历及特长）</label>
                         <div class="col-sm-4">
-                            <textarea name="work_experience" class="form-control" id="form_work_experience" rows="5" placeholder="如果没有请留空。"></textarea>
+                            <textarea name="work_experience" class="form-control required" id="form_work_experience" rows="5" placeholder=" placeholder="50—200字"></textarea>
                         </div>
                     </div>
 
@@ -154,7 +147,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form_phone">电　　话</label>
                         <div class="col-sm-4">
-                            <input name="phone" class="form-control required id="form_phone" type="text" placeholder="">
+                            <input name="phone" class="form-control required" id="form_phone" type="text" placeholder="">
                         </div>
                     </div>
 
@@ -314,33 +307,33 @@
                         </div>
                     </div>
 
-                    <legend>支教问答题（100—500字）</legend>
+                    <legend>支教问答题（50—200字）</legend>
 
                     <div class="form-group">
                         <label for="form_Q1" class="col-sm-12 question_label">1、请简述您为什么要支教？您对支教有哪些了解？希望通过支教收获什么？</label>
                         <div class="col-sm-6">
-                            <textarea name="Q1" class="question_text form-control required" id="form_Q1" rows="5" placeholder="100-500字"></textarea>
+                            <textarea name="Q1" class="question_text form-control required" id="form_Q1" rows="5" placeholder="50—200字"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="form_Q2" class="col-sm-12 question_label">2、请简述对您影响最大的一位老师是如何教学的？您认为作为一个老师应该具备哪些品质？又该如何去做一名合格的老师？</label>
                         <div class="col-sm-6">
-                            <textarea name="Q2" class="question_text form-control required" id="form_Q2" rows="5" placeholder="100-500字"></textarea>
+                            <textarea name="Q2" class="question_text form-control required" id="form_Q2" rows="5" placeholder="50—200字"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="form_Q3" class="col-sm-12 question_label">3、请简述您的家庭教育中有哪些值得学习的经验和不足，孩童时期对你影响最大的一件事是什么？为什么？</label>
                         <div class="col-sm-6">
-                            <textarea name="Q3" class="question_text form-control required" id="form_Q3" rows="5" placeholder="100-500字"></textarea>
+                            <textarea name="Q3" class="question_text form-control required" id="form_Q3" rows="5" placeholder="50—200字"></textarea>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="form_Q4" class="col-sm-12 question_label">4、请简述未来五年内的人生规划？</label>
                         <div class="col-sm-6">
-                            <textarea name="Q4" class="question_text form-control required" id="form_Q4" rows="5" placeholder="100-500字"></textarea>
+                            <textarea name="Q4" class="question_text form-control required" id="form_Q4" rows="5" placeholder="50—200字"></textarea>
                         </div>
                     </div>
 
