@@ -31,7 +31,7 @@ $this->breadcrumbs=array(
     <tr>
         <th>现居住地</th>
         <td><?php echo $model->cur_province . ' ' . $model->cur_city;?></td>
-        <th>职业</th>
+        <th>专业</th>
         <td><?php echo $model->getProfession();?></td>
     </tr>
     <tr>
@@ -86,6 +86,10 @@ $this->breadcrumbs=array(
 
 <h2>个人简介</h2>
 <table class="table table-bordered">
+    <tr>
+        <th>职业</th>
+        <td><?php echo $model->work;?></td>
+    </tr>
     <tr>
         <th>学习、工作经历及特长</th>
         <td><?php echo $model->work_experience;?></td>
