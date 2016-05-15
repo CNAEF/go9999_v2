@@ -138,7 +138,7 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="form_work_experience">个人简介（学习、工作经历及特长）</label>
                         <div class="col-sm-4">
-                            <textarea name="work_experience" class="form-control required" id="form_work_experience" rows="5" placeholder=" placeholder="50—200字"></textarea>
+                            <textarea name="work_experience" class="form-control required" id="form_work_experience" rows="5" placeholder="50—200字"></textarea>
                         </div>
                     </div>
 
@@ -355,7 +355,7 @@
                 </div>
                 <div class="span12">
                     <blockquote>
-                        <p class="alert alert-success">如果您的资料通过审核，我们会第一时间联系您，请耐心等待，感谢您对支教联盟的支持！</p>
+                        <p class="alert alert-success">您的申请表已成功提交，感谢您对中国支教联盟的关注与支持。如果申请合格，初审组志愿者将于7天内通过QQ或微信与您联系。 同时您可以关注我们的微信公众号和微博，获取第一手的支教信息。</p>
                         <small>支教联盟管理 <cite title="衷心感谢">年小恩</cite></small>
                     </blockquote>
                 </div>
