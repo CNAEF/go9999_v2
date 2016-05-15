@@ -100,11 +100,11 @@
             <h3>联系方式<small class="hidden-sm hidden-xs">Contact information</small></h3>
             <ul>
               <li><a href="mailto:admin@go9999.com">邮箱：admin@go9999.com</a></li>
-              <li>QQ群：104151030、166393586</li>
+              <li>QQ群：104151030、166393586、69515948</li>
               <li>深圳QQ群：340710619</li>
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
-              <li>微信：CNAEF2006  louise956（年小恩）</li>
-              <li>电话：0755-26911012（周一至周五09：00—17：00）</li>
+              <li>微信：CNAEF2006、louise956（年小恩）</li>
+              <li>电话：0755-26911012(周一至周五09:00—17:00)</li>
               <li>地址：广东省深圳市南山区侨香路4060号香年广场C座1102室</li>
             </ul>
           </div>
