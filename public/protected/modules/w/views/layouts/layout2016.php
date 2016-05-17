@@ -117,7 +117,7 @@
             <p>Copyright ©2005-<?php echo date('Y');?> go9999.com All Rights Reserved.</p>
           </div>
           <div class="icp">
-            <p><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000025"><img src="<?php echo Yii::app()->baseUrl?>/assets/v2/img/icp.png" />粤公网安备 44030502000025号</a> <a href="http://www.miibeian.gov.cn/">浙ICP备12032988号-1</a></p>
+            <p><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000025"><img src="<?php echo Yii::app()->baseUrl?>/assets/img/icp.png" />粤公网安备 44030502000025号</a> <a href="http://www.miibeian.gov.cn/">浙ICP备12032988号-1</a></p>
           </div>
         </div>
       </div>
