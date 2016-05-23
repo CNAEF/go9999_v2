@@ -22,9 +22,6 @@
 
     -->
     <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160510">
-    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
-    <script src="http://webapi.amap.com/maps?v=1.3&key=3a7e67d2ba1f15395c2e6c400d857a70"></script>
-    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
   </head>
   <body>
     <div class="f_header">
@@ -127,6 +124,5 @@
     </div>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160510"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160510"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/js/points_detail.js?v=20160518"></script>
   </body>
 </html>

@@ -70,7 +70,8 @@
           </div>
         </div>
       </div>
-       <div id="map_show" class="m_map_show"></div>
+      <div class="m_map">
+      </div>
     </div>
     <div class="f_picture">
       <div class="container">
