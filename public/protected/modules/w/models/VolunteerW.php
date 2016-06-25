@@ -28,7 +28,7 @@ class VolunteerW extends CActiveRecord
             array('hometown_province, hometown_city', 'length', 'max'=>40, 'message'=>'最大40个字'),
             array('id_num, phone, family_title, family_name, urgent_title, urgent_name', 'length', 'max'=>20, 'message'=>'最大20个字'),
             array('id_photo, user_photo, edu_photo, _edu_high_level, edu_university, profession, work, email, qq, cur_province, cur_city, cur_addr, family_contact, family_workplace, urgent_contact, info_from', 'length', 'max'=>100, 'message'=>'最大100个字'),
-            array('_user_post_addr, family_addr, urgent_workplace', 'length', 'max'=>200, 'message'=>'最大200个字'),
+            array('_user_post_addr, family_addr, urgent_workplace, work_experience', 'length', 'max'=>200, 'message'=>'最大200个字'),
             array('email', 'email', 'message'=>'请填写正确Email'),
             // The following rule is used by search().
             // @todo Please remove those attributes that should not be searched.

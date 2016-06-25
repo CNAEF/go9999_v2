@@ -9,6 +9,7 @@
 
       贡献者名单:
 
+        @huai707 https://github.com/huai707
         @airycanon https://github.com/airycanon
         @duandi https://github.com/duandi
         @boylee
@@ -21,10 +22,11 @@
       感谢美团云提供服务器支持.
 
     -->
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160510">
-    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
-    <script src="http://webapi.amap.com/maps?v=1.3&key=3a7e67d2ba1f15395c2e6c400d857a70"></script>
-    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160620">
+    <!-- 动态地图用到的资源 -->
+    <!--
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
+    -->
   </head>
   <body>
     <div class="f_header">
@@ -82,7 +84,6 @@
               <li><a target="_blank" href="http://bbs.hfly.net/">庐阳教育论坛</a></li>
               <li><a target="_blank" href="http://bbs.cnbayue.com/">滴水公益论坛</a></li>
               <li><a target="_blank" href="http://www.bmf-sc.com/">四川仁爱医疗基金会</a></li>
-              <li><a target="_blank" href="http://www.ew125.com/">成都抗癌协会</a></li>
               <li><a target="_blank" href="http://xzszhc.2008red.com/">进藏教师家园</a></li>
               <li><a target="_blank" href="http://www.ricedonate.com/">米公益</a></li>
             </ul>
@@ -106,7 +107,7 @@
               <li>QQ群：104151030、166393586、69515948</li>
               <li>深圳QQ群：340710619</li>
               <li><a href="http://weibo.com/go9999">新浪微博：@中国支教联盟网站</a></li>
-              <li>微信：CNAEF2006、louise956（年小恩）</li>
+              <li>微信：CNAEF2006、louise412（年小恩）</li>
               <li>电话：0755-26911012(周一至周五09:00—17:00)</li>
               <li>地址：广东省深圳市南山区侨香路4060号香年广场C座1102室</li>
             </ul>
@@ -125,8 +126,15 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160510"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160510"></script>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/js/points_detail.js?v=20160518"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160620"></script>
+    <!-- 动态地图用到的资源 -->
+    <!--
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3a7e67d2ba1f15395c2e6c400d857a70"></script>
+    -->
+    <!-- 动态地图用到的资源 -->
+    <!--
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    -->
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160620"></script>
   </body>
 </html>

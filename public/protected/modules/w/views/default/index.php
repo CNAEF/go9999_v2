@@ -70,7 +70,12 @@
           </div>
         </div>
       </div>
+       <!-- 动态版本 -->
+       <!--
        <div id="map_show" class="m_map_show"></div>
+       -->
+       <!-- 静态版本 -->
+       <div class="m_map"></div>
     </div>
     <div class="f_picture">
       <div class="container">
