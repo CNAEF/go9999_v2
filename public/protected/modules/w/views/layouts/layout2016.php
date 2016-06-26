@@ -136,5 +136,7 @@
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
     -->
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160620"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/html5.js"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/respond.js"></script>
   </body>
 </html>
