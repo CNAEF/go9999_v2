@@ -22,7 +22,7 @@
       感谢美团云提供服务器支持.
 
     -->
-    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160620">
+    <link rel="stylesheet" href="<?php echo Yii::app()->baseUrl?>/assets/v2/css/core.min.css?v=20160626">
     <!-- 动态地图用到的资源 -->
     <!--
     <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css" />
@@ -126,7 +126,7 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160620"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/core.min.js?v=20160626"></script>
     <!-- 动态地图用到的资源 -->
     <!--
     <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=3a7e67d2ba1f15395c2e6c400d857a70"></script>
@@ -135,7 +135,7 @@
     <!--
     <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
     -->
-    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160620"></script>
+    <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/app.min.js?v=20160626"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/html5.js"></script>
     <script type="text/javascript" src="<?php echo Yii::app()->baseUrl;?>/assets/v2/js/respond.js"></script>
   </body>
