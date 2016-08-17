@@ -23,31 +23,31 @@
                     <?php endforeach;?>
                     <?php } else { ?>
                         <li>
-                            <h5><a target="_blank" href="<?php echo $notices[0]['link'];?>"><?php echo $notices[0]['title'];?><small>- <?php echo $notices[0]['friendlyDate'];?></small></a></h5>
-                            <p><a target="_blank" href="<?php echo $notices[0]['link'];?>"><?php echo mb_substr($notices[0]['description'],0,50);?>...</a></p>
+                            <h5><a target="_blank" href="<?php echo @$notices[0]['link'];?>"><?php echo @$notices[0]['title'];?><small>- <?php echo @$notices[0]['friendlyDate'];?></small></a></h5>
+                            <p><a target="_blank" href="<?php echo @$notices[0]['link'];?>"><?php echo @mb_substr($notices[0]['description'],0,50);?>...</a></p>
                         </li>
                         <li>
-                            <h5><a target="_blank" href="<?php echo $notices[1]['link'];?>"><?php echo $notices[1]['title'];?><small>- <?php echo $notices[1]['friendlyDate'];?></small></a></h5>
-                            <p><a target="_blank" href="<?php echo $notices[1]['link'];?>"><?php echo mb_substr($notices[1]['description'],0,50);?>...</a></p>
+                            <h5><a target="_blank" href="<?php echo @$notices[1]['link'];?>"><?php echo @$notices[1]['title'];?><small>- <?php echo @$notices[1]['friendlyDate'];?></small></a></h5>
+                            <p><a target="_blank" href="<?php echo @$notices[1]['link'];?>"><?php echo @mb_substr($notices[1]['description'],0,50);?>...</a></p>
                         </li>
                         <li>
-                            <h5><a target="_blank" href="<?php echo $notices[2]['link'];?>"><?php echo $notices[2]['title'];?><small>- <?php echo $notices[2]['friendlyDate'];?></small></a></h5>
-                            <p><a target="_blank" href="<?php echo $notices[2]['link'];?>"><?php echo mb_substr($notices[2]['description'],0,50);?>...</a></p>
+                            <h5><a target="_blank" href="<?php echo @$notices[2]['link'];?>"><?php echo @$notices[2]['title'];?><small>- <?php echo @$notices[2]['friendlyDate'];?></small></a></h5>
+                            <p><a target="_blank" href="<?php echo @$notices[2]['link'];?>"><?php echo @mb_substr($notices[2]['description'],0,50);?>...</a></p>
                         </li>
                     <?php } ?>
                 </ul>
                 <ul class="log_main">
                   <li>
-                      <h5><a target="_blank" href="<?php echo $posts[0]['link'];?>"><?php echo $posts[0]['title'];?><small>- <?php echo $posts[0]['friendlyDate'];?></small></a></h5>
-                      <p><a target="_blank" href="<?php echo $posts[0]['link'];?>"><?php echo mb_substr($posts[0]['description'],0,50);?>...</a></p>
+                      <h5><a target="_blank" href="<?php echo @$posts[0]['link'];?>"><?php echo @$posts[0]['title'];?><small>- <?php echo @$posts[0]['friendlyDate'];?></small></a></h5>
+                      <p><a target="_blank" href="<?php echo @$posts[0]['link'];?>"><?php echo @mb_substr($posts[0]['description'],0,50);?>...</a></p>
                   </li>
                   <li>
-                      <h5><a target="_blank" href="<?php echo $posts[1]['link'];?>"><?php echo $posts[1]['title'];?><small>- <?php echo $posts[1]['friendlyDate'];?></small></a></h5>
-                      <p><a target="_blank" href="<?php echo $posts[1]['link'];?>"><?php echo mb_substr($posts[1]['description'],0,50);?>...</a></p>
+                      <h5><a target="_blank" href="<?php echo @$posts[1]['link'];?>"><?php echo @$posts[1]['title'];?><small>- <?php echo @$posts[1]['friendlyDate'];?></small></a></h5>
+                      <p><a target="_blank" href="<?php echo @$posts[1]['link'];?>"><?php echo @mb_substr($posts[1]['description'],0,50);?>...</a></p>
                   </li>
                   <li>
-                      <h5><a target="_blank" href="<?php echo $posts[2]['link'];?>"><?php echo $posts[2]['title'];?><small>- <?php echo $posts[2]['friendlyDate'];?></small></a></h5>
-                      <p><a target="_blank" href="<?php echo $posts[2]['link'];?>"><?php echo mb_substr($posts[2]['description'],0,50);?>...</a></p>
+                      <h5><a target="_blank" href="<?php echo @$posts[2]['link'];?>"><?php echo @$posts[2]['title'];?><small>- <?php echo @$posts[2]['friendlyDate'];?></small></a></h5>
+                      <p><a target="_blank" href="<?php echo @$posts[2]['link'];?>"><?php echo @mb_substr($posts[2]['description'],0,50);?>...</a></p>
                   </li>
                 </ul>
               </div>
