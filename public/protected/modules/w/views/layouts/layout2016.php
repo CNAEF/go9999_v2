@@ -87,6 +87,7 @@
               <li><a target="_blank" href="http://xzszhc.2008red.com/">进藏教师家园</a></li>
               <li><a target="_blank" href="http://www.ricedonate.com/">米公益</a></li>
               <li><a target="_blank" href="http://www.shininghouse.cn/">钻石世家慈善基金会</a></li>
+              <li><a target="_blank" href="http://www.hhd-sz.com/">深圳华汇设计有限公司</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
