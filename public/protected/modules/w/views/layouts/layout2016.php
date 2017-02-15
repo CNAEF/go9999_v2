@@ -122,6 +122,10 @@
         <div class="version">
           <div class="copyright">
             <p>Copyright ©2005-<?php echo date('Y');?> go9999.com All Rights Reserved.</p>
+            <p>
+              <img src="https://img.alicdn.com/tps/TB15vyaLpXXXXXXXFXXXXXXXXXX-198-46.png" style="width: 100px;">
+              <span style="vertical-align: middle;margin-left: 10px;">感谢阿里云赞助主机资源 </span>
+            </p>
           </div>
           <div class="icp">
             <p><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000025"><img src="<?php echo Yii::app()->baseUrl?>/assets/img/icp.png" />粤公网安备 44030502000025号</a> <a href="http://www.miibeian.gov.cn/">浙ICP备12032988号-1</a></p>
