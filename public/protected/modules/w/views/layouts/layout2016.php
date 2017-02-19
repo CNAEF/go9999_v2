@@ -99,6 +99,7 @@
               <li><a target="_blank" href="http://site.douban.com/118628/">豆瓣小站</a></li>
               <li><a target="_blank" href="http://www.douban.com/group/go9999/">豆瓣小组</a></li>
               <li><a target="_blank" href="http://tieba.baidu.com/f?kw=%D6%D0%B9%FA%D6%A7%BD%CC%C1%AA%C3%CB">百度贴吧</a></li>
+              <li><a target="_blank" href="https://shop136419451.taobao.com">周边</a></li>
               <li><a target="_blank" href="http://blog.go9999.com/join">加入我们</a></li>
               <li><a target="_blank" href="/admin">管理后台</a></li>
             </ul>
